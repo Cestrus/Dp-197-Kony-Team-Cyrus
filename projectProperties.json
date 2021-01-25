@@ -89,6 +89,138 @@
     "applepushfunc": "None",
     "apploadeventkey": "None",
     "applogokey": "",
+    "appmenu": {
+        "desktop": {
+            "data": [
+                {
+                    "icon": {
+                        "default": "option1.png"
+                    },
+                    "id": "appmenuitemid1",
+                    "kuid": "c080ae076fff40b3a868abb292720ca7",
+                    "title": "Item 1"
+                },
+                {
+                    "icon": {
+                        "default": "option2.png"
+                    },
+                    "id": "appmenuitemid2",
+                    "kuid": "e524b453dacd46e18bf0f1e00713eee2",
+                    "title": "Item 2"
+                },
+                {
+                    "icon": {
+                        "default": "option3.png"
+                    },
+                    "id": "appmenuitemid3",
+                    "kuid": "j559905681f541a8a95bd1fabb781a9e",
+                    "title": "Item 3"
+                },
+                {
+                    "icon": {
+                        "default": "option4.png"
+                    },
+                    "id": "appmenuitemid4",
+                    "kuid": "g0410dcb6fd442629f7c31deb00b0585",
+                    "title": "Item 4"
+                }
+            ]
+        },
+        "focusSkin": null,
+        "focusskin": null,
+        "mobile": {
+            "data": [
+                {
+                    "icon": {
+                        "default": "option1.png"
+                    },
+                    "id": "appmenuitemid1",
+                    "kuid": "bd3284aa68e64ba6bc5e2be4baae69bd",
+                    "title": "Item 1"
+                },
+                {
+                    "icon": {
+                        "default": "option2.png"
+                    },
+                    "id": "appmenuitemid2",
+                    "kuid": "h8b9ccf1bfd64000b0309a18c87f8279",
+                    "title": "Item 2"
+                },
+                {
+                    "icon": {
+                        "default": "option3.png"
+                    },
+                    "id": "appmenuitemid3",
+                    "kuid": "a89abd4322ac4d9db1f00db4acc067bd",
+                    "title": "Item 3"
+                },
+                {
+                    "icon": {
+                        "default": "option4.png"
+                    },
+                    "id": "appmenuitemid4",
+                    "kuid": "ea6609b8461c48f782f79a6b5d2ace13",
+                    "title": "Item 4"
+                }
+            ]
+        },
+        "osPlatform": "",
+        "osVersion": "iOS7",
+        "skin": null,
+        "tablet": {
+            "data": [
+                {
+                    "icon": {
+                        "default": "option1.png"
+                    },
+                    "id": "appmenuitemid1",
+                    "kuid": "a7894a15fa644ff2b8d97dcc284b7fef",
+                    "title": "Item 1",
+                    "windows8": {
+                        "appBarButtonStyle": "No Style",
+                        "position": "BOTTOM_LEFT"
+                    }
+                },
+                {
+                    "icon": {
+                        "default": "option2.png"
+                    },
+                    "id": "appmenuitemid2",
+                    "kuid": "df28dcf2892343aab0a03f310e72311c",
+                    "title": "Item 2",
+                    "windows8": {
+                        "appBarButtonStyle": "No Style",
+                        "position": "BOTTOM_LEFT"
+                    }
+                },
+                {
+                    "icon": {
+                        "default": "option3.png"
+                    },
+                    "id": "appmenuitemid3",
+                    "kuid": "b2f85925adbd4d16903249887d4debcd",
+                    "title": "Item 3",
+                    "windows8": {
+                        "appBarButtonStyle": "No Style",
+                        "position": "BOTTOM_LEFT"
+                    }
+                },
+                {
+                    "icon": {
+                        "default": "option4.png"
+                    },
+                    "id": "appmenuitemid4",
+                    "kuid": "a7f81f70294546879434203ca6e0914f",
+                    "title": "Item 4",
+                    "windows8": {
+                        "appBarButtonStyle": "No Style",
+                        "position": "BOTTOM_LEFT"
+                    }
+                }
+            ]
+        },
+        "wType": "Appmenu"
+    },
     "appnamekey": "NasaWether",
     "appointments": "false",
     "apppackagekey": "com.orgname.NasaWether",
@@ -536,6 +668,7 @@
     "support64bitandwear": "false",
     "supportX86Devices": "false",
     "supportX86Devicesandwear": "false",
+    "tabletstartupformkey": "",
     "tags": {
         "android": {
             "activity_child_tags": "",

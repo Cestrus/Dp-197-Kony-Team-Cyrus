@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sbbfa749caa24dc4b262801fcd22c221",
+    "_skin_": "sbb93da9a77c40f3b1aa34edf627156e",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -29,20 +29,26 @@
         "needAppMenu": false
     },
     "canUpdateUI": true,
-    "children": [],
+    "children": [
+        "txtSearch",
+        "flxImgContainer",
+        "btnAddToCollection"
+    ],
     "containerweight": 100,
     "controllerInfo": {
         "default": {
             "channel": "mobile",
-            "name": "Form1Controller"
+            "name": "frmSearchImgController"
         }
     },
+    "currentLocale": "default",
     "desktopweb": {
         "needAppMenu": false
     },
+    "device": "iPhone11",
     "displayorientation": 1,
     "enabledforidletimeout": false,
-    "id": "Form1",
+    "id": "frmSearchImg",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,
@@ -93,9 +99,13 @@
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,
+    "platform": "iphone",
+    "prevDevice": "iPhone11",
+    "prevPlatform": "iphone",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,
+    "shellCSS": "iOS_iPhoneXR",
     "snapgridsize": 10,
     "snaptogrid": true,
     "spaan": {
