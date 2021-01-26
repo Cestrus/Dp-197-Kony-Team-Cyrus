@@ -9,7 +9,7 @@ define({
       navigation.navigate();
     } else {
       this.view.inptStart.setFocus(true);
-      this.view.inptStart.placeholder = "Enter the password here again";
+      this.view.inptStart.text = "";
     }
   }
   

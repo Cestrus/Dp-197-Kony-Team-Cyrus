@@ -36,7 +36,11 @@
     "allowverticalbounce": true,
     "bounces": true,
     "canUpdateUI": true,
-    "children": [],
+    "children": [
+        "Label0c3b60029bc3b4c",
+        "btnGoToWeather",
+        "btnGoToSearchPhotos"
+    ],
     "clipbounds": true,
     "containerweight": 100,
     "decelerat": false,

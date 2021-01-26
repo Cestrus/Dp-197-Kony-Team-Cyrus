@@ -30,7 +30,8 @@
     },
     "canUpdateUI": true,
     "children": [
-        "FlexContainerMain"
+        "FlexContainerMain",
+        "lblWelcome"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -39,7 +40,7 @@
             "name": "frmMainController"
         }
     },
-    "currentLocale": "default",
+    "currentLocale": "none",
     "desktopweb": {
         "needAppMenu": false
     },
