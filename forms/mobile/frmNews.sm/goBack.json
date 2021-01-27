@@ -5,11 +5,15 @@
         "type": "ref",
         "value": "preferred"
     },
+    "_left_": {
+        "type": "string",
+        "value": "15dp"
+    },
     "_margin_": [
-        1,
-        1,
-        1,
-        1
+        0,
+        0,
+        0,
+        0
     ],
     "_padding_": [
         0,
@@ -17,8 +21,8 @@
         0,
         0
     ],
-    "_skin_": "s79c13bc01dd4443afc61de6a2488f77",
-    "_text_": "RECIPIENT DETAILS",
+    "_skin_": "s51d91fd29b749a6a6ba7154913c0bb4",
+    "_text_": "",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -31,17 +35,13 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "centery": {
         "type": "string",
         "value": "50%"
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblHeader",
+    "id": "goBack",
     "info": null,
     "ipad": {
         "psp": {
@@ -53,15 +53,12 @@
             "wrapping": 2
         }
     },
-    "iscustomlayout": false,
-    "isvisible": false,
-    "kuid": "be6d81d2c5204db5b98ce1de97991fc7",
+    "isvisible": true,
+    "kuid": "bd9b61574390479ab6eb8c651a950a0f",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flexHeader",
-    "pf": "frmMain",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
+    "pf": "frmNews",
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",

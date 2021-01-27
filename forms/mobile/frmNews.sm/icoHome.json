@@ -7,13 +7,13 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "9%"
     },
     "_margin_": [
-        1,
-        1,
-        1,
-        1
+        0,
+        0,
+        0,
+        0
     ],
     "_padding_": [
         0,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "se8c49e4d0d340c688269ce3be41bf36",
-    "_text_": "Ready for the trip?",
+    "_skin_": "s51d91fd29b749a6a6ba7154913c0bb4",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "90dp"
+        "value": "10dp"
     },
     "_width_": {
-        "type": "string",
-        "value": "100%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -39,13 +39,13 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
+    "centery": {
         "type": "string",
         "value": "50%"
     },
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "Label0c3b60029bc3b4c",
+    "contentalignment": 4,
+    "id": "icoHome",
     "info": null,
     "ipad": {
         "psp": {
@@ -57,14 +57,12 @@
             "wrapping": 2
         }
     },
-    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a66960a1206c417f90725e99d232e917",
+    "kuid": "ha1c825c905a4526a6eb2cfde158ab43",
+    "masterType": 1,
     "name": "kony.ui.Label",
-    "parent": "FlexScrollContainerMain",
-    "pf": "frmMain",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
+    "parent": "navBottomMenu",
+    "pf": "frmNews",
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",

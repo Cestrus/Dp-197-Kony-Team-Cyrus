@@ -30,8 +30,7 @@
     },
     "canUpdateUI": true,
     "children": [
-        "FlexContainerMain",
-        "lblWelcome"
+        "FlexContainerMain"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -48,6 +47,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmMain",
+    "ide_init": "AS_Form_e6997ed446ff4a55a7566f89b16432af",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

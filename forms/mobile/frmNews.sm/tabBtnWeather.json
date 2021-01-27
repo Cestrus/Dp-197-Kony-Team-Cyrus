@@ -5,10 +5,6 @@
         "type": "string",
         "value": "100%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "25%"
-    },
     "_margin_": [
         6,
         6,
@@ -21,8 +17,12 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
-    "_text_": "Two",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -36,14 +36,14 @@
     "contentalignment": 5,
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
-    "id": "tabBtnTwo",
+    "id": "tabBtnWeather",
     "info": null,
     "isvisible": true,
-    "kuid": "e3e62bcee30b46c39a053a86c2366ebc",
+    "kuid": "c98cf3c118e248338296eaee55444961",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "navBottomMenu",
-    "pf": "frmMain",
+    "pf": "frmNews",
     "wType": "Button",
     "zindex": 1
 }
