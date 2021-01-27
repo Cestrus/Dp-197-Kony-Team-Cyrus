@@ -1,0 +1,51 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "50dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s45816cb0623472fb6fc5870450f6036",
+    "_text_": "Enter",
+    "_top_": {
+        "type": "string",
+        "value": "530dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "300dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sbcca6825b164edf971818a3c774b1be",
+    "id": "btnStart",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a147ff629566445f9dc29a1a00d0ded5",
+    "name": "kony.ui.Button",
+    "parent": "FlexContainerStart",
+    "pf": "frmStart",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 2
+}
