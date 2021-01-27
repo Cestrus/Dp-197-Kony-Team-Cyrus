@@ -37,9 +37,11 @@
     "bounces": true,
     "canUpdateUI": true,
     "children": [
-        "Label0c3b60029bc3b4c",
-        "btnGoToWeather",
-        "btnGoToSearchPhotos"
+        "lblHeadingTextPrimary",
+        "lblHeadingTextSecondary",
+        "btnGoToSearchPhotos",
+        "btnGoToNews",
+        "btnGoToWeather"
     ],
     "clipbounds": true,
     "containerweight": 100,

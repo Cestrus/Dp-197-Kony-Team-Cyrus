@@ -22,7 +22,7 @@
         "value": "0dp"
     },
     "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
-    "_text_": "Four",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -36,7 +36,7 @@
     "contentalignment": 5,
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
-    "id": "tabBtnFour",
+    "id": "tabBtnWeather",
     "info": null,
     "isvisible": true,
     "kuid": "db9db0b9fe3e45579a861ecb984409ca",
@@ -45,5 +45,5 @@
     "parent": "navBottomMenu",
     "pf": "frmMain",
     "wType": "Button",
-    "zindex": 1
+    "zindex": 6
 }

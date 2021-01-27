@@ -5,11 +5,15 @@
         "type": "ref",
         "value": "preferred"
     },
+    "_left_": {
+        "type": "string",
+        "value": "83%"
+    },
     "_margin_": [
-        1,
-        1,
-        1,
-        1
+        0,
+        0,
+        0,
+        0
     ],
     "_padding_": [
         0,
@@ -17,8 +21,12 @@
         0,
         0
     ],
-    "_skin_": "s79c13bc01dd4443afc61de6a2488f77",
-    "_text_": "RECIPIENT DETAILS",
+    "_skin_": "s51d91fd29b749a6a6ba7154913c0bb4",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "10dp"
+    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -31,17 +39,13 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "centery": {
         "type": "string",
         "value": "50%"
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblHeader",
+    "id": "icoWeather",
     "info": null,
     "ipad": {
         "psp": {
@@ -53,15 +57,12 @@
             "wrapping": 2
         }
     },
-    "iscustomlayout": false,
-    "isvisible": false,
-    "kuid": "be6d81d2c5204db5b98ce1de97991fc7",
+    "isvisible": true,
+    "kuid": "aeaa12afc31e4a0c9acc1e9c78e967e9",
     "masterType": 1,
     "name": "kony.ui.Label",
-    "parent": "flexHeader",
-    "pf": "frmMain",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
+    "parent": "navBottomMenu",
+    "pf": "frmNews",
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",
