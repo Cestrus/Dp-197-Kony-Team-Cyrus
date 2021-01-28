@@ -10,14 +10,6 @@
                     "isStartupForm": false,
                     "key": "befd37092a0540039fb5f38818414844",
                     "loc": "188 184.845263671875",
-                    "thumbnailURL": "/assets/Dp197KonyTeamCyrus/forms/mobile/frmMain.sm/.thumbs/default.jpeg?"
-                },
-                {
-                    "formKUID": "cd22a50c8348439d8a8db705288269c0",
-                    "formName": "frmNews",
-                    "isStartupForm": false,
-                    "key": "cd22a50c8348439d8a8db705288269c0",
-                    "loc": "368 354.845263671875",
                     "thumbnailURL": null
                 },
                 {
@@ -26,7 +18,7 @@
                     "isStartupForm": true,
                     "key": "f09c63c0e57542608f801a2eff6e2c0a",
                     "loc": "8 24.845263671875003",
-                    "thumbnailURL": "/assets/Dp197KonyTeamCyrus/forms/mobile/frmStart.sm/.thumbs/default.jpeg?"
+                    "thumbnailURL": null
                 }
             ]
         }
