@@ -31,7 +31,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "55%"
     },
     "containerweight": 100,
     "id": "imgRocket",

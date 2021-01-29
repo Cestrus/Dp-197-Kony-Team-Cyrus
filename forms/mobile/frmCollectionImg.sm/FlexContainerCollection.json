@@ -39,7 +39,8 @@
         "flexHeader",
         "lbCollectionTitle",
         "FlexScrollContainerCollection",
-        "FlexContainerCollectionEmpty"
+        "FlexContainerCollectionEmpty",
+        "btnDeleteCollection"
     ],
     "clipbounds": true,
     "containerweight": 100,
