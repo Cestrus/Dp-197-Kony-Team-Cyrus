@@ -1,6 +1,10 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "95dp"
+    },
     "_height_": {
         "type": "string",
         "value": "50dp"
@@ -19,10 +23,6 @@
     ],
     "_skin_": "s71be62718a94408bbeecde428cadc74",
     "_text_": "Add to collection",
-    "_top_": {
-        "type": "string",
-        "value": "670dp"
-    },
     "_width_": {
         "type": "string",
         "value": "300dp"
