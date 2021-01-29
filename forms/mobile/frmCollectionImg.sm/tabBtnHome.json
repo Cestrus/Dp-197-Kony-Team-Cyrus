@@ -1,0 +1,49 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s800ec761f60410fafb3c4cc180583a8",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "25%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s800ec761f60410fafb3c4cc180583a8",
+    "id": "tabBtnHome",
+    "info": null,
+    "isvisible": true,
+    "kuid": "f66da4f2dc334966985df8869112a43a",
+    "masterType": 1,
+    "name": "kony.ui.Button",
+    "parent": "navBottomMenu",
+    "pf": "frmCollectionImg",
+    "wType": "Button",
+    "zindex": 2
+}
