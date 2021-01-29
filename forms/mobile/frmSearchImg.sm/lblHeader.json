@@ -5,10 +5,6 @@
         "type": "ref",
         "value": "preferred"
     },
-    "_left_": {
-        "type": "string",
-        "value": "55dp"
-    },
     "_margin_": [
         1,
         1,
@@ -21,12 +17,8 @@
         0,
         0
     ],
-    "_skin_": "s05839af749446ddb689760ae900eabc",
-    "_text_": "Sorry,  this object not found",
-    "_top_": {
-        "type": "string",
-        "value": "40dp"
-    },
+    "_skin_": "s79c13bc01dd4443afc61de6a2488f77",
+    "_text_": "RECIPIENT DETAILS",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -41,11 +33,15 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.02%"
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
     },
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "lbNotFound",
+    "contentalignment": 4,
+    "id": "lblHeader",
     "info": null,
     "ipad": {
         "psp": {
@@ -58,10 +54,11 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "cef61dd2810d4b08a2f4fd32b3d065c3",
+    "isvisible": false,
+    "kuid": "df7532a630e04491a6efdbd6dda6e13e",
+    "masterType": 1,
     "name": "kony.ui.Label",
-    "parent": "FlexContainerNotFound",
+    "parent": "flexHeader",
     "pf": "frmSearchImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

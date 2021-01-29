@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "59dp"
+        "value": "55dp"
     },
     "_margin_": [
         0,
@@ -26,7 +26,7 @@
     "_text_": "Input name space object",
     "_top_": {
         "type": "string",
-        "value": "24dp"
+        "value": "85dp"
     },
     "_width_": {
         "type": "string",

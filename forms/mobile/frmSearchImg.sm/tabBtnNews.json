@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "50dp"
+        "value": "100%"
     },
     "_margin_": [
         6,
@@ -17,35 +17,34 @@
         0,
         0
     ],
-    "_skin_": "s71be62718a94408bbeecde428cadc74",
-    "_text_": "Add to collection",
+    "_right_": {
+        "type": "string",
+        "value": "25%"
+    },
+    "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "670dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "300dp"
+        "value": "25%"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "49.51%"
-    },
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s9482b46deea49a5ade11002516f25a6",
-    "id": "btnAddToCollection",
+    "focusskin": "se777c1dcc1e41918496377af3436361",
+    "id": "tabBtnNews",
     "info": null,
-    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d803aa93e55e423cafec93c3833ab20c",
+    "kuid": "a075e002837946cf89f3c0fa1aee327c",
+    "masterType": 1,
     "name": "kony.ui.Button",
-    "parent": "FlexContainerSearchImg",
+    "paddinginpixel": false,
+    "parent": "navBottomMenu",
     "pf": "frmSearchImg",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
     "wType": "Button",
-    "zindex": 1
+    "zindex": 6
 }

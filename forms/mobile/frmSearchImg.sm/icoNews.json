@@ -7,13 +7,13 @@
     },
     "_left_": {
         "type": "string",
-        "value": "55dp"
+        "value": "58%"
     },
     "_margin_": [
-        1,
-        1,
-        1,
-        1
+        0,
+        0,
+        0,
+        0
     ],
     "_padding_": [
         0,
@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s05839af749446ddb689760ae900eabc",
-    "_text_": "Sorry,  this object not found",
+    "_skin_": "s51d91fd29b749a6a6ba7154913c0bb4",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "40dp"
+        "value": "10dp"
     },
     "_width_": {
         "type": "ref",
@@ -39,13 +39,13 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
+    "centery": {
         "type": "string",
-        "value": "50.02%"
+        "value": "50%"
     },
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "lbNotFound",
+    "contentalignment": 4,
+    "id": "icoNews",
     "info": null,
     "ipad": {
         "psp": {
@@ -57,16 +57,14 @@
             "wrapping": 2
         }
     },
-    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cef61dd2810d4b08a2f4fd32b3d065c3",
+    "kuid": "fe4f5ce5bfa845bca4f3486635fba7b1",
+    "masterType": 1,
     "name": "kony.ui.Label",
-    "parent": "FlexContainerNotFound",
+    "parent": "navBottomMenu",
     "pf": "frmSearchImg",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",
-    "zindex": 1
+    "zindex": 2
 }

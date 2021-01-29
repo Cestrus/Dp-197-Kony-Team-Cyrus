@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "545dp"
+        "value": "500dp"
     },
     "_margin_": [
         0,
@@ -21,7 +21,7 @@
     "_skin_": "s010b29f344e493bb648722fce21b37f",
     "_top_": {
         "type": "string",
-        "value": "110dp"
+        "value": "155dp"
     },
     "_width_": {
         "type": "string",
@@ -48,7 +48,7 @@
     "id": "FlexContainerImg",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "a1197d27203140278b1140e7294d132d",
     "layouttype": 2,
     "name": "kony.ui.FlexScrollContainer",

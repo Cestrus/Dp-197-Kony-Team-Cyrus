@@ -4,7 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "280dp"
+        "value": "45dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "170dp"
     },
     "_margin_": [
         0,
@@ -19,30 +23,29 @@
         0
     ],
     "_skin_": "s75fbb28b54147d98a251601780a6bb5",
-    "_src_": "space_rocket.png",
+    "_src_": "daco_2860124.png",
+    "_top_": {
+        "type": "string",
+        "value": "10dp"
+    },
     "_width_": {
         "type": "string",
-        "value": "280dp"
+        "value": "45dp"
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.01%"
-    },
-    "centery": {
-        "type": "string",
         "value": "50%"
     },
     "containerweight": 100,
-    "id": "imgRocket",
+    "id": "Image0b993be436b5944",
     "imagescalemode": 1,
     "info": null,
-    "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b016386331b44fd38acf41b3ed87c2e4",
+    "kuid": "g3c9d7e3c33545cbaed007a264dfd662",
     "name": "kony.ui.Image2",
-    "parent": "FlexContainerSearchImg",
+    "parent": "flexHeader",
     "pf": "frmSearchImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
