@@ -1,8 +1,8 @@
 {
     "DNDConfig": null,
-    "_height_": {
+    "_bottom_": {
         "type": "string",
-        "value": "500dp"
+        "value": "175dp"
     },
     "_margin_": [
         0,
@@ -48,7 +48,7 @@
     "id": "FlexContainerImg",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "a1197d27203140278b1140e7294d132d",
     "layouttype": 2,
     "name": "kony.ui.FlexScrollContainer",

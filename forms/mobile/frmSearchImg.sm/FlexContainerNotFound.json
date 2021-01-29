@@ -1,8 +1,8 @@
 {
     "DNDConfig": null,
-    "_height_": {
+    "_bottom_": {
         "type": "string",
-        "value": "500dp"
+        "value": "175dp"
     },
     "_margin_": [
         0,
@@ -43,7 +43,7 @@
     "id": "FlexContainerNotFound",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "fd3d0b7a42e447259cb5410e94cfe102",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

@@ -15,7 +15,7 @@ define({
   },
   
   onButtonGoToSearchPhotos: function() {
-      var navigation = new kony.mvc.Navigation("frmSearchImg");
+      var navigation = new kony.mvc.Navigation("frmCollectionImg");
       navigation.navigate();
   },
   
