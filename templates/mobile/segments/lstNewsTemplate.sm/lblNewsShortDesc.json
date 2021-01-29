@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "15dp"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -16,20 +16,20 @@
         1
     ],
     "_padding_": [
+        3,
         0,
-        0,
-        0,
+        3,
         0
     ],
     "_skin_": "se6e42fc03b54f02bc71b44cb4a7c7b4",
-    "_text_": "Label",
+    "_text_": "Space travel company, which plans to take six people on a sub-orbital flight, completes its 14th mission",
     "_top_": {
         "type": "string",
-        "value": "20dp"
+        "value": "5dp"
     },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "100%"
     },
     "_wrapping_": 2,
     "android": {
@@ -58,6 +58,7 @@
     "isvisible": true,
     "kuid": "cf2f411bae9c4e57b4f8e289e2cdcb1c",
     "name": "kony.ui.Label",
+    "paddinginpixel": false,
     "parent": "FlexContainer",
     "pf": "lstNewsTemplate",
     "retaincontentalignment": false,

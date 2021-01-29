@@ -5,19 +5,19 @@
         {
             "imgNews": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "https://media.guim.co.uk/56c798eaa15f72fe94c840ff17b017c101d36433/554_306_2410_1446/500.jpg"
             },
             "lblNewsDate": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
+                "text": "2021-01-22T06:00:40Z"
             },
             "lblNewsShortDesc": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
+                "text": "Space travel company, which plans to take six people on a sub-orbital flight, completes its 14th mission"
             },
             "lblNewsTitle": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
+                "text": "Spacewatch: Bezos's Blue Origin 'really close' to flying humans"
             }
         },
         {

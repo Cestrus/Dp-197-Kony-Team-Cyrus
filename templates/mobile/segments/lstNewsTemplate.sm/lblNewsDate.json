@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "15dp"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -16,8 +16,8 @@
         1
     ],
     "_padding_": [
-        0,
-        0,
+        3,
+        3,
         0,
         0
     ],
@@ -58,6 +58,7 @@
     "isvisible": true,
     "kuid": "f47b61dcae4d40358a5d801434348ade",
     "name": "kony.ui.Label",
+    "paddinginpixel": false,
     "parent": "FlexContainer",
     "pf": "lstNewsTemplate",
     "retaincontentalignment": false,

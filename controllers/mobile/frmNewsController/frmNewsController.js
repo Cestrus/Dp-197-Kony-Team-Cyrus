@@ -4,6 +4,7 @@ onInitialize: function() {
     //this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
     //this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchPhotos.bind(this);
 	this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
+    this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchPhotos.bind(this);
 	this.view.btnGoBack.onClick = function () {
       var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
       navigation.navigate();
@@ -37,10 +38,10 @@ onInitialize: function() {
     
       
     var newsData = httpClient.response;
-    var listData = newsData.results.map(function(m) {
+    var listData = newsData.response.results.map(function(m) {
       return {
         lblNewsTitle: m.webTitle,
-        lblNewsDate: m.webPublicationDate,
+        lblNewsDate: m.webPublicationDate.slice(0,9),
         lblNewsShortDesc: m.fields.trailText,
         imgNews: m.fields.thumbnail
       };
@@ -58,6 +59,11 @@ onInitialize: function() {
   
   onButtonGoToWeather: function() {
       var navigation = new kony.mvc.Navigation("frmMain");
+      navigation.navigate();
+  },
+  
+  onButtonGoToSearchPhotos: function() {
+      var navigation = new kony.mvc.Navigation("frmSearchImg");
       navigation.navigate();
   },
   
