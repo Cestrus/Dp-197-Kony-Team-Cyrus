@@ -3,12 +3,12 @@
     "DNDConfig": null,
     "_base64_": null,
     "_height_": {
-        "type": "string",
-        "value": "250dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "81dp"
+        "value": "2%"
     },
     "_margin_": [
         0,
@@ -23,26 +23,27 @@
         0
     ],
     "_skin_": "s75fbb28b54147d98a251601780a6bb5",
-    "_src_": "daco_2860124.png",
-    "_top_": {
+    "_src_": "imagedrag.png",
+    "_width_": {
         "type": "string",
-        "value": "130dp"
+        "value": "18%"
     },
     "canUpdateUI": true,
-    "centerx": {
+    "centery": {
         "type": "string",
-        "value": "50.01%"
+        "value": "50%"
     },
+    "containerId": true,
     "containerweight": 100,
-    "id": "imgStart",
+    "id": "imgNews",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a0fc38da25b841ffb23e75095d7100fc",
+    "kuid": "de1554dd35a54d42905daf396c876527",
     "name": "kony.ui.Image2",
-    "parent": "FlexContainerStart",
-    "pf": "frmStart",
+    "parent": "lstItem",
+    "pf": "lstNewsTemplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,

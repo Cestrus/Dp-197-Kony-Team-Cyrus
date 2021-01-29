@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "180dp"
     },
     "_left_": {
         "type": "string",
@@ -35,28 +35,34 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "btnStart",
-        "inptStart",
-        "imgStart"
+        "imgNews",
+        "FlexContainer"
     ],
     "clipbounds": true,
+    "containerId": true,
     "containerweight": 100,
+    "controllerInfo": {
+        "default": {
+            "channel": "mobile",
+            "name": "lstItemController"
+        }
+    },
     "enablescrolling": true,
-    "id": "FlexContainerStart",
+    "id": "lstItem",
     "info": null,
+    "isTemplate": true,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "id3c8d88caae4f8c841e3134919b2bcf",
-    "layouttype": 2,
+    "kuid": "a9e6eb595b1e4ecd893ef91dd678ba57",
+    "layouttype": 3,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmStart",
-    "pf": "frmStart",
+    "parent": "lstNewsTemplate",
+    "pf": "lstNewsTemplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "widgetalignment": 1
 }
