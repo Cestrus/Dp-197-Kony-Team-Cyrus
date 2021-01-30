@@ -21,9 +21,9 @@
         0,
         0
     ],
-    "_placeholder_": "Placeholder",
+    "_placeholder_": "Input name space object",
     "_skin_": "sd7106595e4e42d5b599b55488f1b52d",
-    "_text_": "Input name space object",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "85dp"
