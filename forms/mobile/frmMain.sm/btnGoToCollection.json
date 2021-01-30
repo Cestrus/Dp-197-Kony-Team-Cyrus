@@ -17,11 +17,11 @@
         0,
         0
     ],
-    "_skin_": "s45816cb0623472fb6fc5870450f6036",
-    "_text_": "Check the weather on Mars",
+    "_skin_": "sc8fbe8f98a546f6b53593d47f5d6c7b",
+    "_text_": "View images collection ",
     "_top_": {
         "type": "string",
-        "value": "415dp"
+        "value": "505dp"
     },
     "_width_": {
         "type": "string",
@@ -30,17 +30,17 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.00%"
+        "value": "50%"
     },
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sbcca6825b164edf971818a3c774b1be",
-    "id": "btnGoToWeather",
+    "focusskin": "s43254a9b1514c79a2d0ccc57ad933bc",
+    "id": "btnGoToCollection",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f6a436964f2a4e949cfd6e956e46e8cd",
+    "kuid": "j3171b6464114333b52397fdacac2100",
     "name": "kony.ui.Button",
     "parent": "FlexScrollContainerMain",
     "pf": "frmMain",

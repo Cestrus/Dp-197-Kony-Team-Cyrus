@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "saeb6f153a2448b5826fba0c894cf707",
+    "_skin_": "s264d4d733804f14bdaf9c38b60df37b",
     "_text_": "Delete",
     "_width_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "id": "btnDeleteCollection",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "d4384c678ec54170b6d2680cd8d14e1e",
     "name": "kony.ui.Button",
     "parent": "FlexContainerCollection",

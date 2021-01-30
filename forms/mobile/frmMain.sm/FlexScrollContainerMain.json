@@ -41,7 +41,8 @@
         "lblHeadingTextSecondary",
         "btnGoToSearchPhotos",
         "btnGoToNews",
-        "btnGoToWeather"
+        "btnGoToWeather",
+        "btnGoToCollection"
     ],
     "clipbounds": true,
     "containerweight": 100,

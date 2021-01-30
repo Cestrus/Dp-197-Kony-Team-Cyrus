@@ -8,7 +8,8 @@
   "background_color": "5265ebff",
   "bg_type": "one",
   "border_color": "05d0ceff",
-  "border_style": "plain",
+  "border_radius": 20,
+  "border_style": "custom",
   "border_type": 0,
   "border_width": 2,
   "desktopweb": {
@@ -29,7 +30,7 @@
   "kiosk": {
     "font_name": "None"
   },
-  "kuid": "s9482b46deea49a5ade11002516f25a6",
+  "kuid": "s43254a9b1514c79a2d0ccc57ad933bc",
   "spaan": {
     "font_name": "Helvetica"
   },
