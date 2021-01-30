@@ -29,7 +29,9 @@
         "needAppMenu": false
     },
     "canUpdateUI": true,
-    "children": [],
+    "children": [
+        "FlexContainerFullImg"
+    ],
     "containerweight": 100,
     "controllerInfo": {
         "default": {
@@ -42,7 +44,7 @@
         "needAppMenu": false
     },
     "device": "iPhone11",
-    "displayorientation": 1,
+    "displayorientation": 3,
     "enabledforidletimeout": false,
     "id": "frmFullImg",
     "info": null,

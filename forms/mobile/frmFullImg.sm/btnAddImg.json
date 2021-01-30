@@ -1,0 +1,93 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "number",
+        "value": "0"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "65dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": ""
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": ""
+    },
+    "_skin_": "s3755659597c4e528e1a43e4c3d9e256",
+    "_text_": "➕",
+    "_top_": {
+        "type": "string",
+        "value": ""
+    },
+    "_width_": {
+        "type": "string",
+        "value": "65dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s080d9b549a94b8198921ddf3f2828e1",
+    "id": "btnAddImg",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "f6b625322d6a4258a71bb1d792cc1145",
+    "name": "kony.ui.Button",
+    "parent": "FlexContainerControlPanel",
+    "pf": "frmFullImg",
+    "portrait": {
+        "bottom": {
+            "type": "number",
+            "value": "0"
+        },
+        "centerX": {
+            "type": "string",
+            "value": "50%"
+        },
+        "centerY": {
+            "type": "string",
+            "value": ""
+        },
+        "left": {
+            "type": "string",
+            "value": ""
+        },
+        "right": {
+            "type": "string",
+            "value": ""
+        },
+        "top": {
+            "type": "string",
+            "value": ""
+        }
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}
