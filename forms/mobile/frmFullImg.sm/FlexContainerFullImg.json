@@ -35,8 +35,11 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "imgFull",
-        "FlexContainerControlPanel"
+        "FlexContainerImg",
+        "btnLeftFullImg",
+        "btnRightFullImg",
+        "btnDeleteImg",
+        "btnAddImg"
     ],
     "clipbounds": true,
     "containerweight": 100,

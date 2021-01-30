@@ -41,8 +41,8 @@
     },
     "canUpdateUI": true,
     "centerx": {
-        "type": "string",
-        "value": "50%"
+        "type": "number",
+        "value": "0"
     },
     "centery": {
         "type": "string",
@@ -57,8 +57,34 @@
     "iscustomlayout": false,
     "isvisible": false,
     "kuid": "he3c60239298483ab7592d9e523615f6",
+    "landscape": {
+        "bottom": {
+            "type": "number",
+            "value": "0"
+        },
+        "centerX": {
+            "type": "string",
+            "value": ""
+        },
+        "centerY": {
+            "type": "string",
+            "value": ""
+        },
+        "left": {
+            "type": "string",
+            "value": ""
+        },
+        "right": {
+            "type": "number",
+            "value": "0"
+        },
+        "top": {
+            "type": "string",
+            "value": ""
+        }
+    },
     "name": "kony.ui.Button",
-    "parent": "FlexContainerControlPanel",
+    "parent": "FlexContainerFullImg",
     "pf": "frmFullImg",
     "portrait": {
         "bottom": {

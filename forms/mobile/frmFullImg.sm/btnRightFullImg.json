@@ -10,8 +10,8 @@
         "value": "65dp"
     },
     "_left_": {
-        "type": "number",
-        "value": "0"
+        "type": "string",
+        "value": ""
     },
     "_margin_": [
         6,
@@ -26,8 +26,8 @@
         0
     ],
     "_right_": {
-        "type": "string",
-        "value": ""
+        "type": "number",
+        "value": "0"
     },
     "_skin_": "s3755659597c4e528e1a43e4c3d9e256",
     "_text_": "🡆",
@@ -46,7 +46,7 @@
     },
     "centery": {
         "type": "string",
-        "value": ""
+        "value": "50%"
     },
     "containerweight": 100,
     "contentalignment": 5,
@@ -58,7 +58,7 @@
     "isvisible": true,
     "kuid": "c26277d770804b76b0d3a62a6f9e045a",
     "name": "kony.ui.Button",
-    "parent": "FlexContainerControlPanel",
+    "parent": "FlexContainerFullImg",
     "pf": "frmFullImg",
     "portrait": {
         "bottom": {

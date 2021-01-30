@@ -46,7 +46,7 @@
     },
     "centery": {
         "type": "string",
-        "value": ""
+        "value": "50%"
     },
     "containerweight": 100,
     "contentalignment": 5,
@@ -58,7 +58,7 @@
     "isvisible": true,
     "kuid": "g9372588d3fe47f1a59f65eb66c12012",
     "name": "kony.ui.Button",
-    "parent": "FlexContainerControlPanel",
+    "parent": "FlexContainerFullImg",
     "pf": "frmFullImg",
     "portrait": {
         "bottom": {
