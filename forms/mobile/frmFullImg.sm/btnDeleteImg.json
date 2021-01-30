@@ -1,0 +1,119 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "number",
+        "value": "0"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "65dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": ""
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": ""
+    },
+    "_skin_": "s3755659597c4e528e1a43e4c3d9e256",
+    "_text_": "🗑",
+    "_top_": {
+        "type": "string",
+        "value": ""
+    },
+    "_width_": {
+        "type": "string",
+        "value": "65dp"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "number",
+        "value": "0"
+    },
+    "centery": {
+        "type": "string",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s080d9b549a94b8198921ddf3f2828e1",
+    "id": "btnDeleteImg",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "he3c60239298483ab7592d9e523615f6",
+    "landscape": {
+        "bottom": {
+            "type": "number",
+            "value": "0"
+        },
+        "centerX": {
+            "type": "string",
+            "value": ""
+        },
+        "centerY": {
+            "type": "string",
+            "value": ""
+        },
+        "left": {
+            "type": "string",
+            "value": ""
+        },
+        "right": {
+            "type": "number",
+            "value": "0"
+        },
+        "top": {
+            "type": "string",
+            "value": ""
+        }
+    },
+    "name": "kony.ui.Button",
+    "parent": "FlexContainerFullImg",
+    "pf": "frmFullImg",
+    "portrait": {
+        "bottom": {
+            "type": "number",
+            "value": "0"
+        },
+        "centerX": {
+            "type": "string",
+            "value": "50%"
+        },
+        "centerY": {
+            "type": "string",
+            "value": ""
+        },
+        "left": {
+            "type": "string",
+            "value": ""
+        },
+        "right": {
+            "type": "string",
+            "value": ""
+        },
+        "top": {
+            "type": "string",
+            "value": ""
+        }
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

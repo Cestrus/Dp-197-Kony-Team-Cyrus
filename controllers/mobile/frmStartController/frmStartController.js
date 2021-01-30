@@ -4,7 +4,7 @@ define({
   },
   
   onButtonEnterClicked: function() {
-    if (this.view.inptStart.text.toLocaleLowerCase() === "ready for the space") {
+    if (this.view.inptStart.text && this.view.inptStart.text.toLocaleLowerCase() === "ready for the space") {
       var navigation = new kony.mvc.Navigation("frmMain");
       navigation.navigate();
     } else {

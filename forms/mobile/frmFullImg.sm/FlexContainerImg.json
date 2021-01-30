@@ -1,0 +1,142 @@
+{
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": ""
+    },
+    "_height_": {
+        "type": "string",
+        "value": "220dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_right_": {
+        "type": "number",
+        "value": "0"
+    },
+    "_skin_": "s377682a3b7d478281fa509bc77b7b45",
+    "_top_": {
+        "type": "string",
+        "value": "54dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": ""
+    },
+    "children": [],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "FlexContainerImg",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "c951911f594e4c27a584ea537410a600",
+    "landscape": {
+        "bottom": {
+            "type": "string",
+            "value": ""
+        },
+        "centerX": {
+            "type": "string",
+            "value": ""
+        },
+        "centerY": {
+            "type": "string",
+            "value": ""
+        },
+        "height": {
+            "type": "string",
+            "value": "100%"
+        },
+        "left": {
+            "type": "string",
+            "value": "65dp"
+        },
+        "right": {
+            "type": "string",
+            "value": "65dp"
+        },
+        "top": {
+            "type": "string",
+            "value": "0dp"
+        },
+        "width": {
+            "type": "string",
+            "value": ""
+        }
+    },
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "FlexContainerFullImg",
+    "pf": "frmFullImg",
+    "portrait": {
+        "bottom": {
+            "type": "string",
+            "value": ""
+        },
+        "centerX": {
+            "type": "string",
+            "value": "50%"
+        },
+        "centerY": {
+            "type": "string",
+            "value": "50%"
+        },
+        "height": {
+            "type": "string",
+            "value": ""
+        },
+        "left": {
+            "type": "string",
+            "value": "0dp"
+        },
+        "right": {
+            "type": "number",
+            "value": "0"
+        },
+        "top": {
+            "type": "string",
+            "value": "54dp"
+        },
+        "width": {
+            "type": "string",
+            "value": "100%"
+        }
+    },
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}
