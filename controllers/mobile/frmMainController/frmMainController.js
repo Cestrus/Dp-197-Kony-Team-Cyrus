@@ -6,6 +6,7 @@ define({
     this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchPhotos.bind(this);
 	this.view.btnGoToNews.onClick = this.onButtonGoToNews.bind(this);
 	this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+    this.view.btnGoToCollection.onClick = this.onButtonGoToCollection.bind(this);
 
   },
   
@@ -21,6 +22,11 @@ define({
   
   onButtonGoToNews: function() {
       var navigation = new kony.mvc.Navigation("frmNews");
+      navigation.navigate();
+  },
+  
+  onButtonGoToCollection: function() {
+  	  var navigation = new kony.mvc.Navigation("frmCollectionImg");
       navigation.navigate();
   }
 
