@@ -45,10 +45,12 @@
         "tabBtnSearchImg",
         "tabBtnNews",
         "tabBtnWeather",
+        "tabBtnCollection",
         "icoHome",
         "icoSearch",
         "icoNews",
-        "icoWeather"
+        "icoWeather",
+        "icoCollection"
     ],
     "clipbounds": true,
     "containerweight": 100,
