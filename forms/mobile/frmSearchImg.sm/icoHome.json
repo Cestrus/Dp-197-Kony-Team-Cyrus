@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "9%"
+        "value": "6%"
     },
     "_margin_": [
         0,
@@ -58,7 +58,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "ab1b56c1ba46432094d374cd5b126415",
+    "kuid": "ec02025d53004da9992c6801ab220f5a",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "navBottomMenu",

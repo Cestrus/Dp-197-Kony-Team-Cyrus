@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "34%"
+        "value": "26.00%"
     },
     "_margin_": [
         0,
@@ -37,7 +37,7 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "49.98%"
     },
     "containerweight": 100,
     "contentalignment": 4,
@@ -54,7 +54,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "i4e2767768ac40b7813d749aaef7729b",
+    "kuid": "d2c38571b1354f9e862c1eab1c6e7aa2",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "navBottomMenu",

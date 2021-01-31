@@ -10,7 +10,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "50%"
+        "value": "40%"
     },
     "_margin_": [
         0,
@@ -29,7 +29,7 @@
     "_skin_": "scaaedc37a9c4a7ab2b554427545c5c7",
     "_width_": {
         "type": "string",
-        "value": "25%"
+        "value": "20%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -41,7 +41,7 @@
     "id": "activeTabHighlight",
     "info": null,
     "isvisible": true,
-    "kuid": "d314176676eb4dbaafa88313596d322f",
+    "kuid": "c849d6ee3ab841719c50eaa8d3ea5821",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",
@@ -51,5 +51,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 1
+    "zindex": 2
 }

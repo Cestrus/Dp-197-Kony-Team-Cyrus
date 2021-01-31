@@ -1,28 +1,30 @@
 define({ 
   onInitialize: function() {
-    //this.view.btnGoToWeather.onClick = this.onButtonGoToWeather.bind(this);
-    //this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-    this.view.btnGoToSearchPhotos.onClick = this.onButtonGoToSearchPhotos.bind(this);
-    this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchPhotos.bind(this);
-	this.view.btnGoToNews.onClick = this.onButtonGoToNews.bind(this);
-	this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-    this.view.btnGoToCollection.onClick = this.onButtonGoToCollection.bind(this);
-
+//     this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
+    this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
+    this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+    this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+    this.view.tabBtnCollection.onClick = this.onButtonGoToCollection.bind(this);
   },
   
-  onButtonGoToWeather: function() {
-      var navigation = new kony.mvc.Navigation("frmNews");
-      navigation.navigate();
-  },
+//   onButtonGoToHome: function() {
+//     var navigation = new kony.mvc.Navigation("frmMain");
+//     navigation.navigate();
+//   },
   
-  onButtonGoToSearchPhotos: function() {
+  onButtonGoToSearchImg: function() {
       var navigation = new kony.mvc.Navigation("frmSearchImg");
       navigation.navigate();
-  },
+  },  
   
   onButtonGoToNews: function() {
       var navigation = new kony.mvc.Navigation("frmNews");
       navigation.navigate();
+  },
+  
+  onButtonGoToWeather: function() {
+//       var navigation = new kony.mvc.Navigation("frmWeather");
+//       navigation.navigate();
   },
   
   onButtonGoToCollection: function() {
