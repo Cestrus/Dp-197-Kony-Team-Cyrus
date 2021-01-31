@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "-5dp"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -36,12 +36,12 @@
     "canUpdateUI": true,
     "children": [
         "flexHeader",
-        "navBottomMenu",
         "inptSearchImg",
         "imgRocket",
         "btnAddToCollection",
         "FlexContainerImg",
-        "FlexContainerNotFound"
+        "FlexContainerNotFound",
+        "navBottomMenu"
     ],
     "clipbounds": true,
     "containerweight": 100,

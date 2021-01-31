@@ -22,14 +22,14 @@
         0
     ],
     "_skin_": "s51d91fd29b749a6a6ba7154913c0bb4",
-    "_text_": "",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "10dp"
     },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "10%"
     },
     "_wrapping_": 2,
     "android": {

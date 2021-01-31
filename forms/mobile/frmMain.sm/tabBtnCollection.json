@@ -5,10 +5,6 @@
         "type": "string",
         "value": "100%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "20%"
-    },
     "_margin_": [
         6,
         6,
@@ -21,6 +17,10 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
     "_text_": "",
     "_top_": {
@@ -36,15 +36,14 @@
     "contentalignment": 5,
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
-    "id": "tabBtnSearchImg",
-    "ide_onClick": "AS_Button_ccff48f5db4e46a9ab436dbe86a75daf",
+    "id": "tabBtnCollection",
     "info": null,
     "isvisible": true,
-    "kuid": "a1e1f1e655124022b9532a6b843faabb",
+    "kuid": "gda229b1562249a380d6f6ec78e57955",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "navBottomMenu",
-    "pf": "frmNews",
+    "pf": "frmMain",
     "wType": "Button",
-    "zindex": 2
+    "zindex": 6
 }

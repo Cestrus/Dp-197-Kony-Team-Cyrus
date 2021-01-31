@@ -45,10 +45,12 @@
         "tabBtnSearchImg",
         "tabBtnNews",
         "tabBtnWeather",
+        "tabBtnCollection",
         "icoHome",
         "icoSearch",
         "icoNews",
-        "icoWeather"
+        "icoWeather",
+        "icoCollection"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -56,7 +58,7 @@
     "id": "navBottomMenu",
     "info": null,
     "isvisible": true,
-    "kuid": "cd326d65e1de452b96685e975d1988dd",
+    "kuid": "i3e58df7d1a04b2fb4b5bd149faedb0f",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",

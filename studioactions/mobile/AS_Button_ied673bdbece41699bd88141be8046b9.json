@@ -1,0 +1,21 @@
+{
+    "AS_Button_ied673bdbece41699bd88141be8046b9": {
+        "id": "AS_Button_ied673bdbece41699bd88141be8046b9",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_d1e8adc5adfd48819481b20a04d18bf7",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToHome",
+            "display": "onButtonGoToHome",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

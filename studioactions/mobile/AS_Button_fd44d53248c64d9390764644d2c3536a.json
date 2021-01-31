@@ -1,0 +1,28 @@
+{
+    "AS_Button_fd44d53248c64d9390764644d2c3536a": {
+        "id": "AS_Button_fd44d53248c64d9390764644d2c3536a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmSearchImg",
+            "type": "forms",
+            "platform": "",
+            "KUID": "f2c71699b10a4f21bc1001fec872d762"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__aeaadfc16a1041959344a54ea65a14f8",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToCollection",
+            "display": "onButtonGoToCollection",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

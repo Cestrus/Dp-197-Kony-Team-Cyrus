@@ -5,6 +5,10 @@
         "type": "string",
         "value": "100%"
     },
+    "_left_": {
+        "type": "string",
+        "value": "60%"
+    },
     "_margin_": [
         6,
         6,
@@ -17,10 +21,6 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
     "_text_": "",
     "_top_": {
@@ -29,7 +29,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "25%"
+        "value": "20%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -37,13 +37,14 @@
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
     "id": "tabBtnWeather",
+    "ide_onClick": "AS_Button_fd1c8aaadda44555ba7353d7797f85ea",
     "info": null,
     "isvisible": true,
-    "kuid": "c98cf3c118e248338296eaee55444961",
+    "kuid": "a8a5e471357f4d6d89c6bd502dc0d731",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "navBottomMenu",
     "pf": "frmNews",
     "wType": "Button",
-    "zindex": 1
+    "zindex": 6
 }

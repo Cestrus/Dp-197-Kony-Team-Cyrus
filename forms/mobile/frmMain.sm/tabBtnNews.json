@@ -5,6 +5,10 @@
         "type": "string",
         "value": "100%"
     },
+    "_left_": {
+        "type": "string",
+        "value": "40%"
+    },
     "_margin_": [
         6,
         6,
@@ -17,10 +21,6 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "25%"
-    },
     "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
     "_text_": "",
     "_top_": {
@@ -29,7 +29,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "25%"
+        "value": "20%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -37,9 +37,10 @@
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
     "id": "tabBtnNews",
+    "ide_onClick": "AS_Button_c942d8f3e0a14385823801fdbf8a7581",
     "info": null,
     "isvisible": true,
-    "kuid": "e2cc1617834846edab8f678a9dc062b5",
+    "kuid": "d6ff407fae964249846665318991206b",
     "masterType": 1,
     "name": "kony.ui.Button",
     "paddinginpixel": false,

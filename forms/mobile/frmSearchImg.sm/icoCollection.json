@@ -5,10 +5,6 @@
         "type": "ref",
         "value": "preferred"
     },
-    "_left_": {
-        "type": "string",
-        "value": "6%"
-    },
     "_margin_": [
         0,
         0,
@@ -21,8 +17,12 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "6%"
+    },
     "_skin_": "s51d91fd29b749a6a6ba7154913c0bb4",
-    "_text_": "",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "10dp"
@@ -45,7 +45,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "icoHome",
+    "id": "icoCollection",
     "info": null,
     "ipad": {
         "psp": {
@@ -58,13 +58,13 @@
         }
     },
     "isvisible": true,
-    "kuid": "i43bb63672e1492f876ca53659d8dc78",
+    "kuid": "b52dad000a3142d7a50facb10d60c3dc",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "navBottomMenu",
-    "pf": "frmMain",
+    "pf": "frmSearchImg",
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",
-    "zindex": 2
+    "zindex": 1
 }

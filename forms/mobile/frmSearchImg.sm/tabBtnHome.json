@@ -29,7 +29,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "25%"
+        "value": "20%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -37,9 +37,10 @@
     "displaytext": true,
     "focusskin": "s800ec761f60410fafb3c4cc180583a8",
     "id": "tabBtnHome",
+    "ide_onClick": "AS_Button_ied673bdbece41699bd88141be8046b9",
     "info": null,
     "isvisible": true,
-    "kuid": "bd858f596be247a1b5e95253771bfffc",
+    "kuid": "c1590d97a14b497e9a2d625bc2028d58",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "navBottomMenu",

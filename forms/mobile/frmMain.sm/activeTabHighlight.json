@@ -9,8 +9,8 @@
         "value": "3dp"
     },
     "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "type": "number",
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -29,7 +29,7 @@
     "_skin_": "scaaedc37a9c4a7ab2b554427545c5c7",
     "_width_": {
         "type": "string",
-        "value": "25%"
+        "value": "20%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -41,7 +41,7 @@
     "id": "activeTabHighlight",
     "info": null,
     "isvisible": true,
-    "kuid": "a9f687f1247d4df1a80b19bed0a8d655",
+    "kuid": "a5fb65170efa4432a7c381127aed684d",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",
