@@ -37,6 +37,7 @@
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
     "id": "tabBtnNews",
+    "ide_onClick": "AS_Button_d665bd5ac2f24d348108753562401027",
     "info": null,
     "isvisible": true,
     "kuid": "d36c4406da3e4be3be93b847eab19a80",

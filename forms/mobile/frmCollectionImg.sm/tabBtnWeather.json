@@ -37,6 +37,7 @@
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
     "id": "tabBtnWeather",
+    "ide_onClick": "AS_Button_a53a7cb5121d4f9188a9bb6e0c6b4a67",
     "info": null,
     "isvisible": true,
     "kuid": "i76ed42e73824efa84a660be60f5c682",

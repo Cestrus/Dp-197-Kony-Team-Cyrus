@@ -1,0 +1,28 @@
+{
+    "AS_Button_a53a7cb5121d4f9188a9bb6e0c6b4a67": {
+        "id": "AS_Button_a53a7cb5121d4f9188a9bb6e0c6b4a67",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmCollectionImg",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b39deeec2fe742fa8c620118eda5b48d"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__a62dae432c45456191ad26e3ccf8b687",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToWeather",
+            "display": "onButtonGoToWeather",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}
