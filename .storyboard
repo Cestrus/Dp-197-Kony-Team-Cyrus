@@ -5,19 +5,51 @@
             "linkDataArray": [],
             "nodeDataArray": [
                 {
+                    "formKUID": "b39deeec2fe742fa8c620118eda5b48d",
+                    "formName": "frmCollectionImg",
+                    "isStartupForm": false,
+                    "key": "b39deeec2fe742fa8c620118eda5b48d",
+                    "loc": "8 24.845263671875003",
+                    "thumbnailURL": null
+                },
+                {
+                    "formKUID": "c094c3c2166f400fa856fa2f28e18595",
+                    "formName": "frmFullImg",
+                    "isStartupForm": false,
+                    "key": "c094c3c2166f400fa856fa2f28e18595",
+                    "loc": "8 624.845263671875",
+                    "thumbnailURL": null
+                },
+                {
                     "formKUID": "befd37092a0540039fb5f38818414844",
                     "formName": "frmMain",
                     "isStartupForm": false,
                     "key": "befd37092a0540039fb5f38818414844",
                     "loc": "188 184.845263671875",
+                    "thumbnailURL": "/assets/cyrus/forms/mobile/frmMain.sm/.thumbs/default.jpeg?"
+                },
+                {
+                    "formKUID": "cd22a50c8348439d8a8db705288269c0",
+                    "formName": "frmNews",
+                    "isStartupForm": false,
+                    "key": "cd22a50c8348439d8a8db705288269c0",
+                    "loc": "8 1224.845263671875",
                     "thumbnailURL": null
                 },
                 {
-                    "formKUID": "f09c63c0e57542608f801a2eff6e2c0a",
+                    "formKUID": "f2c71699b10a4f21bc1001fec872d762",
+                    "formName": "frmSearchImg",
+                    "isStartupForm": false,
+                    "key": "f2c71699b10a4f21bc1001fec872d762",
+                    "loc": "8 1824.845263671875",
+                    "thumbnailURL": null
+                },
+                {
+                    "formKUID": "ac24b67245a44aad8272bbc4f5d5efe2",
                     "formName": "frmStart",
                     "isStartupForm": true,
-                    "key": "f09c63c0e57542608f801a2eff6e2c0a",
-                    "loc": "8 24.845263671875003",
+                    "key": "ac24b67245a44aad8272bbc4f5d5efe2",
+                    "loc": "8 2424.845263671875",
                     "thumbnailURL": null
                 }
             ]
