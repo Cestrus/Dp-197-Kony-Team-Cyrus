@@ -24,8 +24,8 @@ onInitialize: function() {
   },
   
   onButtonGoToWeather: function() {
-//       var navigation = new kony.mvc.Navigation("frmWeather");
-//       navigation.navigate();
+      var navigation = new kony.mvc.Navigation("frmWeather");
+      navigation.navigate();
   },
   
   onButtonGoToCollection: function() {

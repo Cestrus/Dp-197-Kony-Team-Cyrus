@@ -1,0 +1,50 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "60%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "20%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "se777c1dcc1e41918496377af3436361",
+    "id": "tabBtnWeather",
+    "ide_onClick": "AS_Button_a2965a501de6416cb9f0adf010659987",
+    "info": null,
+    "isvisible": true,
+    "kuid": "b7aa2191cac444f4a2c79d6ca3709dec",
+    "masterType": 1,
+    "name": "kony.ui.Button",
+    "parent": "navBottomMenu",
+    "pf": "frmWeather",
+    "wType": "Button",
+    "zindex": 6
+}

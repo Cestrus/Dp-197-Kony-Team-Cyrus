@@ -1,0 +1,27 @@
+{
+    "AS_Form_ia9e8b6550e642e68e73867936520744": {
+        "id": "AS_Form_ia9e8b6550e642e68e73867936520744",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmWeather",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d2b62b0c6b5a477aaf7adcfe806db324"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_init_h2fc3146560d4b8e84cf2c8b1114c29a",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onInitialize",
+            "display": "onInitialize",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}
