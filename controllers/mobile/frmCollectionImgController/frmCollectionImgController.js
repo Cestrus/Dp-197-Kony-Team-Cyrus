@@ -4,7 +4,10 @@ define({
     this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
     this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
     this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-//     this.view.tabBtnCollection.onClick = this.onButtonGoToCollection.bind(this);
+	this.view.btnGoBack.onClick = function () {
+      var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
+      navigation.navigate();
+    }.bind(this);
   },
   
   onButtonGoToHome: function() {
@@ -25,11 +28,6 @@ define({
   onButtonGoToWeather: function() {
 //       var navigation = new kony.mvc.Navigation("frmWeather");
 //       navigation.navigate();
-  },
-  
-//   onButtonGoToCollection: function() {
-//   	  var navigation = new kony.mvc.Navigation("frmCollectionImg");
-//       navigation.navigate();
-//   }
+  }
 
  });

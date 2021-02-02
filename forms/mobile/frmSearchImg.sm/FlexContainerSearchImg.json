@@ -35,13 +35,13 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flexHeader",
         "inptSearchImg",
         "imgRocket",
         "btnAddToCollection",
         "FlexContainerImg",
         "FlexContainerNotFound",
-        "navBottomMenu"
+        "navBottomMenu",
+        "flexHeader"
     ],
     "clipbounds": true,
     "containerweight": 100,

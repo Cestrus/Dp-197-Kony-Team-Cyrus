@@ -36,8 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "FlexScrollContainerMain",
-        "flexHeader",
-        "navBottomMenu"
+        "navBottomMenu",
+        "flexHeader"
     ],
     "clipbounds": true,
     "containerweight": 100,

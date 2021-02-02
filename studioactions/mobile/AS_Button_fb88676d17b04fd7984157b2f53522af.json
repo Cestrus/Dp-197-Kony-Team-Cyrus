@@ -1,0 +1,21 @@
+{
+    "AS_Button_fb88676d17b04fd7984157b2f53522af": {
+        "id": "AS_Button_fb88676d17b04fd7984157b2f53522af",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_ica52b354ef34bd4b9332d1d3843add4",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToWeather",
+            "display": "onButtonGoToWeather",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

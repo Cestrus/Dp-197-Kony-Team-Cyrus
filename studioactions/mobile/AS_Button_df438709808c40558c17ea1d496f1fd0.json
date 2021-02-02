@@ -1,0 +1,21 @@
+{
+    "AS_Button_df438709808c40558c17ea1d496f1fd0": {
+        "id": "AS_Button_df438709808c40558c17ea1d496f1fd0",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_ea3ee2309d8942c1bcbff6a5038a4c45",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToSearchImg",
+            "display": "onButtonGoToSearchImg",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

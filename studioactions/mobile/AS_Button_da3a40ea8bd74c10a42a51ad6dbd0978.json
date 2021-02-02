@@ -1,0 +1,21 @@
+{
+    "AS_Button_da3a40ea8bd74c10a42a51ad6dbd0978": {
+        "id": "AS_Button_da3a40ea8bd74c10a42a51ad6dbd0978",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_fab98b600b8f4316be2c1e59a4d83176",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToNews",
+            "display": "onButtonGoToNews",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

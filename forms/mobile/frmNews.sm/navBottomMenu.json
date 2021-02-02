@@ -40,17 +40,11 @@
     },
     "canUpdateUI": true,
     "children": [
-        "tabBtnHome",
         "activeTabHighlight",
+        "tabBtnHome",
         "tabBtnSearchImg",
         "tabBtnNews",
-        "tabBtnWeather",
-        "tabBtnCollection",
-        "icoHome",
-        "icoSearch",
-        "icoNews",
-        "icoWeather",
-        "icoCollection"
+        "tabBtnWeather"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -58,7 +52,7 @@
     "id": "navBottomMenu",
     "info": null,
     "isvisible": true,
-    "kuid": "e4e65abc154942f28c4308c2e628a75e",
+    "kuid": "i2215a37bf7c4eb29f3cc782b64ac522",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",

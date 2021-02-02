@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "20%"
+        "value": "25%"
     },
     "_margin_": [
         6,
@@ -22,14 +22,14 @@
         0
     ],
     "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
-    "_text_": "",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "20%"
+        "value": "25%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -37,10 +37,10 @@
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
     "id": "tabBtnSearchImg",
-    "ide_onClick": "AS_Button_ccff48f5db4e46a9ab436dbe86a75daf",
+    "ide_onClick": "AS_Button_c659aa0d42714624946bbe78b5f9cb42",
     "info": null,
     "isvisible": true,
-    "kuid": "a1e1f1e655124022b9532a6b843faabb",
+    "kuid": "ha87986bb3034084bc81641d9ff92a67",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "navBottomMenu",
