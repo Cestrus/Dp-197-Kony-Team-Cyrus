@@ -3,11 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "25%"
+        "value": "50dp"
     },
     "_margin_": [
         6,
@@ -21,29 +17,35 @@
         0,
         0
     ],
-    "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
-    "_text_": "",
+    "_right_": {
+        "type": "number",
+        "value": "55"
+    },
+    "_skin_": "s5221773d539433c84261fa80117cd59",
+    "_text_": "Go!",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "85dp"
     },
     "_width_": {
         "type": "string",
-        "value": "25%"
+        "value": "50dp"
     },
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "se777c1dcc1e41918496377af3436361",
-    "id": "tabBtnSearchImg",
+    "focusskin": "s0b41f663e8d41999d0803ee0e8fbbca",
+    "id": "btnSearch",
     "info": null,
+    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "df8462f89a894fa0818755cb7f72d725",
-    "masterType": 1,
+    "kuid": "e32503699dfe48aca5f00d62c3eb2742",
     "name": "kony.ui.Button",
-    "parent": "navBottomMenu",
+    "parent": "FlexContainerSearchImg",
     "pf": "frmSearchImg",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
     "wType": "Button",
-    "zindex": 2
+    "zindex": 50
 }

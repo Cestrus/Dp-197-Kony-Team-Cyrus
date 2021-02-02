@@ -7,66 +7,16 @@
     },
     "_bounces_": false,
     "_data_": [
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        },
-        {
-            "imgSpace": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            }
-        }
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
     ],
     "_indicator_": "none",
     "_left_": {
@@ -143,7 +93,7 @@
     "retainselection": false,
     "rowTemplateId": "b28948a9f67448179bd567d747080056",
     "rowcounter": 9,
-    "rowfocusskin": "s10aff14fcfa4834aaa72fc1be996343",
+    "rowfocusskin": "se31c96f41ec40758fb76be53c81f5f3",
     "rowskin": "s0abfa374f6e41459b149d6cc262c16c",
     "rowtemplate": "flxImgRow",
     "screenlevelwidget": false,
@@ -154,7 +104,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": null,
+    "selectedsectionindex": 0,
     "selectionbehavior": "default",
     "separatorrequired": false,
     "showprogressindicator": false,

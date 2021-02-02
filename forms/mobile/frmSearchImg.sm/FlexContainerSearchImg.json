@@ -37,6 +37,7 @@
     "children": [
         "inptSearchImg",
         "imgRocket",
+        "btnSearch",
         "btnAddToCollection",
         "navBottomMenu",
         "flexHeader",
