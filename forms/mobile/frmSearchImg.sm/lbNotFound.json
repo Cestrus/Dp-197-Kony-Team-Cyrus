@@ -1,13 +1,17 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_blur_": {
+        "enabled": false,
+        "value": 0
+    },
     "_height_": {
         "type": "ref",
         "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "55dp"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -21,11 +25,15 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "number",
+        "value": "0"
+    },
     "_skin_": "s05839af749446ddb689760ae900eabc",
     "_text_": "Sorry,  this object not found",
     "_top_": {
         "type": "string",
-        "value": "40dp"
+        "value": "175dp"
     },
     "_width_": {
         "type": "ref",
@@ -58,10 +66,10 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "cef61dd2810d4b08a2f4fd32b3d065c3",
     "name": "kony.ui.Label",
-    "parent": "FlexContainerNotFound",
+    "parent": "FlexContainerSearchImg",
     "pf": "frmSearchImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

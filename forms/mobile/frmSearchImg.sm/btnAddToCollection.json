@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "95dp"
+        "value": "85dp"
     },
     "_height_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "id": "btnAddToCollection",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "d803aa93e55e423cafec93c3833ab20c",
     "name": "kony.ui.Button",
     "parent": "FlexContainerSearchImg",

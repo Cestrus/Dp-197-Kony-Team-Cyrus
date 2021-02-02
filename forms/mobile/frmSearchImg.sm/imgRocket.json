@@ -39,7 +39,7 @@
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "b016386331b44fd38acf41b3ed87c2e4",
     "name": "kony.ui.Image2",
     "parent": "FlexContainerSearchImg",
