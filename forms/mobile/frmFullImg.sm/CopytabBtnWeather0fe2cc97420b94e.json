@@ -1,0 +1,50 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "75%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "25%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "se777c1dcc1e41918496377af3436361",
+    "id": "CopytabBtnWeather0fe2cc97420b94e",
+    "ide_onClick": "AS_Button_fb88676d17b04fd7984157b2f53522af",
+    "info": null,
+    "isvisible": true,
+    "kuid": "d6b8dac7f10c4363b2c7526f0ee70787",
+    "masterType": 1,
+    "name": "kony.ui.Button",
+    "parent": "CopynavBottomMenu0j8bcaf4b919943",
+    "pf": "frmFullImg",
+    "wType": "Button",
+    "zindex": 6
+}

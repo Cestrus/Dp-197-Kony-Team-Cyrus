@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "60%"
+        "value": "75%"
     },
     "_margin_": [
         6,
@@ -22,14 +22,14 @@
         0
     ],
     "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
-    "_text_": "",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "20%"
+        "value": "25%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -37,10 +37,10 @@
     "displaytext": true,
     "focusskin": "se777c1dcc1e41918496377af3436361",
     "id": "tabBtnWeather",
-    "ide_onClick": "AS_Button_a53a7cb5121d4f9188a9bb6e0c6b4a67",
+    "ide_onClick": "AS_Button_hca7d46327404a6d8b382051da15c44a",
     "info": null,
     "isvisible": true,
-    "kuid": "i76ed42e73824efa84a660be60f5c682",
+    "kuid": "ca7d6fe317a74da08eae1a8db11d1265",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "navBottomMenu",

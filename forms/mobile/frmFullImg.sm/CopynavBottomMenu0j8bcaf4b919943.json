@@ -1,0 +1,67 @@
+{
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "number",
+        "value": "0"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "65dp"
+    },
+    "_left_": {
+        "type": "number",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s2705f530c484a5d9c32f327d5dbb146",
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "android": {
+        "height": {
+            "type": "string",
+            "value": "57dp"
+        }
+    },
+    "canUpdateUI": true,
+    "children": [
+        "CopyactiveTabHighlight0e4e25dc393324d",
+        "CopytabBtnHome0e27c8f15a69c42",
+        "CopytabBtnSearchImg0e7402a30ca184b",
+        "CopytabBtnNews0bd6705cee2bd41",
+        "CopytabBtnWeather0fe2cc97420b94e"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "CopynavBottomMenu0j8bcaf4b919943",
+    "info": null,
+    "isvisible": true,
+    "kuid": "jaa4f8ec02ab4564897feac296d63400",
+    "layouttype": 2,
+    "masterType": 1,
+    "name": "kony.ui.FlexContainer",
+    "parent": "navBottomMenu",
+    "pf": "frmFullImg",
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "spa": {},
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

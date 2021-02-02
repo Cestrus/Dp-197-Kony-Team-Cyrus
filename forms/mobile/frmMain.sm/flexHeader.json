@@ -35,10 +35,9 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lblHeader",
-        "headerButtonLeft",
-        "imgBack",
-        "Image0b993be436b5944"
+        "Image0b993be436b5944",
+        "btnGoBack",
+        "btnProfile"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -47,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "j005161bac5a4f53975fd6ebffc702b4",
+    "kuid": "j11b059d8a1b4d35b275fc9e572276ab",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",

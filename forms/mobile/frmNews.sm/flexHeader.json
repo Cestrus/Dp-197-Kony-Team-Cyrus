@@ -35,12 +35,9 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lblHeader",
-        "headerButtonLeft",
-        "imgBack",
         "Image0b993be436b5944",
-        "goBack",
-        "btnGoBack"
+        "btnGoBack",
+        "btnProfile"
     ],
     "clipbounds": true,
     "containerweight": 100,

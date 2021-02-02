@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "s800ec761f60410fafb3c4cc180583a8",
-    "_text_": "",
+    "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "20%"
+        "value": "25%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -39,7 +39,7 @@
     "id": "tabBtnHome",
     "info": null,
     "isvisible": true,
-    "kuid": "d6da1d570b0e45c2b5145a48a83724ab",
+    "kuid": "cff1d7f23d194389a65ef1f4e71e705e",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "navBottomMenu",

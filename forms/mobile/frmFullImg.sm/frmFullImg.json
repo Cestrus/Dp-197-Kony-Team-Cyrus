@@ -30,7 +30,9 @@
     },
     "canUpdateUI": true,
     "children": [
-        "FlexContainerFullImg"
+        "FlexContainerFullImg",
+        "navBottomMenu",
+        "flexHeader"
     ],
     "containerweight": 100,
     "controllerInfo": {
