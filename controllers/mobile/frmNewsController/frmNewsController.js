@@ -12,9 +12,7 @@ onInitialize: function() {
   },
 
   onNavigate: function(data) {
-    if (data) {
       this.view.lstNews.setData(data);
-    }
   },
   
   onFormShowed: function() {

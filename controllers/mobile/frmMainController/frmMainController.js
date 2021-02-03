@@ -18,7 +18,7 @@ define(["NewsService"], function(newsService) {
     onButtonGoToNews: function() {
       
       newsService.getNews(function(arr) {
-        alert("Total currencies: " + arr.length + "\n" + arr);
+        alert(arr);
         
       },function() {
         alert("Error while retrieving news list.");

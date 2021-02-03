@@ -24,16 +24,14 @@ define(function () {
   var getNews = function (successCallback, errorCallback) {
     
     makeHttpRequest(NEWS_BASE_URL, function (currentData) {
-      if (currentData) {
-        freshNews = currentData.response.results.map(function (c) {
-          return {
-              lblNewsTitle: c.webTitle,
-              lblNewsDate: c.webPublicationDate.slice(0,10),
-              lblNewsShortDesc: c.fields.trailText,
-              imgNews: c.fields.thumbnail
-            };
-        });
-      }
+      freshNews = currentData.response.results.map(function (c) {
+        return {
+          lblNewsTitle: c.webTitle,
+          lblNewsDate: c.webPublicationDate.slice(0,10),
+          lblNewsShortDesc: c.fields.trailText,
+          imgNews: c.fields.thumbnail
+        };
+      });
       successCallback(freshNews);
     }, errorCallback);
   };
