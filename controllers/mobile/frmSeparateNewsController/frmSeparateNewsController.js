@@ -1,17 +1,22 @@
 define(["NewsService"], function(newsService) {
   return { 
-    onInitialize: function() {
+	onInitialize: function() { 
+      this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
-      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+      this.view.btnGoBack.onClick = this.onButtonGoToNews.bind(this);
 
-      this.view.btnGoToNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.btnGoToWeather.onClick = this.onButtonGoToWeather.bind(this);
-      this.view.btnGoToSearchPhotos.onClick = this.onButtonGoToSearchImg.bind(this);
     },
 
-    onButtonGoToSearchImg: function() {
-        var navigation = new kony.mvc.Navigation("frmSearchImg");
+    onNavigate: function(data) {
+		this.view.imgNews.src = data.imgNews;
+		this.view.lblNewsTitle.text = data.lblNewsTitle;
+        this.view.lblNewsText.text = data.bodyText;
+    },
+
+    onButtonGoToHome: function() {
+        var navigation = new kony.mvc.Navigation("frmMain");
         navigation.navigate();
     },  
 
@@ -22,6 +27,11 @@ define(["NewsService"], function(newsService) {
       },function() {
         alert("Error while retrieving news list.");
       });
+    },
+
+    onButtonGoToSearchImg: function() {
+        var navigation = new kony.mvc.Navigation("frmSearchImg");
+        navigation.navigate();
     },
 
     onButtonGoToWeather: function() {

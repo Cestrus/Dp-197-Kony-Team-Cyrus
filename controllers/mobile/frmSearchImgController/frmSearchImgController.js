@@ -1,4 +1,4 @@
-define(["SearchImgService"], function(SearchImgService){
+define(["SearchImgService", "NewsService"], function(SearchImgService, newsService){
     return {
         onInitialize: function() {
             this.resetVisiblity();
@@ -27,9 +27,16 @@ define(["SearchImgService"], function(SearchImgService){
         },
 
         onButtonGoToNews: function() {
-            var navigation = new kony.mvc.Navigation("frmNews");
-            navigation.navigate();
-        },
+			newsService.getNews( 
+				function(arr) {
+					var navigation = new kony.mvc.Navigation("frmNews");
+					navigation.navigate(arr);
+				},
+				function() {
+					alert("Error while retrieving news list.");
+				}
+			);
+		},
 
         onButtonGoToWeather: function() {
             var navigation = new kony.mvc.Navigation("frmWeather");
@@ -106,7 +113,5 @@ define(["SearchImgService"], function(SearchImgService){
                 this.storeFavoriteImg.push(this.imgArr[this.chooseImgNimbers[i]])
             }
         }
-
 	}
-
  });

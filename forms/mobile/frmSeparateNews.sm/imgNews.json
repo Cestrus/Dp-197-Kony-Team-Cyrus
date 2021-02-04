@@ -3,12 +3,12 @@
     "DNDConfig": null,
     "_base64_": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "150dp"
     },
     "_left_": {
         "type": "string",
-        "value": "2%"
+        "value": "15dp"
     },
     "_margin_": [
         0,
@@ -26,24 +26,23 @@
     "_src_": "imagedrag.png",
     "_top_": {
         "type": "string",
-        "value": "22dp"
+        "value": "15dp"
     },
     "_width_": {
         "type": "string",
-        "value": "18%"
+        "value": "150dp"
     },
     "canUpdateUI": true,
-    "containerId": true,
     "containerweight": 100,
     "id": "imgNews",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "de1554dd35a54d42905daf396c876527",
+    "kuid": "e1ee451e735545e9884800bb5f49e49f",
     "name": "kony.ui.Image2",
-    "parent": "lstItem",
-    "pf": "lstNewsTemplate",
+    "parent": "FlexScrollContainer",
+    "pf": "frmSeparateNews",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,
