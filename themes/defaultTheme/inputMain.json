@@ -11,11 +11,11 @@
   },
   "background_color": "38365bff",
   "bg_type": "one",
-  "border_color": "333333ff",
+  "border_color": "38365bff",
   "border_radius": 20,
   "border_style": "custom",
   "border_type": 0,
-  "border_width": 2,
+  "border_width": 3,
   "desktopweb": {
     "font_name": "Helvetica",
     "font_size": 150,

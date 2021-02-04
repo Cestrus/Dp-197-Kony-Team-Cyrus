@@ -28,6 +28,7 @@
         "type": "string",
         "value": "300dp"
     },
+    "android": {},
     "autocapitalize": "none",
     "autocomplete": false,
     "autocorrect": false,
@@ -52,7 +53,7 @@
     "name": "kony.ui.TextBox2",
     "parent": "FlexContainerStart",
     "pf": "frmStart",
-    "placeholderskin": "s531dfd818594b7a99961a1eab45cb2b",
+    "placeholderskin": "s6efd239c4d049ed8de74a0acc5a4855",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,
