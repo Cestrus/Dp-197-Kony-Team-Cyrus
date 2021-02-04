@@ -4,11 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "168dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "130dp"
+        "value": "120dp"
     },
     "_margin_": [
         0,
@@ -17,38 +13,37 @@
         0
     ],
     "_padding_": [
-        5,
-        5,
-        5,
-        5
+        0,
+        0,
+        0,
+        0
     ],
-    "_skin_": "s75fbb28b54147d98a251601780a6bb5",
+    "_skin_": "s6f67fde8e4743a68fdda5dfc5f279dd",
     "_src_": "imagedrag.png",
     "_top_": {
         "type": "string",
-        "value": "30dp"
+        "value": "5dp"
     },
     "_width_": {
         "type": "string",
-        "value": "300dp"
+        "value": "210dp"
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.00%"
+        "value": "50%"
     },
+    "containerId": true,
     "containerweight": 100,
-    "id": "imgSpaceObj",
+    "id": "imgSpace",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ebf0fac104d340649a53b97e94ec6812",
+    "kuid": "d7ad348927054c1e9dff6da87c1bcb4c",
     "name": "kony.ui.Image2",
-    "paddingLocked": true,
-    "paddinginpixel": false,
-    "parent": "FlexContainerImg",
-    "pf": "frmSearchImg",
+    "parent": "flxImgRowContainer",
+    "pf": "imgRowTamplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,

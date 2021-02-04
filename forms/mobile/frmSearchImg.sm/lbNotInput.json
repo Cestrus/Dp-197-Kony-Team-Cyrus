@@ -1,17 +1,9 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
-    "_blur_": {
-        "enabled": false,
-        "value": 0
-    },
     "_height_": {
         "type": "ref",
         "value": "preferred"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -25,12 +17,8 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "number",
-        "value": "0"
-    },
     "_skin_": "s05839af749446ddb689760ae900eabc",
-    "_text_": "Sorry,  this object not found",
+    "_text_": "You must input some name",
     "_top_": {
         "type": "string",
         "value": "175dp"
@@ -49,11 +37,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.02%"
+        "value": "50%"
     },
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "lbNotFound",
+    "contentalignment": 4,
+    "id": "lbNotInput",
     "info": null,
     "ipad": {
         "psp": {
@@ -67,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "cef61dd2810d4b08a2f4fd32b3d065c3",
+    "kuid": "i6b183debb0b44ce8ae69ed561d99872",
     "name": "kony.ui.Label",
     "parent": "FlexContainerSearchImg",
     "pf": "frmSearchImg",
@@ -76,5 +64,5 @@
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",
-    "zindex": 1
+    "zindex": 50
 }

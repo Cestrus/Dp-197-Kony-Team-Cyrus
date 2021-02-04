@@ -37,11 +37,13 @@
     "children": [
         "inptSearchImg",
         "imgRocket",
+        "btnSearch",
         "btnAddToCollection",
-        "FlexContainerImg",
-        "FlexContainerNotFound",
         "navBottomMenu",
-        "flexHeader"
+        "flexHeader",
+        "lbNotFound",
+        "lstImg",
+        "lbNotInput"
     ],
     "clipbounds": true,
     "containerweight": 100,

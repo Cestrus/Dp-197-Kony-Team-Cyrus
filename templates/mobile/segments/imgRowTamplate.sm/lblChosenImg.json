@@ -1,17 +1,13 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
-    "_blur_": {
-        "enabled": false,
-        "value": 0
+    "_bottom_": {
+        "type": "number",
+        "value": "0"
     },
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
-    },
-    "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "30dp"
     },
     "_margin_": [
         1,
@@ -26,18 +22,14 @@
         0
     ],
     "_right_": {
-        "type": "number",
-        "value": "0"
-    },
-    "_skin_": "s05839af749446ddb689760ae900eabc",
-    "_text_": "Sorry,  this object not found",
-    "_top_": {
         "type": "string",
-        "value": "175dp"
+        "value": "0dp"
     },
+    "_skin_": "s42f705e9a5b4524a25eb39aa6e57d33",
+    "_text_": "",
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "30dp"
     },
     "_wrapping_": 2,
     "android": {
@@ -47,13 +39,10 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50.02%"
-    },
+    "containerId": true,
     "containerweight": 100,
     "contentalignment": 5,
-    "id": "lbNotFound",
+    "id": "lblChosenImg",
     "info": null,
     "ipad": {
         "psp": {
@@ -66,15 +55,15 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": false,
-    "kuid": "cef61dd2810d4b08a2f4fd32b3d065c3",
+    "isvisible": true,
+    "kuid": "e9ca8b23ed6f4c028f5b2640c0e9735a",
     "name": "kony.ui.Label",
-    "parent": "FlexContainerSearchImg",
-    "pf": "frmSearchImg",
+    "parent": "flxImgRowContainer",
+    "pf": "imgRowTamplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},
     "tooltip": "",
     "wType": "Label",
-    "zindex": 1
+    "zindex": 10
 }

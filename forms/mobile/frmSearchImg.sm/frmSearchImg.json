@@ -47,6 +47,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmSearchImg",
+    "ide_init": "AS_Form_e149a8f650ea4104973b2ce323560559",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,
@@ -93,7 +94,7 @@
         "needAppMenu": false
     },
     "kuid": "f2c71699b10a4f21bc1001fec872d762",
-    "layouttype": 2,
+    "layouttype": 4,
     "name": "kony.ui.Form2",
     "needappmenu": false,
     "paddinginpixel": false,

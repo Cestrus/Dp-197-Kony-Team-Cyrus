@@ -1,0 +1,31 @@
+{
+    "AS_FlexContainer_f1b8f209533c4e219c5ec96aef35c28b": {
+        "id": "AS_FlexContainer_f1b8f209533c4e219c5ec96aef35c28b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "imgRowTamplate",
+            "type": "templates",
+            "platform": "",
+            "KUID": "b28948a9f67448179bd567d747080056"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__deff82947e7745b4a7cfecb123973935",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onChooseImg",
+            "display": "onChooseImg",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}
