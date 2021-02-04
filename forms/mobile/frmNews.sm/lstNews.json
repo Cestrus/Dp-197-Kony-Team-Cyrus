@@ -5,181 +5,19 @@
         {
             "imgNews": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": ""
             },
             "lblNewsDate": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "2021-01-22T06:00:40Z"
+                "text": ""
             },
             "lblNewsShortDesc": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Space travel company, which plans to take six people on a sub-orbital flight, completes its 14th mission"
+                "text": ""
             },
             "lblNewsTitle": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Spacewatch: Bezos's Blue Origin 'really close' to flying humans"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "2021-01-22T06:00:40Z"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Space travel company, which plans to take six people on a sub-orbital flight, completes its 14th mission"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Spacewatch: Bezos's Blue Origin 'really close' to flying humans"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "2021-01-22T06:00:40Z"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Space travel company, which plans to take six people on a sub-orbital flight, completes its 14th mission"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Spacewatch: Bezos's Blue Origin 'really close' to flying humans"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "2021-01-22T06:00:40Z"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Space travel company, which plans to take six people on a sub-orbital flight, completes its 14th mission"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Spacewatch: Bezos's Blue Origin 'really close' to flying humans"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            }
-        },
-        {
-            "imgNews": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblNewsDate": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsShortDesc": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
-            },
-            "lblNewsTitle": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "Label"
+                "text": ""
             }
         }
     ],
@@ -216,7 +54,7 @@
     "autogrowmode": 1,
     "canUpdateUI": true,
     "containerweight": 100,
-    "counter": "09",
+    "counter": "00",
     "focusedindex": null,
     "focuseditem": null,
     "groupcells": false,
@@ -250,7 +88,7 @@
     "retainflexpositionproperties": false,
     "retainselection": false,
     "rowTemplateId": "h47d0076143144ab8fa23eaead12ab09",
-    "rowcounter": 9,
+    "rowcounter": 0,
     "rowfocusskin": "s10aff14fcfa4834aaa72fc1be996343",
     "rowskin": "s0abfa374f6e41459b149d6cc262c16c",
     "rowtemplate": "lstItem",
@@ -262,7 +100,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": 0,
+    "selectedsectionindex": null,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,

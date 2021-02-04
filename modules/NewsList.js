@@ -1,15 +1,15 @@
-function NewsList(webTitle, webPublicationDate, trailText, thumbnail) {
-  this.lblNewsTitle = webTitle || '';
-  this.lblNewsDate = webPublicationDate.slice(0,10) || '';
-  this.lblNewsShortDesc = trailText || '';
-  this.imgNews = thumbnail || '';
+function News(webTitle, webPublicationDate, trailText, thumbnail) {
+  this.webTitle = webTitle || '';
+  this.webPublicationDate = webPublicationDate || '';
+  this.trailText = trailText || '';
+  this.thumbnail = thumbnail || '';
 }
 
-NewsList.prototype = function () {
+News.prototype = function () {
   return {
-    lblNewsTitle: this.lblNewsTitle,
-    lblNewsDate: this.lblNewsDate,
-    lblNewsShortDesc: this.lblNewsShortDesc,
-    imgNews: this.imgNews
+	lblNewsTitle: webTitle,
+    lblNewsDate: webPublicationDate.slice(0,10),
+    lblNewsShortDesc: trailText,
+    imgNews: thumbnail
   };
 };
