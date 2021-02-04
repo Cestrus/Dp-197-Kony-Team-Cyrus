@@ -22,6 +22,10 @@ define(function () {
   
   
   var getNews = function (successCallback, errorCallback) {
+    var newsFromStore = kony.store.getItem("newsArr");
+    if (newsFromStore) {
+      return successCallback(newsFromStore);
+    }
     
     var newsArr = [];
     
@@ -32,11 +36,12 @@ define(function () {
               lblNewsTitle: m.webTitle,
               lblNewsDate: m.webPublicationDate.slice(0,10),
               lblNewsShortDesc: m.fields.trailText,
-              imgNews: m.fields.thumbnail
+              imgNews: m.fields.thumbnail,
+              bodyText: m.fields.bodyText
             });
 		});
       }
-      
+      kony.store.setItem("newsArr", newsArr);
       successCallback(newsArr);
         
     }, errorCallback);

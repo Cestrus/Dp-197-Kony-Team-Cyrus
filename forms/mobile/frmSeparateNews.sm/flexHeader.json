@@ -2,7 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "160dp"
+        "value": "65dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -18,36 +22,36 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s377682a3b7d478281fa509bc77b7b45",
+    "_skin_": "s2705f530c484a5d9c32f327d5dbb146",
     "_top_": {
         "type": "string",
-        "value": "10dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lblNewsDate",
-        "lblNewsTitle",
-        "lblNewsShortDesc"
+        "Image0b993be436b5944",
+        "btnGoBack",
+        "btnProfile"
     ],
     "clipbounds": true,
-    "containerId": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "FlexContainer",
+    "id": "flexHeader",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c56a84906d46452a8c3e16dd65f03724",
-    "layouttype": 4,
+    "kuid": "a56515dd253142ee8f6dfa772e51e669",
+    "layouttype": 2,
+    "masterType": 1,
     "name": "kony.ui.FlexContainer",
-    "parent": "lstItem",
-    "pf": "lstNewsTemplate",
+    "parent": "FlexContainerMain",
+    "pf": "frmSeparateNews",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
@@ -55,5 +59,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 1
+    "zindex": 50
 }

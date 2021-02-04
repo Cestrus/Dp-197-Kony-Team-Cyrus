@@ -16,16 +16,12 @@ define(["NewsService"], function(newsService) {
     },  
 
     onButtonGoToNews: function() {
-      
       newsService.getNews(function(arr) {
         var navigation = new kony.mvc.Navigation("frmNews");
         navigation.navigate(arr);
-        //alert(arr[0].lblNewsTitle);
       },function() {
         alert("Error while retrieving news list.");
       });
-        //var navigation = new kony.mvc.Navigation("frmNews");
-        //navigation.navigate(arr);
     },
 
     onButtonGoToWeather: function() {
