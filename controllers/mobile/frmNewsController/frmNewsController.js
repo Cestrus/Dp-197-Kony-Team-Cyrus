@@ -9,7 +9,7 @@ define({
       navigation.navigate();
     }.bind(this);
     
-    this.view.lstNews.onRowClick() = this.onSeparateNewsClicked.bind(this);
+    this.view.lstNews.onRowClick = this.onSeparateNewsClicked.bind(this);
 
   },
 
@@ -17,7 +17,7 @@ define({
       this.view.lstNews.setData(data);
   },
   
-  onSeparateNewsClicked: function (widgetRef, sectionNumber, rowNumber, selectedState) {
+  onSeparateNewsClicked: function (segmentWidgetRef, sectionNumber, rowIndex, selectedState) {
       var navigation = new kony.mvc.Navigation("frmSeparateNews");
       navigation.navigate(segmentWidgetRef.data[rowIndex]);
   },
