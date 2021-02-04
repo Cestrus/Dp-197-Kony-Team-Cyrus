@@ -1,0 +1,27 @@
+{
+    "AS_Form_a4aaf798c1884eb9b4092e40abfa03bd": {
+        "id": "AS_Form_a4aaf798c1884eb9b4092e40abfa03bd",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmNews",
+            "type": "forms",
+            "platform": null,
+            "KUID": "a9d7700c25d94f0b9ef306adc5e4ca45"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_init_ed0b41497e8940d99c3494abe794c29d",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onInitialize",
+            "display": "onInitialize",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}
