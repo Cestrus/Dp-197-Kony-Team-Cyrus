@@ -42,7 +42,7 @@
     "isvisible": true,
     "kuid": "d7ad348927054c1e9dff6da87c1bcb4c",
     "name": "kony.ui.Image2",
-    "parent": "flxImgRow",
+    "parent": "flxImgRowContainer",
     "pf": "imgRowTamplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
