@@ -42,7 +42,8 @@
         "navBottomMenu",
         "flexHeader",
         "lbNotFound",
-        "lstImg"
+        "lstImg",
+        "lbNotInput"
     ],
     "clipbounds": true,
     "containerweight": 100,

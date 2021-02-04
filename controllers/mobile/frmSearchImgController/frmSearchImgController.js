@@ -43,6 +43,7 @@ define(["SearchImgService"], function(SearchImgService){
             this.view.lbNotFound.isVisible = false;
             this.view.lstImg.isVisible = false;
             this.view.btnAddToCollection.isVisible = false;
+            this.view.lbNotInput.isVisible = false;
         },
 
         renderNotFound: function() {
@@ -50,6 +51,7 @@ define(["SearchImgService"], function(SearchImgService){
             this.view.lbNotFound.isVisible = true;
             this.view.lstImg.isVisible = false;
             this.view.btnAddToCollection.isVisible = false;
+            this.view.lbNotInput.isVisible = false;
         },
 
         renderListImg: function() {
@@ -57,9 +59,11 @@ define(["SearchImgService"], function(SearchImgService){
             this.view.lbNotFound.isVisible = false;
             this.view.lstImg.isVisible = true;
             this.view.btnAddToCollection.isVisible = false;
+            this.view.lbNotInput.isVisible = false;
         },
 
         renderNotInput: function() {
+            this.view.lbNotInput.isVisible = true;
             this.view.imgRocket.isVisible = true;
             this.view.lbNotFound.isVisible = false;
             this.view.lstImg.isVisible = false;

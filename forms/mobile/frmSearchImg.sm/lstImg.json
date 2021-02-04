@@ -166,7 +166,7 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "bc8ec361cd3746cfb9350889f15abfe0",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
