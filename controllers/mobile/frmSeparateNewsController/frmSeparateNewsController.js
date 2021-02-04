@@ -13,7 +13,9 @@ define(["NewsService"], function(newsService) {
     },
 
     onNavigate: function(data) {
-        this.view.lstNews.setData(data);
+		this.view.imgNews.src = data.imgNews;
+		this.view.lblNewsTitle.text = data.lblNewsTitle;
+        this.view.lblNewsText.text = data.bodyText;
     },
 
     onButtonGoToHome: function() {

@@ -1,5 +1,5 @@
 define({ 
-onInitialize: function() {
+  onInitialize: function() {
 	//this.view.postShow = this.onFormShowed.bind(this);  
     this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
     this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
@@ -8,11 +8,18 @@ onInitialize: function() {
       var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
       navigation.navigate();
     }.bind(this);
+    
+    this.view.lstNews.onRowClick() = this.onSeparateNewsClicked.bind(this);
 
   },
 
   onNavigate: function(data) {
       this.view.lstNews.setData(data);
+  },
+  
+  onSeparateNewsClicked: function (widgetRef, sectionNumber, rowNumber, selectedState) {
+      var navigation = new kony.mvc.Navigation("frmSeparateNews");
+      navigation.navigate(segmentWidgetRef.data[rowIndex]);
   },
   
   onButtonGoToHome: function() {

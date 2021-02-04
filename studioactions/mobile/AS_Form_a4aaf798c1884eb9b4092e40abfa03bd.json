@@ -7,7 +7,7 @@
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "CopyfrmNews",
+            "name": "frmSeparateNews",
             "type": "forms",
             "platform": null,
             "KUID": "a9d7700c25d94f0b9ef306adc5e4ca45"
