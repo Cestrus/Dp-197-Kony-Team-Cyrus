@@ -36,8 +36,11 @@
     "canUpdateUI": true,
     "children": [
         "btnStart",
-        "inptStart",
-        "imgStart"
+        "inptStartPsswd",
+        "inptStartLogin",
+        "imgStart",
+        "SwitchNewUser",
+        "Label0a7e5fb3a70864e"
     ],
     "clipbounds": true,
     "containerweight": 100,

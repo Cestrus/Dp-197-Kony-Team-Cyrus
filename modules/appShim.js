@@ -1,11 +1,3 @@
-if (!Date.prototype.previousDate){
-  Date.prototype.previousDate = function() {
-    var previousDate = new Date(this);
-    previousDate.setDate(previousDate.getDate() - 1);
-    return previousDate;
-  };
-}
-
 if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
