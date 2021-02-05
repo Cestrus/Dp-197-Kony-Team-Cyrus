@@ -15,15 +15,11 @@ define({
   },
     
   renderForSearch: function() {
-    this.view.btnLeftFullImg.isVisible = false;
-    this.view.btnRightFullImg.isVisible = false;
     this.view.btnDeleteImg.isVisible = false;
     this.view.btnAddImg.isVisible = true;
   },
   
   renderForFavorite: function() {
-    this.view.btnLeftFullImg.isVisible = true;
-    this.view.btnRightFullImg.isVisible = true;
     this.view.btnDeleteImg.isVisible = true;
     this.view.btnAddImg.isVisible = false;
 	},
@@ -37,11 +33,11 @@ define({
       var navigation = new kony.mvc.Navigation('frmSearchImg');
       navigation.navigate();
     } else {
-      this.view.imgSpaceFull.src = this.navigationData.imgLink;
-    }    
-    this.view.imgSpaceFull.width = '100%';
-		this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
-	},
+      this.view.imgSpaceFull.src = this.navigationData.imgLink;    
+			this.view.imgSpaceFull.width = '100%';
+			this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
+    }
+  },
   
   onNextImg: function() {
     

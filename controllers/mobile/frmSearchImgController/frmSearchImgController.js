@@ -3,7 +3,7 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
     onInitialize: function() {
       this.resetVisiblity();
       // 
-      this.imgArr = []; // array for all img
+      this.pageImg = new PageImgStore(); // array for all img
       this.chooseImgNimbers = []; // array for index chosen img
       this.storeFavoriteImg = []; // store for favorite img TODO IT GLOBAL
 
@@ -91,12 +91,13 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
       if(!arrLinks){
         this.renderNotInput();
       } else {
-        this.imgArr = arrLinks.filter(function(link) { // delete arr element what is ""
+        var tempArr = arrLinks.filter(function(link) { // delete arr element what is ""
 					return link.imgSpace !== "";
         });
-        if(!this.imgArr.length) this.renderNotFound();  
+        this.pageImg.set(tempArr);
+        if(!this.pageImg.get().length) this.renderNotFound();  
         else {
-          this.view.lstImg.setData(this.imgArr);
+          this.view.lstImg.setData(this.pageImg.get());
           this.renderListImg();
         }        
 			} 
@@ -104,7 +105,7 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
     },
 
     onShowFullImg: function(seguiWidget, sectionNumber, rowNumber, selectedState) {
-      var data = {imgLink: this.imgArr[rowNumber].imgSpace, isSearchScreen: true};
+      var data = {imgLink: this.pageImg.get()[rowNumber].imgSpace, isSearchScreen: true};
       var navigation = new kony.mvc.Navigation("frmFullImg");
       navigation.navigate(data);
     },
