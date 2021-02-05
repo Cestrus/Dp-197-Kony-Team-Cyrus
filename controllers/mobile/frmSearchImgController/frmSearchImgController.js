@@ -104,8 +104,9 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
     },
 
     onShowFullImg: function(seguiWidget, sectionNumber, rowNumber, selectedState) {
+      var data = {imgLink: this.imgArr[rowNumber].imgSpace, isSearchScreen: true};
       var navigation = new kony.mvc.Navigation("frmFullImg");
-      navigation.navigate(this.imgArr[rowNumber]);
+      navigation.navigate(data);
     },
 
     onAddToCollection: function() {

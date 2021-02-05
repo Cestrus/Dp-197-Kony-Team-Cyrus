@@ -63,7 +63,7 @@
         },
         "centerX": {
             "type": "string",
-            "value": ""
+            "value": "50%"
         },
         "centerY": {
             "type": "string",
@@ -71,24 +71,44 @@
         },
         "height": {
             "type": "string",
-            "value": "100%"
+            "value": ""
         },
         "left": {
-            "type": "number",
-            "value": "0"
+            "type": "string",
+            "value": ""
+        },
+        "minHeight": {
+            "type": "string",
+            "value": "100%"
+        },
+        "minWidth": {
+            "type": "string",
+            "value": "100%"
         },
         "right": {
             "type": "number",
             "value": "0"
         },
         "top": {
-            "type": "string",
-            "value": ""
+            "type": "number",
+            "value": "65"
         },
         "width": {
             "type": "string",
             "value": ""
         }
+    },
+    "maxwidth": {
+        "type": "string",
+        "value": ""
+    },
+    "minheight": {
+        "type": "string",
+        "value": "100%"
+    },
+    "minwidth": {
+        "type": "string",
+        "value": "100%"
     },
     "name": "kony.ui.Image2",
     "parent": "FlexContainerImg",
@@ -105,6 +125,18 @@
         "left": {
             "type": "number",
             "value": "0"
+        },
+        "maxWidth": {
+            "type": "string",
+            "value": ""
+        },
+        "minHeight": {
+            "type": "string",
+            "value": "100%"
+        },
+        "minWidth": {
+            "type": "string",
+            "value": "100%"
         },
         "right": {
             "type": "number",
