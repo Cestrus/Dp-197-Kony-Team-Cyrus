@@ -1,4 +1,4 @@
-define(["NewsService"], function(newsService) {
+define(["NewsService","WeatherService"], function(newsService, weatherService) {
   return { 
     onInitialize: function() {
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
@@ -25,9 +25,13 @@ define(["NewsService"], function(newsService) {
     },
 
     onButtonGoToWeather: function() {
+      weatherService.getWeather(function(arr) {
         var navigation = new kony.mvc.Navigation("frmWeather");
-        navigation.navigate();
-    }
+        navigation.navigate(arr);
+      },function() {
+        alert("Error while retrieving Mars weather.");
+      });
+    },
   };
 
  });
