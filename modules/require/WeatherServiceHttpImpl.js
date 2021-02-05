@@ -20,21 +20,27 @@ define(function () {
   }; 
  
   var getWeather = function (successCallback, errorCallback) {
-    var weatherData = kony.store.getItem("listDates");
+    var weatherData = kony.store.getItem("weather");
     if (weatherData) {
       return successCallback(weatherData);
     }
     
     
-    var weather = null;
+    var weather = [];
     
-    makeHttpRequest(WEATHER_BASE_URL, function (currentData) {
-      if (currentData && Array.isArray(currentData)) {
-        weather = currentData.soles.map(function (dataByDate) {
-          return new Weather(dataByDate);
-        });
+      makeHttpRequest(WEATHER_BASE_URL, function (currentData) {
+      if (currentData) {
+        currentData.soles.forEach(function(d) {
+			weather.push({
+              lblSol: `Sole ${d.sol}`,
+              lblDate: d.terrestrial_date,
+              lblSunrise: `Sunrise ${d.sunrise}`,
+              lblSunset: `Sunset ${d.sunset}`,
+              lblTempMin: `Min ${d.min_temp}°C`,
+              lblTempMax: `Max ${d.max_temp}°C`,
+            });
+		});
       }
-      
       kony.store.setItem("weather", weather);
       successCallback(weather);
 

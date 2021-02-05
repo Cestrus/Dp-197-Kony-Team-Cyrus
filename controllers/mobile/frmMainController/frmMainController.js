@@ -26,8 +26,10 @@ define(["NewsService","WeatherService"], function(newsService, weatherService) {
 
     onButtonGoToWeather: function() {
       weatherService.getWeather(function(arr) {
+        alert(arr.join(', '));
         var navigation = new kony.mvc.Navigation("frmWeather");
         navigation.navigate(arr);
+        
       },function() {
         alert("Error while retrieving Mars weather.");
       });

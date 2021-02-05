@@ -1,5 +1,5 @@
 function Weather(date) {
-  this.ls = date.ls || '';
+  this.sol = date.sol || '';
   this.terrestrial_date = date.terrestrial_date || '';
   this.sunrise = date.sunrise || '';
   this.sunset = date.sunset || '';
@@ -9,7 +9,7 @@ function Weather(date) {
 
 Weather.prototype = function () {
   return {
-    lblSol: `Sole ${ls}`,
+    lblSol: `Sole ${sol}`,
 	lblDate: terrestrial_date,
     lblSunrise: `Sunrise ${sunrise}`,
     lblSunset: `Sunset ${sunset}`,
