@@ -31,7 +31,6 @@
     "canUpdateUI": true,
     "children": [
         "FlexContainerFullImg",
-        "navBottomMenu",
         "flexHeader"
     ],
     "containerweight": 100,

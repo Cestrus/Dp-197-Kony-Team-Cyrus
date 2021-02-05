@@ -1,10 +1,5 @@
 define({ 
-  onInitialize: function() {
-    this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-    this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-    this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-    this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
-    
+  onInitialize: function() {    
     this.view.btnRightFullImg.onClick = this.onNextImg.bind(this);
     this.view.btnLeftFullImg.onClick = this.onPrevImg.bind(this);
   
@@ -13,38 +8,10 @@ define({
       navigation.navigate();
     }.bind(this);
      
-//     this.view.onNavigate = this.onNavigated.bind(this); 
     this.view.preShow = this.onFormShowed.bind(this);
     
   },
-  
-  onButtonGoToHome: function() {
-    var navigation = new kony.mvc.Navigation("frmMain");
-    navigation.navigate();
-  },
-
-  onButtonGoToNews: function() {
-    newsService.getNews( 
-      function(arr) {
-        var navigation = new kony.mvc.Navigation("frmNews");
-        navigation.navigate(arr);
-      },
-      function() {
-        alert("Error while retrieving news list.");
-      }
-    );
-  },
-
-  onButtonGoToWeather: function() {
-    var navigation = new kony.mvc.Navigation("frmWeather");
-    navigation.navigate();
-  },
-  
-  onButtonGoToSearchImg: function() {
-    var navigation = new kony.mvc.Navigation("frmSearchImg");
-    navigation.navigate();
-  },
-  
+    
   renderForSearch: function() {
     this.view.btnLeftFullImg.isVisible = false;
     this.view.btnRightFullImg.isVisible = false;
