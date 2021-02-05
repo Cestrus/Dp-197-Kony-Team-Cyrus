@@ -33,7 +33,7 @@ define({
   },
 	
 	onFormShowed: function() {
-    if(!this.navigationData.imgLink){
+    if(!this.navigationData){
       var navigation = new kony.mvc.Navigation('frmSearchImg');
       navigation.navigate();
     } else {
