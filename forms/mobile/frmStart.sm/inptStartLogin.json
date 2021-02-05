@@ -17,12 +17,12 @@
         0,
         0
     ],
-    "_placeholder_": "Enter the password here",
+    "_placeholder_": "Enter the login here",
     "_skin_": "sb0d6d59dece4e42ae21cb2eeeec6d1f",
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "450dp"
+        "value": "365dp"
     },
     "_width_": {
         "type": "string",
@@ -43,12 +43,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "focusskin": "s7ea8559ac394a7ab3d28967270e5f94",
-    "id": "inptStart",
+    "id": "inptStartLogin",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "e54692dfd30649d983c4a1ee7fc4f3f9",
+    "kuid": "a296f859ae894a4895eced19abfd8ffe",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "FlexContainerStart",
