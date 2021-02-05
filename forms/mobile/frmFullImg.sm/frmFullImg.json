@@ -31,7 +31,6 @@
     "canUpdateUI": true,
     "children": [
         "FlexContainerFullImg",
-        "navBottomMenu",
         "flexHeader"
     ],
     "containerweight": 100,
@@ -49,6 +48,8 @@
     "displayorientation": 3,
     "enabledforidletimeout": false,
     "id": "frmFullImg",
+    "ide_init": "AS_Form_e077a3cbe22e4a8696c97a07feafae8c",
+    "ide_onNavigate": "AS_Form_d0514d15d6bb48578cae6db244dcdc57",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

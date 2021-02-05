@@ -10,7 +10,6 @@
         "actions": [{
             "id": "INVOKE_FUNCTION__ide_onClick_ica52b354ef34bd4b9332d1d3843add4",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "onButtonGoToWeather",
             "display": "onButtonGoToWeather",
             "inputparams": [],
             "callbackType": null,

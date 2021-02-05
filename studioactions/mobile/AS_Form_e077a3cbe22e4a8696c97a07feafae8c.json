@@ -1,25 +1,23 @@
 {
-    "AS_FlexContainer_f1b8f209533c4e219c5ec96aef35c28b": {
-        "id": "AS_FlexContainer_f1b8f209533c4e219c5ec96aef35c28b",
+    "AS_Form_e077a3cbe22e4a8696c97a07feafae8c": {
+        "id": "AS_Form_e077a3cbe22e4a8696c97a07feafae8c",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
-        }, {
-            "datatype": "collection",
-            "name": "context"
         }],
         "contextObj": {
-            "name": "imgRowTamplate",
-            "type": "templates",
+            "name": "frmFullImg",
+            "type": "forms",
             "platform": "",
-            "KUID": "b28948a9f67448179bd567d747080056"
+            "KUID": "c094c3c2166f400fa856fa2f28e18595"
         },
         "language": "js",
         "actions": [{
-            "id": "INVOKE_FUNCTION__deff82947e7745b4a7cfecb123973935",
+            "id": "INVOKE_FUNCTION__a3dc76ffeeab4a95bc28ca594796856f",
             "type": "INVOKE_FUNCTION",
-            "display": "onChooseImg",
+            "sequenceKUID": "onInitialize",
+            "display": "onInitialize",
             "inputparams": [],
             "parentId": null,
             "callbackType": null,

@@ -4,14 +4,6 @@
         "type": "string",
         "value": ""
     },
-    "_height_": {
-        "type": "string",
-        "value": "220dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_margin_": [
         0,
         0,
@@ -26,10 +18,6 @@
         0
     ],
     "_percent_": true,
-    "_right_": {
-        "type": "number",
-        "value": "0"
-    },
     "_skin_": "s377682a3b7d478281fa509bc77b7b45",
     "_top_": {
         "type": "string",
@@ -50,7 +38,9 @@
         "type": "string",
         "value": ""
     },
-    "children": [],
+    "children": [
+        "imgSpaceFull"
+    ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
@@ -61,8 +51,8 @@
     "kuid": "c951911f594e4c27a584ea537410a600",
     "landscape": {
         "bottom": {
-            "type": "string",
-            "value": ""
+            "type": "number",
+            "value": "0"
         },
         "centerX": {
             "type": "string",
@@ -74,7 +64,7 @@
         },
         "height": {
             "type": "string",
-            "value": "100%"
+            "value": ""
         },
         "left": {
             "type": "string",
@@ -86,7 +76,7 @@
         },
         "top": {
             "type": "string",
-            "value": "0dp"
+            "value": "65dp"
         },
         "width": {
             "type": "string",
@@ -99,8 +89,8 @@
     "pf": "frmFullImg",
     "portrait": {
         "bottom": {
-            "type": "string",
-            "value": ""
+            "type": "number",
+            "value": "65"
         },
         "centerX": {
             "type": "string",
@@ -116,15 +106,15 @@
         },
         "left": {
             "type": "string",
-            "value": "0dp"
+            "value": ""
         },
         "right": {
-            "type": "number",
-            "value": "0"
+            "type": "string",
+            "value": ""
         },
         "top": {
             "type": "string",
-            "value": "54dp"
+            "value": "65dp"
         },
         "width": {
             "type": "string",
