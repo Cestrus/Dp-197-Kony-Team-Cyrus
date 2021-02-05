@@ -2,9 +2,17 @@
     "@class": "com.kony.gen.viz.model.component.KVizImage2",
     "DNDConfig": null,
     "_base64_": null,
+    "_bottom_": {
+        "type": "string",
+        "value": ""
+    },
     "_height_": {
         "type": "string",
         "value": "100%"
+    },
+    "_left_": {
+        "type": "number",
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -18,16 +26,24 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "number",
+        "value": "0"
+    },
     "_skin_": "s75fbb28b54147d98a251601780a6bb5",
     "_src_": "imagedrag.png",
+    "_top_": {
+        "type": "string",
+        "value": ""
+    },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": ""
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.00%"
+        "value": ""
     },
     "centery": {
         "type": "string",
@@ -40,9 +56,69 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "icf09a32f48e4960b20d31208b98b702",
+    "landscape": {
+        "bottom": {
+            "type": "string",
+            "value": ""
+        },
+        "centerX": {
+            "type": "string",
+            "value": ""
+        },
+        "centerY": {
+            "type": "string",
+            "value": "50.00%"
+        },
+        "height": {
+            "type": "string",
+            "value": "100%"
+        },
+        "left": {
+            "type": "number",
+            "value": "0"
+        },
+        "right": {
+            "type": "number",
+            "value": "0"
+        },
+        "top": {
+            "type": "string",
+            "value": ""
+        },
+        "width": {
+            "type": "string",
+            "value": ""
+        }
+    },
     "name": "kony.ui.Image2",
     "parent": "FlexContainerImg",
     "pf": "frmFullImg",
+    "portrait": {
+        "bottom": {
+            "type": "string",
+            "value": ""
+        },
+        "height": {
+            "type": "string",
+            "value": "100%"
+        },
+        "left": {
+            "type": "number",
+            "value": "0"
+        },
+        "right": {
+            "type": "number",
+            "value": "0"
+        },
+        "top": {
+            "type": "string",
+            "value": ""
+        },
+        "width": {
+            "type": "string",
+            "value": ""
+        }
+    },
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,

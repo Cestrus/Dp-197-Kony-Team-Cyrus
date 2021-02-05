@@ -1,6 +1,6 @@
 {
   "android": {
-    "font_name": "default",
+    "font_name": "FontAwesome",
     "font_size": 250,
     "isForked": false
   },
@@ -90,7 +90,7 @@
     "isForked": false
   },
   "winphone8": {
-    "font_name": "None",
+    "font_name": "FontAwesome",
     "font_size": 250,
     "isForked": false
   }
