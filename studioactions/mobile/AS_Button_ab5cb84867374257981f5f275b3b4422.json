@@ -10,7 +10,6 @@
         "actions": [{
             "id": "INVOKE_FUNCTION__ide_onClick_a42094fb80f24c0983a01deb39bfcfd2",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "onButtonGoToSearchImg",
             "display": "onButtonGoToSearchImg",
             "inputparams": [],
             "callbackType": null,

@@ -44,15 +44,14 @@
         "tabBtnHome",
         "tabBtnSearchImg",
         "tabBtnNews",
-        "tabBtnWeather",
-        "CopynavBottomMenu0j8bcaf4b919943"
+        "tabBtnWeather"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
     "id": "navBottomMenu",
     "info": null,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "c4f9678fa4b14c55b1cc40324734b936",
     "layouttype": 2,
     "masterType": 1,

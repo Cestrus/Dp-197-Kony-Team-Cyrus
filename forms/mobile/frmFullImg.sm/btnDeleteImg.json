@@ -79,8 +79,8 @@
             "value": "0"
         },
         "top": {
-            "type": "string",
-            "value": ""
+            "type": "number",
+            "value": "65"
         }
     },
     "name": "kony.ui.Button",

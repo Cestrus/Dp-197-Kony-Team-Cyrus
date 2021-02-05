@@ -1,6 +1,5 @@
 define(function () {
 	var URL_MAIN = "https://images-api.nasa.gov/search?q=";
-    var imgLinks = [];
     
     var makeURL = function(str) {
         return URL_MAIN + str.split(' ').join('%20') + "&page=1";
@@ -30,13 +29,13 @@ define(function () {
             makeHttpRequest(
                 url, 
                 function(responseData){
-                    imgLinks = responseData.collection.items.map(function(item) {
+                    var imgLinks = responseData.collection.items.map(function(item) {
                         if(item.links) {
-                            return {imgSpace: item.links[0].href}
+                            return {imgSpace: item.links[0].href};
                         } else {
-                            return {imgSpace: ''}
+                            return {imgSpace: ''};
                         }      
-                    });
+                    });                  	
 					successCallback(imgLinks);
 				}, 
                 errorCallback

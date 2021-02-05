@@ -10,7 +10,6 @@
         "actions": [{
             "id": "INVOKE_FUNCTION__ide_onClick_bf6d91e0d4554cb7b86cc685648bac5e",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "onButtonGoToNews",
             "display": "onButtonGoToNews",
             "inputparams": [],
             "callbackType": null,
