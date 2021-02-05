@@ -2,8 +2,8 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
   return {
     onInitialize: function() {
       this.resetVisiblity();
-      // 
-      this.pageImg = new PageImgStore(); // array for all img
+     
+      this.pageImg = new PageImgStore(); // array for all img on page
       this.chooseImgNimbers = []; // array for index chosen img
       this.storeFavoriteImg = []; // store for favorite img TODO IT GLOBAL
 
@@ -105,7 +105,7 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
     },
 
     onShowFullImg: function(seguiWidget, sectionNumber, rowNumber, selectedState) {
-      var data = {imgLink: this.pageImg.get()[rowNumber].imgSpace, isSearchScreen: true};
+      var data = {num: rowNumber, isSearchScreen: true};
       var navigation = new kony.mvc.Navigation("frmFullImg");
       navigation.navigate(data);
     },

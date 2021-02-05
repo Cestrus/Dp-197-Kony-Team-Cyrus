@@ -4,7 +4,7 @@ function PageImgStore () {
   if (isExistInstPage) return isExistInstPage;
   else isExistInstPage = this;
   
-  var store = null;
+  var store = [];
   
   this.set = function(arr) {
     store = arr.slice();
