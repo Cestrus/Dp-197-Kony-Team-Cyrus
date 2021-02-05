@@ -33,7 +33,12 @@ define({
   },
 	
 	onFormShowed: function() {
-    this.view.imgSpaceFull.src = this.navigationData.imgLink;
+    if(!this.navigationData.imgLink){
+      var navigation = new kony.mvc.Navigation('frmSearchImg');
+      navigation.navigate();
+    } else {
+      this.view.imgSpaceFull.src = this.navigationData.imgLink;
+    }    
     this.view.imgSpaceFull.width = '100%';
 		this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
 	},
