@@ -2,6 +2,8 @@ define({
   onInitialize: function() {    
     this.view.btnRightFullImg.onClick = this.onNextImg.bind(this);
     this.view.btnLeftFullImg.onClick = this.onPrevImg.bind(this);
+    this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
+    this.view.btnAddImg.onClick = this.onAddImg.bind(this);
   
     this.view.btnGoBack.onClick = function () {
       var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
@@ -41,6 +43,14 @@ define({
   },
 
   onPrevImg: function() {
+    
+  },
+  
+  onDeleteImg: function() {
+    
+  },
+  
+  onAddImg: function() {
     
   },
        
