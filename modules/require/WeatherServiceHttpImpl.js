@@ -30,16 +30,20 @@ define(function () {
     
       makeHttpRequest(WEATHER_BASE_URL, function (currentData) {
       if (currentData) {
-        currentData.soles.forEach(function(d) {
-			weather.push({
-              lblSol: `Sole ${d.sol}`,
-              lblDate: d.terrestrial_date,
-              lblSunrise: `Sunrise ${d.sunrise}`,
-              lblSunset: `Sunset ${d.sunset}`,
-              lblTempMin: `Min ${d.min_temp}°C`,
-              lblTempMax: `Max ${d.max_temp}°C`,
+        var dates = currentData.soles;
+        for (var i = 0; i <= 6; i++){
+          weather.push({
+              lblSol: `Sole ${dates[i].sol}`,
+              lblDate: dates[i].terrestrial_date,
+              lblSunrise: `Sunrise ${dates[i].sunrise}`,
+              lblSunset: `Sunset ${dates[i].sunset}`,
+              lblTempMin: `Min ${dates[i].min_temp}°C`,
+              lblTempMax: `Max ${dates[i].max_temp}°C`,
             });
-		});
+        }
+//         currentData.soles.forEach(function(d) {
+			
+// 		});
       }
       kony.store.setItem("weather", weather);
       successCallback(weather);
