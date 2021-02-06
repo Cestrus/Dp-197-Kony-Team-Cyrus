@@ -1,4 +1,4 @@
-define(["NewsService"], function(newsService) {
+define(["NewsService", "WeatherService"], function(newsService, weatherService) {
   return { 
     onInitialize: function() {
       this.favorImgStore = new FavorImgStore();
