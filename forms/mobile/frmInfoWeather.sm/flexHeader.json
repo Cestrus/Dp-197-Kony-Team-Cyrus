@@ -37,8 +37,7 @@
     "children": [
         "Image0b993be436b5944",
         "btnGoBack",
-        "btnProfile",
-        "CopyflexHeader0f509447319a041"
+        "btnProfile"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -47,12 +46,12 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "beae404b53c04649b125a98923be27c0",
+    "kuid": "fca455ccdfec4badbebd3f203bcb55f9",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",
     "parent": "FlexContainerMain",
-    "pf": "frmWeather",
+    "pf": "frmInfoWeather",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
