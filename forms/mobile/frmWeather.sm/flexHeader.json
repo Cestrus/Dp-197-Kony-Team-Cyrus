@@ -37,7 +37,8 @@
     "children": [
         "imgAstronaftSmall",
         "btnGoBack",
-        "btnProfile"
+        "btnProfile",
+        "CopyflexHeader0f509447319a041"
     ],
     "clipbounds": true,
     "containerweight": 100,

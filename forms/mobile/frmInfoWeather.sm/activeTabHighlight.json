@@ -1,12 +1,16 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "3dp"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "75%"
     },
     "_margin_": [
         0,
@@ -22,42 +26,30 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sf956024bcf34b17908c49ebc0f06d67",
-    "_top_": {
-        "type": "string",
-        "value": "0dp"
-    },
+    "_skin_": "scaaedc37a9c4a7ab2b554427545c5c7",
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "25%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [
-        "lstDates",
-        "flexHeader",
-        "flexWeatherHeader",
-        "navBottomMenu"
-    ],
+    "children": [],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "FlexContainerMain",
+    "id": "activeTabHighlight",
     "info": null,
-    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c026b27a3b2d414f87e336480d4ccf57",
+    "kuid": "j4792c8091494dee8e429e715e6c6a75",
     "layouttype": 2,
+    "masterType": 1,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmWeather",
-    "pf": "frmWeather",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
-    "retainflowhorizontalalignment": false,
+    "parent": "navBottomMenu",
+    "pf": "frmInfoWeather",
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 1
+    "zindex": 7
 }

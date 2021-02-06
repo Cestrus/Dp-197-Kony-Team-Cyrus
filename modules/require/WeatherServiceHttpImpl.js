@@ -31,7 +31,9 @@ define(function () {
       makeHttpRequest(WEATHER_BASE_URL, function (currentData) {
       if (currentData) {
         var dates = currentData.soles;
+        
         for (var i = 0; i <= 6; i++){
+          
           weather.push({
               lblSol: `Sole ${dates[i].sol}`,
               lblDate: dates[i].terrestrial_date,
@@ -39,12 +41,10 @@ define(function () {
               lblSunset: `Sunset ${dates[i].sunset}`,
               lblTempMin: `Min ${dates[i].min_temp}°C`,
               lblTempMax: `Max ${dates[i].max_temp}°C`,
-            });
+         });
         }
-//         currentData.soles.forEach(function(d) {
-			
-// 		});
       }
+        
       kony.store.setItem("weather", weather);
       successCallback(weather);
 

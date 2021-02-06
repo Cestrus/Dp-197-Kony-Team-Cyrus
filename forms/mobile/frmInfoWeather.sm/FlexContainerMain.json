@@ -37,7 +37,6 @@
     "children": [
         "lstDates",
         "flexHeader",
-        "flexWeatherHeader",
         "navBottomMenu"
     ],
     "clipbounds": true,
@@ -47,11 +46,11 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c026b27a3b2d414f87e336480d4ccf57",
+    "kuid": "fbb435f53ea84db88dd13590327af741",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmWeather",
-    "pf": "frmWeather",
+    "parent": "frmInfoWeather",
+    "pf": "frmInfoWeather",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
