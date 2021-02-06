@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "168dp"
+        "value": "45dp"
     },
     "_left_": {
         "type": "string",
-        "value": "130dp"
+        "value": "170dp"
     },
     "_margin_": [
         0,
@@ -17,38 +17,36 @@
         0
     ],
     "_padding_": [
-        2,
-        2,
-        2,
-        2
+        0,
+        0,
+        0,
+        0
     ],
     "_skin_": "s75fbb28b54147d98a251601780a6bb5",
-    "_src_": "imagedrag.png",
+    "_src_": "daco_2860124.png",
     "_top_": {
         "type": "string",
-        "value": "30dp"
+        "value": "10dp"
     },
     "_width_": {
         "type": "string",
-        "value": "300dp"
+        "value": "45dp"
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.00%"
+        "value": "50%"
     },
     "containerweight": 100,
-    "id": "imgSpaceObj",
+    "id": "imgAstronaftSmall",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e6ae99cf87234e649a42053510703847",
+    "kuid": "babfe3e091534acebd2905088d9fb21f",
     "name": "kony.ui.Image2",
-    "paddingLocked": true,
-    "paddinginpixel": false,
-    "parent": "FlexScrollContainerCollection",
-    "pf": "frmCollectionImg",
+    "parent": "flexHeader",
+    "pf": "frmFullImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,

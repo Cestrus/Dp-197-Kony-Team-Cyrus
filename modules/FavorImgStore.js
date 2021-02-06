@@ -6,23 +6,35 @@ function FavorImgStore (){
   
   var store = [];
   
-  this.push = function (img) {
-		var isExist = store.find(function(el){return el.imgSpace === img.imgSpace;});
-    if (!isExist) store.push(img); 
+  var isExist = function(img){
+    return store.find(function(el){return el.imgSpace === img.imgSpace;});
   };
   
-  this.delete = function (img) {
-    var indx = store.findIndex(function(el){return el.imgSpace === img.imgSpace;});
-    store.splice(indx, 1);
+  this.push = function (images) {
+    if (Array.isArray(images)){
+      for(var i = 0; i < images.length; i++){
+				if(isExist(images[i])) continue;
+        else store.push(images);
+      }
+    } else if (!isExist(images)) store.push(images); 
   };
   
-  this.load = function (arr) {
+  this.delete = function (num) {
+    store.splice(num, 1);
+  };
+  
+  this.set = function (arr) {
     store.length = 0;
     store = arr.slice();
   };
   
+  this.get = function (){
+    return store;
+  };
+  
   return {
-    load: this.load,
+    set: this.set,
+    get: this.get,
     push: this.push, 
     delete: this.delete,
   };
