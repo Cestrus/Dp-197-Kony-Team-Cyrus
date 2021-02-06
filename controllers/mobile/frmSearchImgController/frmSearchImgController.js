@@ -3,7 +3,7 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
     onInitialize: function() {
       this.resetVisiblity();
      
-      this.loadImg = new LoadImgStore(); // array for all img on page
+      this.loadImgStore = new LoadImgStore(); // array for all img on page
       this.storeFavoriteImg = []; // store for favorite img TODO IT GLOBAL
 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
@@ -93,10 +93,10 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
         var tempArr = arrLinks.filter(function(link) { // delete arr element what is ""
 					return link.imgSpace !== "";
         });
-        this.loadImg.set(tempArr);
-        if(!this.loadImg.get().length) this.renderNotFound();  
+        this.loadImgStore.set(tempArr);
+        if(!this.loadImgStore.get().length) this.renderNotFound();  
         else {
-          this.view.lstImg.setData(this.loadImg.get());
+          this.view.lstImg.setData(this.loadImgStore.get());
           this.renderListImg();
         }        
 			} 
