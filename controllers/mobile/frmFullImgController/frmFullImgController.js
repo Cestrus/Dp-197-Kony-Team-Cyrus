@@ -1,5 +1,7 @@
 define({ 
-  onInitialize: function() {    
+  onInitialize: function() {  
+    this.loadImgStore = new LoadImgStore();
+    this.currNum = null;
     this.view.btnRightFullImg.onClick = this.onNextImg.bind(this);
     this.view.btnLeftFullImg.onClick = this.onPrevImg.bind(this);
     this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
@@ -15,15 +17,11 @@ define({
   },
     
   renderForSearch: function() {
-    this.view.btnLeftFullImg.isVisible = false;
-    this.view.btnRightFullImg.isVisible = false;
     this.view.btnDeleteImg.isVisible = false;
     this.view.btnAddImg.isVisible = true;
   },
   
   renderForFavorite: function() {
-    this.view.btnLeftFullImg.isVisible = true;
-    this.view.btnRightFullImg.isVisible = true;
     this.view.btnDeleteImg.isVisible = true;
     this.view.btnAddImg.isVisible = false;
 	},
@@ -33,22 +31,25 @@ define({
   },
 	
 	onFormShowed: function() {
-    if(!this.navigationData.imgLink){
+    if(!this.navigationData){
       var navigation = new kony.mvc.Navigation('frmSearchImg');
       navigation.navigate();
     } else {
-      this.view.imgSpaceFull.src = this.navigationData.imgLink;
-    }    
-    this.view.imgSpaceFull.width = '100%';
-		this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
-	},
+      this.currNum = this.navigationData.num;
+      this.view.imgSpaceFull.src = this.loadImgStore.get()[this.currNum].imgSpace;    
+			this.view.imgSpaceFull.width = '100%'; // will test without this
+			this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
+    }
+  },
   
   onNextImg: function() {
-    
+    this.currNum = (this.currNum + 1 >= this.loadImgStore.get().length) ? this.currNum : ++this.currNum;
+    this.view.imgSpaceFull.src = this.loadImgStore.get()[this.currNum].imgSpace;
   },
 
   onPrevImg: function() {
-    
+    this.currNum = this.currNum - 1 < 0 ? this.currNum : --this.currNum;
+    this.view.imgSpaceFull.src = this.loadImgStore.get()[this.currNum].imgSpace;
   },
   
   onDeleteImg: function() {
