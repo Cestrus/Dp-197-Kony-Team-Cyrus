@@ -25,7 +25,7 @@
     "_skin_": "s2705f530c484a5d9c32f327d5dbb146",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "65dp"
     },
     "_width_": {
         "type": "string",
@@ -35,19 +35,17 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Image0b993be436b5944",
-        "btnGoBack",
-        "btnProfile",
-        "CopyflexHeader0f509447319a041"
+        "btnInfo",
+        "lblWeatherHeader"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flexHeader",
+    "id": "flexWeatherHeader",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "beae404b53c04649b125a98923be27c0",
+    "kuid": "dc531a0ff3a945b9a886f057c67d9d9c",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",

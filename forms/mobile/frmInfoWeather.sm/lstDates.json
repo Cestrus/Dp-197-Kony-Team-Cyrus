@@ -135,7 +135,7 @@
     ],
     "_top_": {
         "type": "string",
-        "value": "130dp"
+        "value": "65dp"
     },
     "_width_": {
         "type": "string",
@@ -163,7 +163,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i773960b5b3443729389c062a7747cab",
+    "kuid": "h111dda3219e47af9b41c9c4fffca5d1",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
@@ -173,7 +173,7 @@
         "position": "bottom"
     },
     "parent": "FlexContainerMain",
-    "pf": "frmWeather",
+    "pf": "frmInfoWeather",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainselection": false,
