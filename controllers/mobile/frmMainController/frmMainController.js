@@ -8,6 +8,7 @@ define(["NewsService","WeatherService"], function(newsService, weatherService) {
       this.view.btnGoToNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.btnGoToWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnGoToSearchPhotos.onClick = this.onButtonGoToSearchImg.bind(this);
+      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
 
     onButtonGoToSearchImg: function() {
@@ -32,6 +33,11 @@ define(["NewsService","WeatherService"], function(newsService, weatherService) {
       },function() {
         alert("Error while retrieving Mars weather.");
       });
+    },
+
+    onGoToProfile: function() {
+      var navigation = new kony.mvc.Navigation("frmCollectionImg");
+      navigation.navigate();
     },
   };
 

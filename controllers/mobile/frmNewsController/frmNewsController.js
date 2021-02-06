@@ -11,6 +11,7 @@ define(["WeatherService"], function(weatherService){
       }.bind(this);
 
       this.view.lstNews.onRowClick = this.onSeparateNewsClicked.bind(this);
+      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
 
     },
 
@@ -41,7 +42,12 @@ define(["WeatherService"], function(weatherService){
       },function() {
         alert("Error while retrieving Mars weather.");
       });
-    },    
+    },
+
+    onGoToProfile: function() {
+      var navigation = new kony.mvc.Navigation("frmCollectionImg");
+      navigation.navigate();
+    },
   };
 
 
