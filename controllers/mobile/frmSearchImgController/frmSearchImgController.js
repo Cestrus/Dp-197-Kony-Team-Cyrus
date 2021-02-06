@@ -1,4 +1,4 @@
-define(["SearchImgService", "NewsService"], function(SearchImgService, newsService){
+define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImgService, newsService, weatherService){
   return {
     onInitialize: function() {
       this.resetVisiblity();
@@ -38,8 +38,13 @@ define(["SearchImgService", "NewsService"], function(SearchImgService, newsServi
 		},
 
     onButtonGoToWeather: function() {
-      var navigation = new kony.mvc.Navigation("frmWeather");
-        navigation.navigate();
+      weatherService.getWeather(function(arr) {
+        var navigation = new kony.mvc.Navigation("frmWeather");
+        navigation.navigate(arr);
+        
+      },function() {
+        alert("Error while retrieving Mars weather.");
+      });
     },
 
         // visibility methods
