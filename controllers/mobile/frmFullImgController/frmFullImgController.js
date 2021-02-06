@@ -1,6 +1,6 @@
 define({ 
   onInitialize: function() {  
-    this.pageImg = new PageImgStore();
+    this.loadImg = new LoadImgStore();
     this.currNum = null;
     this.view.btnRightFullImg.onClick = this.onNextImg.bind(this);
     this.view.btnLeftFullImg.onClick = this.onPrevImg.bind(this);
@@ -36,20 +36,20 @@ define({
       navigation.navigate();
     } else {
       this.currNum = this.navigationData.num;
-      this.view.imgSpaceFull.src = this.pageImg.get()[this.currNum].imgSpace;    
+      this.view.imgSpaceFull.src = this.loadImg.get()[this.currNum].imgSpace;    
 			this.view.imgSpaceFull.width = '100%'; // will test without this
 			this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
     }
   },
   
   onNextImg: function() {
-    this.currNum = (this.currNum + 1 >= this.pageImg.get().length) ? this.currNum : ++this.currNum;
-    this.view.imgSpaceFull.src = this.pageImg.get()[this.currNum].imgSpace;
+    this.currNum = (this.currNum + 1 >= this.loadImg.get().length) ? this.currNum : ++this.currNum;
+    this.view.imgSpaceFull.src = this.loadImg.get()[this.currNum].imgSpace;
   },
 
   onPrevImg: function() {
     this.currNum = this.currNum - 1 < 0 ? this.currNum : --this.currNum;
-    this.view.imgSpaceFull.src = this.pageImg.get()[this.currNum].imgSpace;
+    this.view.imgSpaceFull.src = this.loadImg.get()[this.currNum].imgSpace;
   },
   
   onDeleteImg: function() {

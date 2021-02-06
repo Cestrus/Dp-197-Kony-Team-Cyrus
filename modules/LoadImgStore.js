@@ -1,12 +1,13 @@
 var isExistInstPage = false; 
 
-function PageImgStore () {
+function LoadImgStore () {
   if (isExistInstPage) return isExistInstPage;
   else isExistInstPage = this;
   
   var store = [];
   
   this.set = function(arr) {
+    store.length = 0;
     store = arr.slice();
   };
   
