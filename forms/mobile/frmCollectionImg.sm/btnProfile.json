@@ -39,7 +39,7 @@
     "id": "btnProfile",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "je86afea165a4fb1b0ac254f93d82976",
     "name": "kony.ui.Button",
     "parent": "flexHeader",

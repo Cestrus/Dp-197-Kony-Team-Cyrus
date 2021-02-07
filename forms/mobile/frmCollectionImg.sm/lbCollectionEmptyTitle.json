@@ -21,7 +21,7 @@
     "_text_": "Not images yet",
     "_top_": {
         "type": "string",
-        "value": "20dp"
+        "value": "150dp"
     },
     "_width_": {
         "type": "ref",
@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "a9dc7be6e7b74e19960e2a88fb5c9b4e",
     "name": "kony.ui.Label",
-    "parent": "FlexContainerCollectionEmpty",
+    "parent": "FlexContainerCollection",
     "pf": "frmCollectionImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
