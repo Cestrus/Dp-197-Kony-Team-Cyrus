@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "58dp"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -24,33 +24,37 @@
     "_skin_": "sf33e1bf99c1427499f2ec65c5edc123",
     "_top_": {
         "type": "string",
-        "value": "491dp"
+        "value": "191dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100dp"
+        "value": "49dp"
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "id": "SwitchNewUser",
+    "id": "switchNewUser",
     "info": null,
+    "iphone": {
+        "psp": {
+            "nativeThumbLook": false
+        }
+    },
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kiosk": {
         "render": false
     },
     "kuid": "efcdc1be110442f486c32970c022e376",
-    "leftsidetext": "ON",
+    "leftsidetext": "Yes",
     "name": "kony.ui.Switch",
-    "onslide": null,
     "osPlatform": "android",
     "osVersion": "iOS7",
-    "parent": "FlexContainerStart",
+    "parent": "FlexContainerForm",
     "pf": "frmStart",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "rightsidetext": "OFF",
-    "selectedindex": 0,
+    "rightsidetext": "No",
+    "selectedindex": 1,
     "wType": "Switch",
     "widgetalignment": 5,
     "zindex": 3
