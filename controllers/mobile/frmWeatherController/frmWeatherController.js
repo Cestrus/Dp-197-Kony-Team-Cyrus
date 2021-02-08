@@ -5,13 +5,7 @@ define(["NewsService"], function(newsService) {
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       
-      this.view.btnGoBack.onClick = function () {
-        var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
-        navigation.navigate();
-      }.bind(this);
-      
-      this.view.btnGoBack.onClick = function () {
-        
+      this.view.btnGoBack.onClick = function () { 
         var previousFormId = kony.application.getPreviousForm().id;
         if (previousFormId === "frmNews") {
           this.onButtonGoToNews();
