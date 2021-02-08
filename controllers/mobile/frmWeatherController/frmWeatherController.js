@@ -4,7 +4,6 @@ define(["NewsService"], function(newsService) {
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-
       this.view.btnGoBack.onClick = function () {
         var previousFormId = kony.application.getPreviousForm().id;
         if (previousFormId === "frmNews") {
@@ -14,8 +13,6 @@ define(["NewsService"], function(newsService) {
           navigation.navigate();
         }
       }.bind(this);
-
-      
       this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
@@ -45,8 +42,6 @@ define(["NewsService"], function(newsService) {
       var navigation = new kony.mvc.Navigation("frmSearchImg");
       navigation.navigate();
     },
-<<<<<<< HEAD
-    
     onButtonGoInfo : function() {
       var navigation = new kony.mvc.Navigation("frmWeatherInfo");
       navigation.navigate();
@@ -56,13 +51,6 @@ define(["NewsService"], function(newsService) {
       var navigation = new kony.mvc.Navigation("frmCollectionImg");
       navigation.navigate();
     }
-=======
-
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    },
->>>>>>> master
 
   };
 
