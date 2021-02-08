@@ -1,0 +1,56 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizRichText",
+    "DNDConfig": null,
+    "Default": {
+        "contentAlignment": 2
+    },
+    "_height_": {
+        "type": "string",
+        "value": "685dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "15dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "15dp"
+    },
+    "_skin_": "sa12e9f596e341d6ab332406e5a5b910",
+    "_text_": "The term sol is used to refer to the duration of a day on Mars. A sol is about 24 hours and 40 minutes. For Curiosity, sol 0 corresponds with its landing day on Mars.\n\nMars is farther from the Sun than Earth, it makes that Mars is colder than our planet. Moreover, Martian's atmosphere, which is extremely tenuous, does not retain the heat; thence the difference between day and night's temperatures is more pronounced than in our planet.",
+    "_top_": {
+        "type": "string",
+        "value": "75dp"
+    },
+    "_wrapping_": 2,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 1,
+    "id": "txtMarsWeatherInfo",
+    "info": null,
+    "iphone": {},
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d2b752cff75148d49dd4873f509ea7a6",
+    "linkskin": "s232bfdf158b443c8f954a5e2e5a8668",
+    "name": "kony.ui.RichText",
+    "parent": "FlexContainerMain",
+    "pf": "frmWeatherInfo",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "RichText",
+    "widgetalignment": 5,
+    "zindex": 50
+}

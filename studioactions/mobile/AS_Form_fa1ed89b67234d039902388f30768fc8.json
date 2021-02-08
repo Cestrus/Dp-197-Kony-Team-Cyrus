@@ -7,7 +7,7 @@
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "frmInfoWeather",
+            "name": "frmWeatherInfo",
             "type": "forms",
             "platform": null,
             "KUID": "c9d71f23f877409cb4b530dae23efee5"
