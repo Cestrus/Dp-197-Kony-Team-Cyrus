@@ -26,12 +26,12 @@
     "_src_": "daco_2860124.png",
     "_top_": {
         "type": "string",
-        "value": "111dp"
+        "value": "73dp"
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.01%"
+        "value": "50.00%"
     },
     "containerweight": 100,
     "id": "imgStart",

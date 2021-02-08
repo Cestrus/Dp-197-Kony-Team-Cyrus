@@ -1,15 +1,18 @@
 define(function () {
   var checkUser = function(login, password, successCB, errorCB) {
-    var testUser = {login: 'test', password: 'test'};
-    //kony.store.setItem("users", testUser);
     
-	var users = [testUser];//kony.store.getItem("users");
-    var matchedUsers = users.filter(function(u) { 
-      return u.login === login.toLocaleLowerCase() && u.password === password.toLocaleLowerCase(); 
-    });
+	var users = [kony.store.getItem("users")];
+    var matchedUsers = null;
     var callback = null;
     
-    if (matchedUsers.length > 0) {
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].login === login.toLocaleLowerCase() && users[i].password === password) {
+        matchedUsers = true; 
+        break;
+      }
+    }
+    
+    if (matchedUsers) {
       callback = successCB;
     } else {
       callback = errorCB;
@@ -19,24 +22,29 @@ define(function () {
      
   };
   
-  var registerUser = function(fullName, login, password, successCB, errorCB) {
-    var users = kony.store.getItem("users");
-    var matchedUsers = users.filter(function(u) { 
-      return u.userId === userId; 
-    });
-  
+  var registerUser = function(login, password, successCB, errorCB) {
+    var users = [kony.store.getItem("users")];
+    var matchedUser = null;
     var callback = null;
-    if (matchedUsers.length > 0) {
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].login === login.toLocaleLowerCase()) {
+        matchedUser = true; 
+        break;
+      }
+    }
+  
+    if (matchedUser) {
       callback = errorCB;
     } else {
-      var user = {login: login, password: password};
+      var user = {login: login.toLocaleLowerCase(), password: password};
       users.push(user);
       kony.store.setItem("users", users);
       
       callback = successCB;
     }
+    return callback();
     
-  }
+  };
   return {
     checkUser: checkUser,
     registerUser: registerUser
