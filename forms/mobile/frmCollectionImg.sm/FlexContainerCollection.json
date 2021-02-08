@@ -35,12 +35,13 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
+        "flexHeader",
         "lbCollectionTitle",
-        "FlexScrollContainerCollection",
-        "FlexContainerCollectionEmpty",
         "btnDeleteCollection",
-        "navBottomMenu",
-        "flexHeader"
+        "imgRocket",
+        "lbCollectionEmptyTitle",
+        "lstImg",
+        "navBottomMenu"
     ],
     "clipbounds": true,
     "containerweight": 100,

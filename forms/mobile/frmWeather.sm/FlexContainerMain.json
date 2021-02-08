@@ -37,6 +37,7 @@
     "children": [
         "lstDates",
         "flexHeader",
+        "flexWeatherHeader",
         "navBottomMenu"
     ],
     "clipbounds": true,

@@ -6,11 +6,17 @@ define(["WeatherService"], function(weatherService){
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnGoBack.onClick = function () {
-        var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
-        navigation.navigate();
+        var previousFormId = kony.application.getPreviousForm().id;
+        if (previousFormId === "frmWeather") {
+          this.onButtonGoToWeather();
+        } else {
+          var navigation = new kony.mvc.Navigation(previousFormId);
+          navigation.navigate();
+        }
       }.bind(this);
 
       this.view.lstNews.onRowClick = this.onSeparateNewsClicked.bind(this);
+      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
 
     },
 
@@ -18,7 +24,7 @@ define(["WeatherService"], function(weatherService){
       this.view.lstNews.setData(data);
     },
 
-    onSeparateNewsClicked: function (segmentWidgetRef, sectionNumber, rowIndex, selectedState) {
+    onSeparateNewsClicked: function (segmentWidgetRef, sectionNumber, rowIndex) {
       var navigation = new kony.mvc.Navigation("frmSeparateNews");
       navigation.navigate(segmentWidgetRef.data[rowIndex]);
     },
@@ -41,7 +47,12 @@ define(["WeatherService"], function(weatherService){
       },function() {
         alert("Error while retrieving Mars weather.");
       });
-    },    
+    },
+
+    onGoToProfile: function() {
+      var navigation = new kony.mvc.Navigation("frmCollectionImg");
+      navigation.navigate();
+    },
   };
 
 

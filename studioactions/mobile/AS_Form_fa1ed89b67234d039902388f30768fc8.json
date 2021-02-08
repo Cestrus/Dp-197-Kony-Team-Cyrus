@@ -1,0 +1,31 @@
+{
+    "AS_Form_fa1ed89b67234d039902388f30768fc8": {
+        "id": "AS_Form_fa1ed89b67234d039902388f30768fc8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+<<<<<<< HEAD
+            "name": "frmWeatherInfo",
+=======
+            "name": "frmInfoWeather",
+>>>>>>> master
+            "type": "forms",
+            "platform": null,
+            "KUID": "c9d71f23f877409cb4b530dae23efee5"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_init_j14e82629ca4441bbd455de096a29ee5",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onInitialize",
+            "display": "onInitialize",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

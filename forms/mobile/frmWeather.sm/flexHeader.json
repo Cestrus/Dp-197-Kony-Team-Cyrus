@@ -35,9 +35,10 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Image0b993be436b5944",
+        "imgAstronaftSmall",
         "btnGoBack",
-        "btnProfile"
+        "btnProfile",
+        "CopyflexHeader0f509447319a041"
     ],
     "clipbounds": true,
     "containerweight": 100,

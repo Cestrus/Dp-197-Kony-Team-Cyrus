@@ -42,7 +42,7 @@
     "isvisible": true,
     "kuid": "gb4c1b95d73d4c3cb53516674be73468",
     "name": "kony.ui.Image2",
-    "parent": "FlexContainerCollectionEmpty",
+    "parent": "FlexContainerCollection",
     "pf": "frmCollectionImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

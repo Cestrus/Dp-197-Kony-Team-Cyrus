@@ -1,8 +1,8 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
+    "_height_": {
         "type": "string",
-        "value": "155dp"
+        "value": "65dp"
     },
     "_left_": {
         "type": "string",
@@ -22,48 +22,41 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s010b29f344e493bb648722fce21b37f",
+    "_skin_": "s2705f530c484a5d9c32f327d5dbb146",
     "_top_": {
         "type": "string",
-        "value": "150dp"
+        "value": "65dp"
     },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "allboxes": [],
-    "allowhorizontalbounce": false,
-    "allowverticalbounce": true,
-    "bounces": true,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "imgSpaceObj"
+        "btnInfo",
+        "lblWeatherHeader"
     ],
     "clipbounds": true,
     "containerweight": 100,
-    "decelerat": false,
-    "dragg": false,
     "enablescrolling": true,
-    "horizontalscrollindicator": true,
-    "id": "FlexScrollContainerCollection",
+    "id": "flexWeatherHeader",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
-    "kuid": "i2bdafed121f4a26995347fcaa6bce0c",
+    "isvisible": true,
+    "kuid": "dc531a0ff3a945b9a886f057c67d9d9c",
     "layouttype": 2,
-    "name": "kony.ui.FlexScrollContainer",
-    "pagingenabled": false,
-    "parent": "FlexContainerCollection",
-    "pf": "frmCollectionImg",
+    "masterType": 1,
+    "name": "kony.ui.FlexContainer",
+    "parent": "FlexContainerMain",
+    "pf": "frmWeather",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "track": false,
-    "verticalscrollindicator": true,
-    "wType": "FlexScrollContainer",
+    "wType": "FlexContainer",
     "widgetalignment": 1,
     "zindex": 50
 }
