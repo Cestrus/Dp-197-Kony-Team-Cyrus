@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "165dp"
+        "value": "69dp"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "I'm new here",
     "_top_": {
         "type": "string",
-        "value": "496dp"
+        "value": "196dp"
     },
     "_width_": {
         "type": "ref",
@@ -54,10 +54,10 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "j6df3412940642358952447955ce92be",
     "name": "kony.ui.Label",
-    "parent": "FlexContainerStart",
+    "parent": "FlexContainerForm",
     "pf": "frmStart",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

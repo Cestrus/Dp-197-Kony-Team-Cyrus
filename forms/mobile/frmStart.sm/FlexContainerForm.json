@@ -2,11 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "value": "308dp"
     },
     "_margin_": [
         0,
@@ -22,33 +18,40 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sf956024bcf34b17908c49ebc0f06d67",
+    "_skin_": "s377682a3b7d478281fa509bc77b7b45",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "323dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "300dp"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "imgStart",
-        "FlexContainerForm"
+        "Label0a7e5fb3a70864e",
+        "btnStart",
+        "inptStartPsswd",
+        "inptStartLogin",
+        "switchNewUser"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "FlexContainerStart",
+    "id": "FlexContainerForm",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "id3c8d88caae4f8c841e3134919b2bcf",
+    "kuid": "efa356d5078e49b294627351e5f2607c",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmStart",
+    "parent": "FlexContainerStart",
     "pf": "frmStart",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -57,5 +60,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 1
+    "zindex": 3
 }

@@ -5,6 +5,10 @@
         "type": "string",
         "value": "50dp"
     },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_margin_": [
         0,
         0,
@@ -22,11 +26,11 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "365dp"
+        "value": "31dp"
     },
     "_width_": {
         "type": "string",
-        "value": "300dp"
+        "value": "100%"
     },
     "android": {},
     "autocapitalize": "none",
@@ -34,10 +38,6 @@
     "autocorrect": false,
     "autofilter": false,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerheight": "",
     "containerheightmode": 1,
     "containerweight": 100,
@@ -51,7 +51,7 @@
     "kuid": "a296f859ae894a4895eced19abfd8ffe",
     "mode": "A",
     "name": "kony.ui.TextBox2",
-    "parent": "FlexContainerStart",
+    "parent": "FlexContainerForm",
     "pf": "frmStart",
     "placeholderskin": "s6efd239c4d049ed8de74a0acc5a4855",
     "retaincontentalignment": false,

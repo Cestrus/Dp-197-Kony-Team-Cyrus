@@ -1,6 +1,10 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_height_": {
         "type": "string",
         "value": "50dp"
@@ -19,13 +23,9 @@
     ],
     "_skin_": "s45816cb0623472fb6fc5870450f6036",
     "_text_": "Enter",
-    "_top_": {
-        "type": "string",
-        "value": "530dp"
-    },
     "_width_": {
         "type": "string",
-        "value": "300dp"
+        "value": "100%"
     },
     "canUpdateUI": true,
     "centerx": {
@@ -42,7 +42,7 @@
     "isvisible": true,
     "kuid": "e247677b95894dfbb4f7337777c22985",
     "name": "kony.ui.Button",
-    "parent": "FlexContainerStart",
+    "parent": "FlexContainerForm",
     "pf": "frmStart",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

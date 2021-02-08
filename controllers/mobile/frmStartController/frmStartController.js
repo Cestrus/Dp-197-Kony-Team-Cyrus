@@ -5,21 +5,23 @@ define(["AuthUserService"], function(authUser) {
     },
 
     onButtonEnterClicked: function() {
-      /*if (this.view.inptStart.text && this.view.inptStart.text.toLocaleLowerCase() === "ready for the space") {
-        var navigation = new kony.mvc.Navigation("frmMain");
-        navigation.navigate();
+      if (this.view.switchNewUser.selectedIndex === 1) {
+        authUser.checkUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
+          function() {
+            var navigation = new kony.mvc.Navigation("frmMain");
+            navigation.navigate();
+          },function() {
+            alert("User is not registrated. Please registrate first");
+          });
       } else {
-        this.view.inptStart.setFocus(true);
-        this.view.inptStart.text = "";
-      }*/
-      
-      authUser.checkUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
-      function() {
-        var navigation = new kony.mvc.Navigation("frmMain");
-        navigation.navigate();
-      },function() {
-        alert("User is not registrated. Please registrate first");
-      });
+        authUser.registerUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
+          function() {
+            var navigation = new kony.mvc.Navigation("frmMain");
+            navigation.navigate();
+          },function() {
+            alert("User already exists. Please try another login");
+          });
+      }
     }
 
   };

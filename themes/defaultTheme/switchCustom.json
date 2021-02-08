@@ -5,7 +5,7 @@
     "bg_type": "one",
     "font_name": "default",
     "isForked": true,
-    "thumb_color": "c5c0f0ff"
+    "thumb_color": "ffffffff"
   },
   "androidwearos": {
     "background_left_color": "5265ebff",
@@ -13,7 +13,7 @@
     "bg_type": "one",
     "font_name": "default",
     "isForked": true,
-    "thumb_color": "c5c0f0ff"
+    "thumb_color": "ffffffff"
   },
   "background_left_color": "48d874ff",
   "background_right_color": "ffffff00",
@@ -50,7 +50,7 @@
     "bg_type": "one",
     "font_name": "System",
     "isForked": true,
-    "thumb_color": "c5c0f0ff",
+    "thumb_color": "ffffffff",
     "tint_color": "e8e8e8"
   },
   "iphone": {
@@ -59,7 +59,7 @@
     "bg_type": "one",
     "font_name": "System",
     "isForked": true,
-    "thumb_color": "c5c0f0ff",
+    "thumb_color": "ffffffff",
     "tint_color": "e8e8e8"
   },
   "isDefaultSkin": false,
@@ -189,7 +189,7 @@
     "bg_type": "one",
     "font_name": "default",
     "isForked": true,
-    "thumb_color": "c5c0f0ff"
+    "thumb_color": "ffffffff"
   },
   "wType": "Switch",
   "watchos": {
