@@ -35,9 +35,9 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flexHeader",
         "navBottomMenu",
-        "txtMarsWeatherInfo"
+        "txtMarsWeatherInfo",
+        "flexHeader"
     ],
     "clipbounds": true,
     "containerweight": 100,

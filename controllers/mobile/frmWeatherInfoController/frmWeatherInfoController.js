@@ -6,10 +6,7 @@ define(["NewsService","WeatherService"], function(newsService, weatherService) {
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       
-      this.view.btnGoBack.onClick = function () {
-        var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
-        navigation.navigate();
-      }.bind(this);
+      this.view.btnGoBack.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
     

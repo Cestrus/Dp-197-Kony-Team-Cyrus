@@ -35,7 +35,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "Image0b993be436b5944",
+        "imgAstronaftSmall",
         "btnGoBack",
         "btnProfile"
     ],
@@ -46,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fca455ccdfec4badbebd3f203bcb55f9",
+    "kuid": "d1f74ab5fa5a4aabb69a16c6fa745165",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.FlexContainer",
