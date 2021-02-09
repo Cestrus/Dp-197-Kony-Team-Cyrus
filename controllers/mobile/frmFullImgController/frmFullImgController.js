@@ -76,6 +76,12 @@ define({
     inst.push(this.currStore.get()[this.currNum]);
   },
   
-
+  showMessage: function(str) {
+    this.view.lbMessage.text = 'Image is ' + str;
+    this.view.lbMessage.isVisible = true;
+    kony.timer.schedule("timerMess", function(){
+      this.view.lbMessage.isVisible = false;      
+    }, 0.5, false);
+  }
 
 });
