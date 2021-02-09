@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "10dp"
+        "value": "50dp"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "50%"
+    },
     "_skin_": "s49282b5b03a43e6bddf7a9aacde3ecf",
     "_text_": "Sunrise",
     "_top_": {
         "type": "string",
-        "value": "85dp"
-    },
-    "_width_": {
-        "type": "string",
-        "value": "50%"
+        "value": "90dp"
     },
     "_wrapping_": 2,
     "android": {
