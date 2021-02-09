@@ -31,7 +31,6 @@ define(["AuthUserService"], function(authUser) {
     },
     
     validateInput: function() {
-      var validationResult = null;
       var login = this.view.inptStartLogin.text;
       var password = this.view.inptStartPsswd.text;
       //regexps for the validation
@@ -46,37 +45,32 @@ define(["AuthUserService"], function(authUser) {
       }
       
       if (login.length < 4 || login.length > 10) {
-        validationResult = {
+        return  {
           validation: false, 
           validationMessage: "Login's length should be from 4 to 10 characters"
         };
-        return validationResult;
       }
       if (password.length < 4 || password.length > 10) {
-        validationResult = {
+        return  {
           validation: false, 
           validationMessage: "Password's length should be from 4 to 10 characters"
         };
-        return validationResult;
       }
       
       if(!pattern.test(password)){
-        validationResult = {
+        return  {
           validation: false, 
           validationMessage: "Password shouldn't contain any spaces or special characters"
         };
-        return validationResult;
       }
       if(!pattern.test(login)){
-        validationResult = {
+        return {
           validation: false, 
           validationMessage: "Login shouldn't contain any spaces or special characters"
         };
-        return validationResult;
       }
       
-      validationResult = {validation: true};
-      return validationResult;
+     return  {validation: true};
     }
 
   };
