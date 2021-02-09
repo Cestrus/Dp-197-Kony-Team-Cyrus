@@ -37,11 +37,10 @@ define(["AuthUserService"], function(authUser) {
       var pattern  = /^(?!\s)[A-Za-z0-9]+$/;
       
       if (login === null || password === null) {
-        validationResult = {
+        return {
           validation: false, 
           validationMessage: "Please fill all fields"
         };
-        return validationResult;
       }
       
       if (login.length < 4 || login.length > 10) {
