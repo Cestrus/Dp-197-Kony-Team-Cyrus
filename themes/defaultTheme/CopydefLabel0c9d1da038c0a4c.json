@@ -1,97 +1,97 @@
 {
   "android": {
-    "font_name": "FontAwesome",
-    "font_size": 250,
+    "font_name": "default",
+    "font_size": 120,
     "isForked": false
   },
   "androidwearos": {
     "font_name": "default",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
-  "background_color": "171430ff",
+  "background_color": "333333ff",
   "bg_type": "one",
-  "border_color": "05d0ceff",
+  "border_color": "424242ff",
   "border_style": "plain",
   "border_type": 0,
   "border_width": 0,
   "desktopweb": {
     "font_name": "Helvetica",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "fontSizeInPx": false,
   "font_color": "ffffffff",
   "font_name": "iphoneSystem",
-  "font_size": 250,
+  "font_size": 120,
   "font_style": "normal",
   "font_weight": "400",
   "ipad": {
     "font_name": "System",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "iphone": {
-    "font_name": "FontAwesome",
-    "font_size": 250,
+    "font_name": "System",
+    "font_size": 120,
     "isForked": false
   },
   "isDefaultSkin": false,
   "kiosk": {
     "font_name": "None",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
-  "kuid": "s080d9b549a94b8198921ddf3f2828e1",
+  "kuid": "s4499054845b48ffb569a8b569ac60c7",
   "spaan": {
     "font_name": "Helvetica",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "spaandroidtablet": {
     "font_name": "Helvetica",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "spaip": {
     "font_name": "Helvetica",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "spaipad": {
     "font_name": "Helvetica",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "spawindowstablet": {
     "font_name": "Helvetica",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "spawinphone8": {
     "font_name": "Helvetica",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "tabrcandroid": {
     "font_name": "default",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
-  "wType": "Button",
+  "wType": "Label",
   "watchos": {
     "font_name": "System",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "windows8": {
     "font_name": "None",
-    "font_size": 250,
+    "font_size": 120,
     "isForked": false
   },
   "winphone8": {
-    "font_name": "FontAwesome",
-    "font_size": 250,
+    "font_name": "None",
+    "font_size": 120,
     "isForked": false
   }
 }

@@ -13,18 +13,6 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
       this.view.lstImg.onRowClick = this.onShowFullImg.bind(this);
 
-      this.view.btnGoBack.onClick = function () {
-        var previousFormId = kony.application.getPreviousForm().id;
-        if (previousFormId === "frmNews") {
-          this.onButtonGoToNews();
-        } else if (previousFormId === "frmWeather") {
-          this.onButtonGoToWeather();
-        } else {
-          var navigation = new kony.mvc.Navigation(previousFormId);
-          navigation.navigate();
-        }
-      }.bind(this);
-
     },
 
     onButtonGoToHome: function() {

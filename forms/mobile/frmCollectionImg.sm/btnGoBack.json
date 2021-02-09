@@ -39,7 +39,7 @@
     "id": "btnGoBack",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "fcc22bed1d72461bb6ccbc9b17aecee0",
     "name": "kony.ui.Button",
     "parent": "flexHeader",

@@ -1,0 +1,65 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "100dp"
+    },
+    "_height_": {
+        "type": "string",
+        "value": "50dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Placeholder",
+    "_skin_": "scf61934412745bea5fbb4af1138e3d0",
+    "_text_": "Image is added",
+    "_width_": {
+        "type": "string",
+        "value": "150dp"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "focusskin": "sb27991ee4b94685bb0fedc65731eea7",
+    "id": "txtBoxAddImg",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "keyboardtype": "A",
+    "kuid": "e9db3828c70f4cd8b4f671355e172ddd",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "paddinginpixel": false,
+    "parent": "frmFullImg",
+    "pf": "frmFullImg",
+    "placeholderskin": "s531dfd818594b7a99961a1eab45cb2b",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 50
+}

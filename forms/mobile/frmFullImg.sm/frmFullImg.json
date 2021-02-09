@@ -31,7 +31,8 @@
     "canUpdateUI": true,
     "children": [
         "FlexContainerFullImg",
-        "flexHeader"
+        "flexHeader",
+        "txtBoxAddImg"
     ],
     "containerweight": 100,
     "controllerInfo": {

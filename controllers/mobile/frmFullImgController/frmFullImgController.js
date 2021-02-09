@@ -7,6 +7,7 @@ define({
     this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
     this.view.btnAddImg.onClick = this.onAddImg.bind(this);
     this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+    
     this.view.btnGoBack.onClick = function () {
       var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
       navigation.navigate();
@@ -46,7 +47,6 @@ define({
       this.currStore = this.navigationData.isSearchScreen ? new LoadImgStore() : new FavorImgStore();
 
       this.view.imgSpaceFull.src = this.currStore.get()[this.currNum].imgSpace; 
-
       this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
     }
   },
@@ -62,6 +62,7 @@ define({
   },
 
   onDeleteImg: function() {
+    this.showMessage('deleted');
     this.currStore.delete(this.currNum);
     if (!this.currStore.get().length) {
       var navigation = new kony.mvc.Navigation("frmCollectionImg");
@@ -71,8 +72,18 @@ define({
   },
 
   onAddImg: function() {
-    var inst = new FavorImgStore();
-    inst.push(this.currStore.get()[this.currNum]);
+    this.showMessage('added');
+    var store = new FavorImgStore();
+    store.push(this.currStore.get()[this.currNum]);
   },
+  
+  showMessage: function(str) {
+    this.view.txtBoxAddImg.text = 'Image is ' + str;
+    this.view.txtBoxAddImg.isVisible = true;
+    kony.timer.schedule("timerMessg", function(){
+      this.view.txtBoxAddImg.isVisible = false;
+      kony.timer.cancel("timerMessg");
+    }.bind(this), 1, false);
+  }
 
 });

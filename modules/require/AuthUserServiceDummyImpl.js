@@ -1,7 +1,8 @@
 define(function () {
   var checkUser = function(login, password, successCB, errorCB) {
     var dummyUser = {login: "test", password: "test"};
-	var users = [dummyUser, kony.store.getItem("users")];
+
+	  var users = [dummyUser, kony.store.getItem("users")];
     var matchedUsers = null;
     var callback = null;
     
