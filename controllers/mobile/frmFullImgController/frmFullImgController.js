@@ -7,6 +7,7 @@ define({
     this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
     this.view.btnAddImg.onClick = this.onAddImg.bind(this);
     this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+    
     this.view.btnGoBack.onClick = function () {
       var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
       navigation.navigate();
@@ -72,16 +73,17 @@ define({
 
   onAddImg: function() {
     this.showMessage('added');
-    var inst = new FavorImgStore();
-    inst.push(this.currStore.get()[this.currNum]);
+    var store = new FavorImgStore();
+    store.push(this.currStore.get()[this.currNum]);
   },
   
   showMessage: function(str) {
-    this.view.lbMessage.text = 'Image is ' + str;
-    this.view.lbMessage.isVisible = true;
-    kony.timer.schedule("timerMess", function(){
-      this.view.lbMessage.isVisible = false;      
-    }, 0.5, false);
+    this.view.txtBoxAddImg.text = 'Image is ' + str;
+    this.view.txtBoxAddImg.isVisible = true;
+    kony.timer.schedule("timerMessg", function(){
+      this.view.txtBoxAddImg.isVisible = false;
+      kony.timer.cancel("timerMessg");
+    }.bind(this), 1, false);
   }
 
 });

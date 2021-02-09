@@ -7,15 +7,15 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
 
-      this.view.btnGoBack.onClick = function () {
-        var navigation = null;
-        if(kony.application.getPreviousForm().id === "frmFullImg") {
-          navigation = new kony.mvc.Navigation("frmMain");
-        } else {
-          navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
-        }
-        navigation.navigate();
-      }.bind(this);
+//       this.view.btnGoBack.onClick = function () {
+//         var navigation = null;
+//         if(kony.application.getPreviousForm().id === "frmFullImg") {
+//           navigation = new kony.mvc.Navigation("frmMain");
+//         } else {
+//           navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
+//         }
+//         navigation.navigate();
+//       }.bind(this);
 
       this.view.preShow = this.onFormPreShow.bind(this);
       this.view.lstImg.onRowClick = this.onShowFullImg.bind(this);

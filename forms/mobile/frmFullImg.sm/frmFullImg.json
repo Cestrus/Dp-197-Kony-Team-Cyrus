@@ -32,7 +32,7 @@
     "children": [
         "FlexContainerFullImg",
         "flexHeader",
-        "lbMessage"
+        "txtBoxAddImg"
     ],
     "containerweight": 100,
     "controllerInfo": {
