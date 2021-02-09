@@ -1,6 +1,10 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_height_": {
         "type": "string",
         "value": "100%"
@@ -19,7 +23,7 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "5dp"
+        "value": "0dp"
     },
     "_skin_": "sc5b8a36485d46c6ab8158e0bb104455",
     "_text_": " ",
@@ -40,7 +44,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ddb25f85724941c5bc055eb5bbf0b103",
+    "kuid": "d1c18a6cf61f46a28323555959a0318d",
     "name": "kony.ui.Button",
     "parent": "flexWeatherHeader",
     "pf": "frmWeather",

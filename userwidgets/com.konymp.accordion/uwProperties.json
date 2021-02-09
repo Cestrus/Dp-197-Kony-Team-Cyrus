@@ -1,0 +1,2570 @@
+{
+    "classname": "accordion",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f164eb6289c047c9852406250f260704",
+                    "paramList": [],
+                    "propertyKey": "setData",
+                    "pw": {
+                        "displayName": "setData",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ba642d18eb0a476da0ef34132cfdc667",
+                    "paramList": [],
+                    "propertyKey": "getData",
+                    "pw": {
+                        "displayName": "getData",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "j60ecd1c2c644a87a655f51f47701e33",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onClickHeader",
+                    "pw": {
+                        "displayName": "onClickHeader",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "e58016fbfed54f938d2756770f8cc2c8",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onClickRow",
+                    "pw": {
+                        "displayName": "onClickRow",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "adaab1de89e74e6d8c3e6103c03c5b06",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onRowExpansion",
+                    "pw": {
+                        "displayName": "onRowExpansion",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b659be1703504e9ebfa4d05e749614ef",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onRowCollapse",
+                    "pw": {
+                        "displayName": "onRowCollapse",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [
+                "Animation",
+                "Header Flex",
+                "Header Image Flex",
+                "Header Image",
+                "Row Flex"
+            ],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": true,
+                    "group": "Animation",
+                    "kuid": "j7c747e94d244075a27af7e9aa9ac544",
+                    "originalPropertyKey": "animation",
+                    "propertyIndex": 1,
+                    "propertyKey": "animation",
+                    "pw": {
+                        "displayName": "Animation",
+                        "uiRepresentation": "Label-Radiobuttongroup"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "boolean",
+                    "value": "true/false"
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "Anywhere on the Header (including image)",
+                    "group": "General",
+                    "kuid": "f6c9be978412481f9469c3e3012f0555",
+                    "originalPropertyKey": "expandOn",
+                    "propertyIndex": 1,
+                    "propertyKey": "expandOn",
+                    "pw": {
+                        "displayName": "Expand row on click of",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "list selector",
+                    "value": [
+                        "Image only",
+                        "Anywhere on the Header (including image)"
+                    ]
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "2",
+                    "group": "Animation",
+                    "kuid": "d1c0a3a7e33a4a4a9db534028858750b",
+                    "originalPropertyKey": "animationDuration",
+                    "propertyIndex": 2,
+                    "propertyKey": "animationDuration",
+                    "pw": {
+                        "displayName": "Duration ",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0",
+                    "group": "Animation",
+                    "kuid": "e8794ce735784eda981de7609d939f36",
+                    "originalPropertyKey": "animationDelay",
+                    "propertyIndex": 3,
+                    "propertyKey": "animationDelay",
+                    "pw": {
+                        "displayName": "Delay",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "bedca3f3fccb435197e8ca53a8562d49",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "c14d4264fa204b70a4d4a7648d93bbd4",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 1,
+                    "propertyKey": "flxImageVisibility",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "displayName": "Image visibility",
+                        "srcWidget": "flxImage",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "a6cbb2d3e8a9407eae3cdbba183d84bb",
+                    "originalPropertyKey": "left",
+                    "propertyIndex": 1,
+                    "propertyKey": "flxImageLeft",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Left",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "d6e8b0d85b15453d898833582e2f71cb",
+                    "originalPropertyKey": "src",
+                    "propertyIndex": 1,
+                    "propertyKey": "imgExpand",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "displayName": "Image to expand",
+                        "srcWidget": "imgIndicator",
+                        "type": "string",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Imagelist",
+                                "dataUpdaterId": "Imagelist",
+                                "popupId": "Imagelist",
+                                "type": "ImageEditBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Label-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e66c967adeac468bbff9231a7b535bcf",
+                    "originalPropertyKey": "src",
+                    "propertyIndex": 1,
+                    "propertyKey": "imgCollapse",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "displayName": "Image to collapse",
+                        "srcWidget": "imgIndicator2",
+                        "type": "string",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Imagelist",
+                                "dataUpdaterId": "Imagelist",
+                                "popupId": "Imagelist",
+                                "type": "ImageEditBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Label-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "d37311db65dc4e7fa327dcc7e4229b2d"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "h29a555ec30845e4850f13df0e4b4d9a",
+                    "originalPropertyKey": "imageScaleMode",
+                    "propertyIndex": 1,
+                    "propertyKey": "imgIndicatorScaleMode",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "displayName": "Scale Mode",
+                        "srcWidget": "imgIndicator",
+                        "type": "enum",
+                        "uiRepresentation": "Label-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "e022c7b8913644f89556dc449e0f6fbe",
+                    "originalPropertyKey": "left",
+                    "propertyIndex": 1,
+                    "propertyKey": "flxheaderMainLeft",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Left",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "i1895102fcfa4f6b8dfbdde9abd58217",
+                    "originalPropertyKey": "left",
+                    "propertyIndex": 1,
+                    "propertyKey": "flxContainerLeft",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Left",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "a316da20cc1a44fa9f489bd7d600b510",
+                    "originalPropertyKey": "right",
+                    "propertyIndex": 2,
+                    "propertyKey": "flxImageRight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Right",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "a916d08a0a684c09acba8fbdc758fccb",
+                    "originalPropertyKey": "right",
+                    "propertyIndex": 2,
+                    "propertyKey": "flxContainerRight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Right",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "fa9fbff3869844598eeccd96fe82b30b",
+                    "originalPropertyKey": "left",
+                    "propertyIndex": 2,
+                    "propertyKey": "imgIndicatorLeft",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Left",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "h18dc197038e449e8f73fae9f2ace0f6",
+                    "originalPropertyKey": "skin",
+                    "propertyIndex": 2,
+                    "propertyKey": "sknHeader",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "displayName": "Header Skin",
+                        "srcWidget": "flxHeaderMain",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "h5ed6c0c92d94035a4f51323e69bf324",
+                    "originalPropertyKey": "right",
+                    "propertyIndex": 2,
+                    "propertyKey": "flxheaderMainRight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Right",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "cb933b3b2ea94ed99acf572af51c10e8",
+                    "originalPropertyKey": "bottom",
+                    "propertyIndex": 3,
+                    "propertyKey": "flxheaderMainBottom",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Bottom",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "b8e6b0ea8c054da9bb29f2cf61c5c4ac",
+                    "originalPropertyKey": "top",
+                    "propertyIndex": 3,
+                    "propertyKey": "flxImageTop",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Top",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "beac01fb215246e0b5130b63f3b30e27",
+                    "originalPropertyKey": "top",
+                    "propertyIndex": 3,
+                    "propertyKey": "flxContainerTop",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Top",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "df9c91c7fd8e4b1082702867675eab81",
+                    "originalPropertyKey": "skin",
+                    "propertyIndex": 3,
+                    "propertyKey": "sknRow",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "displayName": "Row Skin",
+                        "srcWidget": "flxContainer",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "a68f0b2acabc477a85a4f93f6ea5199b",
+                    "originalPropertyKey": "right",
+                    "propertyIndex": 3,
+                    "propertyKey": "imgIndicatorRIght",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Right",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "d6ae5e43ce6e41728405ffff97d44b75",
+                    "originalPropertyKey": "bottom",
+                    "propertyIndex": 4,
+                    "propertyKey": "flxImageBottom",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Bottom",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "faa35a0c67904d40b9ef8a598e310a05",
+                    "originalPropertyKey": "top",
+                    "propertyIndex": 4,
+                    "propertyKey": "flxheaderMainTop",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Top",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "d2d00d6816cf49f0b6b1c6d5852710b6",
+                    "originalPropertyKey": "top",
+                    "propertyIndex": 4,
+                    "propertyKey": "imgIndicatorTop",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Top",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "gdd14b56e611427e9855020a978b29e3",
+                    "originalPropertyKey": "bottom",
+                    "propertyIndex": 4,
+                    "propertyKey": "flxContainerBottom",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Bottom",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "f9422a1fe1e04bd8aa3bb2f056d53e4d",
+                    "originalPropertyKey": "width",
+                    "propertyIndex": 5,
+                    "propertyKey": "flxheaderMainWidth",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Width",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "cb0227566bbc48ca998b48d85573a369",
+                    "originalPropertyKey": "bottom",
+                    "propertyIndex": 5,
+                    "propertyKey": "imgIndicatorBottom",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Bottom",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "ga8ea0b537c140509cb5fa5e328f4c41",
+                    "originalPropertyKey": "width",
+                    "propertyIndex": 5,
+                    "propertyKey": "flxContainerWidth",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Width",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "ab5e0a1fd4bb4c0a9ec081c8034e380a",
+                    "originalPropertyKey": "width",
+                    "propertyIndex": 5,
+                    "propertyKey": "flxImageWidth",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Width",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "bfc97df5c28a4fc78b1c0fa7cac06b97",
+                    "originalPropertyKey": "height",
+                    "propertyIndex": 6,
+                    "propertyKey": "flxContainerHeight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Height",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "bcf33bdbd34a4057856fb171275b8298",
+                    "originalPropertyKey": "height",
+                    "propertyIndex": 6,
+                    "propertyKey": "flxheaderMainHeight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Height",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "f7c180f7229540b9ade6d68cb530f369",
+                    "originalPropertyKey": "width",
+                    "propertyIndex": 6,
+                    "propertyKey": "imgIndicatorWidth",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Width",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "g2db4d92c2e742d0b38cb50ecce819b4",
+                    "originalPropertyKey": "height",
+                    "propertyIndex": 6,
+                    "propertyKey": "flxImageHeight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Height",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "fea1ea4fac994d5f85de86b41e77a79c",
+                    "originalPropertyKey": "centerX",
+                    "propertyIndex": 7,
+                    "propertyKey": "flxImageCenterX",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center X",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "b5f1567c00424cc9b3ecff36379ef8b3",
+                    "originalPropertyKey": "centerX",
+                    "propertyIndex": 7,
+                    "propertyKey": "flxContainerCenterX",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center X",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "ba22b2f2850342ebb985be40a581c436",
+                    "originalPropertyKey": "height",
+                    "propertyIndex": 7,
+                    "propertyKey": "imgIndicatorHeight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Height",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ],
+                                    [
+                                        "Preferred",
+                                        "preferred"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "hbb5cb48a208406bb214d3d83e795683",
+                    "originalPropertyKey": "centerY",
+                    "propertyIndex": 7,
+                    "propertyKey": "flxheaderMainCenterY",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center Y",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image Flex",
+                    "kuid": "e4548a7eb8f149c2bea34760d82315d8",
+                    "originalPropertyKey": "centerY",
+                    "propertyIndex": 8,
+                    "propertyKey": "flxImageCenterY",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center Y",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxImage",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "af9d2dd969e8407397571f9c16a95b79"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Row Flex",
+                    "kuid": "c635bad2b3dd48c0b7c15fda86f9744c",
+                    "originalPropertyKey": "centerY",
+                    "propertyIndex": 8,
+                    "propertyKey": "flxContainerCenterY",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center Y",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxContainer",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Flex",
+                    "kuid": "d6d69d211a8042efaa199b84a18decf9",
+                    "originalPropertyKey": "centerX",
+                    "propertyIndex": 8,
+                    "propertyKey": "flxheaderMainCenterX",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center X",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "flxHeaderMain",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "f19a631be5ad4cf391dcf4a0ac3a6e44"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "e429699a0af649cb8cca6bc5ff7c4d58",
+                    "originalPropertyKey": "centerX",
+                    "propertyIndex": 8,
+                    "propertyKey": "imgIndicatorCenterX",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center X",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                },
+                {
+                    "access": "Enable",
+                    "group": "Header Image",
+                    "kuid": "d1a068abeb9c480f833beba8ca25a878",
+                    "originalPropertyKey": "centerY",
+                    "propertyIndex": 9,
+                    "propertyKey": "imgIndicatorCenterY",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "defaultValue": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "displayName": "Center Y",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb",
+                                "kiosk"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "winphone8",
+                                "spaip",
+                                "spaan",
+                                "spawinphone8",
+                                "spabb"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "windows8",
+                                "spaipad",
+                                "spaandroidtablet",
+                                "spawindowstablet"
+                            ]
+                        },
+                        "srcWidget": "imgIndicator",
+                        "type": "object",
+                        "uiConfig": {
+                            "Combobox": {
+                                "masterData": [
+                                    [
+                                        "Dp",
+                                        "dp"
+                                    ],
+                                    [
+                                        "Px",
+                                        "px"
+                                    ],
+                                    [
+                                        "%",
+                                        "%"
+                                    ],
+                                    [
+                                        "Default",
+                                        "Default"
+                                    ]
+                                ]
+                            },
+                            "Label": {},
+                            "Textbox": {}
+                        },
+                        "uiRepresentation": "Label-Textbox-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "e131c86ffab145d7bf3eb98c4b5bd4ac"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [
+                {
+                    "kuid": "jcdf60cb5c944e2fac36379b984f6e65",
+                    "propertyKey": "flxContainer",
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "kuid": "a42fc5b5d5c94a11bb91bdf283ef67ac",
+                    "propertyKey": "flxHeader",
+                    "srcWgtKUID": "e44fe45c1eb449bf85d189bfca037dee"
+                }
+            ],
+            "passthrough": [
+                {
+                    "kuid": "b9d3f209a43e46babe353664b468b1c7",
+                    "placeholder": "Row",
+                    "propertyKey": "flxContainer",
+                    "srcWgtKUID": "g8b3c9d6ca244b269a82ed77eb7df05a"
+                },
+                {
+                    "kuid": "j3b52965e2cd4571968bc23e17fd5106",
+                    "placeholder": "Header",
+                    "propertyKey": "flxHeader",
+                    "srcWgtKUID": "e44fe45c1eb449bf85d189bfca037dee"
+                }
+            ]
+        }
+    },
+    "namespace": "com.konymp",
+    "version": "1.0.0"
+}

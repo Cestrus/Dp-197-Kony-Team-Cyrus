@@ -1,0 +1,156 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {
+            "factContent": {
+                "text": "The term sol is used to refer to the duration of a day on Mars. A sol is about 24 hours and 40 minutes. The duration of daylight varies along the Martian year, as on Earth. For Curiosity, sol 0 corresponds with its landing day on Mars."
+            },
+            "imgIcon": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "mars.png"
+            },
+            "lblTitle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Mars day duration "
+            }
+        },
+        {
+            "factContent": {
+                "text": "A Martian year is divided in 12 months, as Earth's. However, Martian months are from 46 to 67 sols (Martian days) long. The longest one is the month 3 (67 sols), and the shortest one is the month 9 (46 sols) Martian months mark seasonal changes. In the southern hemisphere (Curiosity rover location) the autumn starts in month 1; the winter in month 4; the spring in month 7; and the summer in month 10."
+            },
+            "imgIcon": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "schedule.png"
+            },
+            "lblTitle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Seasons on Mars"
+            }
+        },
+        {
+            "factContent": {
+                "text": "Pressure is a measure of the total mass in a column of air above us. Because Martian's atmosphere is extremely tenuous, pressure on Mars' surface is about 160 times smaller than pressure on Earth. Average pressure on Martian surface is about 700 Pascals (100000 Pascals on Earth) Curiosity is into Gale crater, which is about 5 kilometers (3 miles) depth. For this reason, pressure measured by REMS is usually higher than average pressure on the entire planet. "
+            },
+            "imgIcon": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "gaug.png"
+            },
+            "lblTitle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Pressure facts"
+            }
+        },
+        {
+            "factContent": {
+                "text": "Mars is farther from the Sun than Earth, it makes that Mars is colder than our planet. Moreover, Martian's atmosphere, which is extremely tenuous, does not retain the heat."
+            },
+            "imgIcon": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "hot.png"
+            },
+            "lblTitle": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "About temperature"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "130dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 1,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "03",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "hiddencolumns": {
+        "factContent": "text"
+    },
+    "id": "lstFacts",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "d2e3734452734712a087ec443e8300d4",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "FlexContainerMain",
+    "pf": "frmWeatherFAQ",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "f222ae1bc5e5468f95da898a99bfb87c",
+    "rowcounter": 3,
+    "rowfocusskin": "s10aff14fcfa4834aaa72fc1be996343",
+    "rowskin": "s0abfa374f6e41459b149d6cc262c16c",
+    "rowtemplate": "flxFactRow",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s80436ec60524145a45cb573afc73343",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": true,
+    "separatorthickness": 1,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxFactRow": "flxFactRow",
+        "imgIcon": "imgIcon",
+        "lblTitle": "lblTitle"
+    },
+    "zindex": 50
+}

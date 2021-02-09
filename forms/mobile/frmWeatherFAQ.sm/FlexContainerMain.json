@@ -1,0 +1,63 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sf956024bcf34b17908c49ebc0f06d67",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "flexHeader",
+        "flexWeatherFAQHeader",
+        "navBottomMenu",
+        "lstFacts"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "FlexContainerMain",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ad0246f5699a404b94b179a6181c652a",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "frmWeatherFAQ",
+    "pf": "frmWeatherFAQ",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

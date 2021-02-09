@@ -1,0 +1,27 @@
+{
+    "AS_Form_fa1dfa758a05415c8b9a8cf27a77cc6e": {
+        "id": "AS_Form_fa1dfa758a05415c8b9a8cf27a77cc6e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmWeatherFAQ",
+            "type": "forms",
+            "platform": null,
+            "KUID": "g5366a951d3c4950962e7339fb962a26"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_init_j08ee6a8d7ff4246bc9c69cab6d0e746",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onInitialize",
+            "display": "onInitialize",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

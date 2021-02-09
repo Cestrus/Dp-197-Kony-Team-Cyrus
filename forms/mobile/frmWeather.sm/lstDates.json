@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "65dp"
+        "value": "0dp"
     },
     "_data_": [
         {
@@ -71,9 +71,13 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "number",
+        "value": "0"
+    },
     "_top_": {
         "type": "string",
-        "value": "125dp"
+        "value": "65dp"
     },
     "_width_": {
         "type": "string",
@@ -101,7 +105,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b591672e71e44a49b3d72cfd15328213",
+    "kuid": "j3a0568101694fe7b7f4664008344d59",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
@@ -110,7 +114,7 @@
     "paginationconfig": {
         "position": "bottom"
     },
-    "parent": "FlexContainerMain",
+    "parent": "flxWeatherContainer",
     "pf": "frmWeather",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
