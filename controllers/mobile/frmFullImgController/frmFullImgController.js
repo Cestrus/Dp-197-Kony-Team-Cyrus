@@ -46,7 +46,6 @@ define({
       this.currStore = this.navigationData.isSearchScreen ? new LoadImgStore() : new FavorImgStore();
 
       this.view.imgSpaceFull.src = this.currStore.get()[this.currNum].imgSpace; 
-
       this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
     }
   },
@@ -62,6 +61,7 @@ define({
   },
 
   onDeleteImg: function() {
+    this.showMessage('deleted');
     this.currStore.delete(this.currNum);
     if (!this.currStore.get().length) {
       var navigation = new kony.mvc.Navigation("frmCollectionImg");
@@ -71,8 +71,11 @@ define({
   },
 
   onAddImg: function() {
+    this.showMessage('added');
     var inst = new FavorImgStore();
     inst.push(this.currStore.get()[this.currNum]);
   },
+  
+
 
 });

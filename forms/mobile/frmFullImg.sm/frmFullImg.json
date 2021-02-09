@@ -31,7 +31,8 @@
     "canUpdateUI": true,
     "children": [
         "FlexContainerFullImg",
-        "flexHeader"
+        "flexHeader",
+        "lbMessage"
     ],
     "containerweight": 100,
     "controllerInfo": {
