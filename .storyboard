@@ -26,7 +26,7 @@
                     "isStartupForm": false,
                     "key": "befd37092a0540039fb5f38818414844",
                     "loc": "188 184.845263671875",
-                    "thumbnailURL": "/assets/cyrus/forms/mobile/frmMain.sm/.thumbs/default.jpeg?"
+                    "thumbnailURL": null
                 },
                 {
                     "formKUID": "cd22a50c8348439d8a8db705288269c0",
@@ -45,11 +45,35 @@
                     "thumbnailURL": null
                 },
                 {
+                    "formKUID": "a9d7700c25d94f0b9ef306adc5e4ca45",
+                    "formName": "frmSeparateNews",
+                    "isStartupForm": false,
+                    "key": "a9d7700c25d94f0b9ef306adc5e4ca45",
+                    "loc": "368 354.845263671875",
+                    "thumbnailURL": null
+                },
+                {
                     "formKUID": "ac24b67245a44aad8272bbc4f5d5efe2",
                     "formName": "frmStart",
                     "isStartupForm": true,
                     "key": "ac24b67245a44aad8272bbc4f5d5efe2",
                     "loc": "8 2424.845263671875",
+                    "thumbnailURL": null
+                },
+                {
+                    "formKUID": "d2b62b0c6b5a477aaf7adcfe806db324",
+                    "formName": "frmWeather",
+                    "isStartupForm": false,
+                    "key": "d2b62b0c6b5a477aaf7adcfe806db324",
+                    "loc": "188 784.845263671875",
+                    "thumbnailURL": null
+                },
+                {
+                    "formKUID": "g5366a951d3c4950962e7339fb962a26",
+                    "formName": "frmWeatherFAQ",
+                    "isStartupForm": false,
+                    "key": "g5366a951d3c4950962e7339fb962a26",
+                    "loc": "188 1384.845263671875",
                     "thumbnailURL": null
                 }
             ]

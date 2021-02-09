@@ -1,17 +1,17 @@
-define(["NewsService"], function(newsService) { 
+define(["NewsService", "WeatherService"], function(newsService, weatherService) { 
   return {
     onInitialize: function() {  
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       
-      this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
+      this.view.btnGoBack.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
 
-    onNavigate: function(data) {
-      this.view.lstDates.setData(data);
-    },
+//     onNavigate: function(data) {
+//       this.view.lstDates.setData(data);
+//     },
 
     onButtonGoToHome: function() {
       var navigation = new kony.mvc.Navigation("frmMain");
@@ -29,16 +29,22 @@ define(["NewsService"], function(newsService) {
         }
       );
     },
+    
+    onButtonGoToWeather: function() {
+      weatherService.getWeather(function(arr) {
+        var navigation = new kony.mvc.Navigation("frmWeather");
+        navigation.navigate(arr);
+
+      },function() {
+        alert("Error while retrieving Mars weather.");
+      });
+    },
 
     onButtonGoToSearchImg: function() {
       var navigation = new kony.mvc.Navigation("frmSearchImg");
       navigation.navigate();
     },
     
-    onButtonGoInfo : function() {
-      var navigation = new kony.mvc.Navigation("frmWeatherFAQ");
-      navigation.navigate();
-    },
     
     onGoToProfile: function() {
       var navigation = new kony.mvc.Navigation("frmCollectionImg");
