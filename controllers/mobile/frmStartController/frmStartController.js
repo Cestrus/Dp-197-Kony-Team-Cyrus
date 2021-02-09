@@ -5,23 +5,78 @@ define(["AuthUserService"], function(authUser) {
     },
 
     onButtonEnterClicked: function() {
-      if (this.view.switchNewUser.selectedIndex === 1) {
-        authUser.checkUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
-          function() {
-            var navigation = new kony.mvc.Navigation("frmMain");
-            navigation.navigate();
-          },function() {
-            alert("User is not registrated. Please registrate first");
-          });
+      var validationResult = this.validateInput();
+      if (!validationResult.validation) {
+        alert (validationResult.validationMessage);
       } else {
-        authUser.registerUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
-          function() {
-            var navigation = new kony.mvc.Navigation("frmMain");
-            navigation.navigate();
-          },function() {
-            alert("User already exists. Please try another login");
-          });
+        if (this.view.switchNewUser.selectedIndex === 1) {
+          authUser.checkUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
+            function() {
+              var navigation = new kony.mvc.Navigation("frmMain");
+              navigation.navigate();
+            },function() {
+              alert("User is not registrated. Please registrate first");
+            });
+        } else {
+          authUser.registerUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
+            function() {
+              var navigation = new kony.mvc.Navigation("frmMain");
+              navigation.navigate();
+            },function() {
+              alert("User already exists. Please try another login");
+            });
+        }
       }
+      
+    },
+    
+    validateInput: function() {
+      var validationResult = null;
+      var login = this.view.inptStartLogin.text;
+      var password = this.view.inptStartPsswd.text;
+      //regexps for the validation
+      var pattern  = /^(?!\s)[A-Za-z0-9]+$/;
+      
+      if (login === null || password === null) {
+        validationResult = {
+          validation: false, 
+          validationMessage: "Please fill all fields"
+        };
+        return validationResult;
+      }
+      
+      if (login.length < 4 || login.length > 10) {
+        validationResult = {
+          validation: false, 
+          validationMessage: "Login's length should be from 4 to 10 characters"
+        };
+        return validationResult;
+      }
+      if (password.length < 4 || password.length > 10) {
+        validationResult = {
+          validation: false, 
+          validationMessage: "Password's length should be from 4 to 10 characters"
+        };
+        return validationResult;
+      }
+      
+      if(!pattern.test(password)){
+        validationResult = {
+          validation: false, 
+          validationMessage: "Password shouldn't contain any spaces or special characters"
+        };
+        return validationResult;
+      }
+      if(!pattern.test(login)){
+        validationResult = {
+          validation: false, 
+          validationMessage: "Login shouldn't contain any spaces or special characters"
+        };
+        return validationResult;
+      }
+      
+      validationResult = {validation: true};
+      return validationResult;
     }
 
   };
