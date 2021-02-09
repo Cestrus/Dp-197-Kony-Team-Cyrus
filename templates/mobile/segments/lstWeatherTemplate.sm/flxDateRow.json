@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s56a5f001e554cf7ae95eaca421cb49a",
+    "_skin_": "sae1da21ed4445299d1a92fa66d59328",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -40,7 +40,11 @@
         "lblSunrise",
         "lblSunset",
         "lblTempMin",
-        "lblTempMax"
+        "lblTempMax",
+        "lblIconTempLow",
+        "lblIconTempHigh",
+        "lblIconSun",
+        "lblIconMoon"
     ],
     "clipbounds": true,
     "containerId": true,

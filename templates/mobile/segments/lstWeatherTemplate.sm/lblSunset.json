@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "50%"
+        "value": "60%"
     },
     "_margin_": [
         1,
@@ -22,14 +22,14 @@
         0
     ],
     "_right_": {
-        "type": "number",
-        "value": "10"
+        "type": "string",
+        "value": "10dp"
     },
     "_skin_": "s49282b5b03a43e6bddf7a9aacde3ecf",
     "_text_": "Sunset",
     "_top_": {
         "type": "string",
-        "value": "85dp"
+        "value": "90dp"
     },
     "_width_": {
         "type": "ref",
