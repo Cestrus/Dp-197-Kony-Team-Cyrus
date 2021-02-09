@@ -5,16 +5,6 @@ define(["NewsService"], function(newsService) {
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       
-      this.view.btnGoBack.onClick = function () { 
-        var previousFormId = kony.application.getPreviousForm().id;
-        if (previousFormId === "frmNews") {
-          this.onButtonGoToNews();
-        } else {
-          var navigation = new kony.mvc.Navigation(previousFormId);
-          navigation.navigate();
-        }
-      }.bind(this);
-      
       this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
@@ -44,6 +34,7 @@ define(["NewsService"], function(newsService) {
       var navigation = new kony.mvc.Navigation("frmSearchImg");
       navigation.navigate();
     },
+    
     onButtonGoInfo : function() {
       var navigation = new kony.mvc.Navigation("frmWeatherInfo");
       navigation.navigate();
