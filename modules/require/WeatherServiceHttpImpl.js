@@ -35,12 +35,12 @@ define(function () {
         for (var i = 0; i <= 6; i++){
           
           weather.push({
-              lblSol: `Sole ${dates[i].sol}`,
+              lblSol: 'Sole ' + dates[i].sol,
               lblDate: dates[i].terrestrial_date,
-              lblSunrise: `Sunrise ${dates[i].sunrise}`,
-              lblSunset: `Sunset ${dates[i].sunset}`,
-              lblTempMin: `Min ${dates[i].min_temp}°C`,
-              lblTempMax: `Max ${dates[i].max_temp}°C`,
+              lblSunrise: 'Sunrise '+ dates[i].sunrise,
+              lblSunset: 'Sunset '+ dates[i].sunset,
+              lblTempMin: 'Min '+ dates[i].min_temp +'°C',
+              lblTempMax: 'Max '+ dates[i].max_temp + '°C',
          });
         }
       }
