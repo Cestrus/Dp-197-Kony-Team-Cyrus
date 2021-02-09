@@ -10,12 +10,12 @@ define(function () {
       }
       
       if (httpClient.status === HttpResponseCodes.OK) {
-        successCallback(httpClient.response);
-        
+        successCallback(httpClient.response);  
       } else {
         errorCallback(httpClient.response);
       }
     };
+    
     httpClient.send();
   }; 
  
@@ -24,11 +24,10 @@ define(function () {
     if (weatherData) {
       return successCallback(weatherData);
     }
-    
-    
+
     var weather = [];
     
-      makeHttpRequest(WEATHER_BASE_URL, function (currentData) {
+    makeHttpRequest(WEATHER_BASE_URL, function (currentData) {
       if (currentData) {
         var dates = currentData.soles;
         

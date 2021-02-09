@@ -4,7 +4,6 @@ define(["NewsService"], function(newsService) {
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      
       this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },

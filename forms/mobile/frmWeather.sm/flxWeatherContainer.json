@@ -1,8 +1,12 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "number",
+        "value": "65"
+    },
     "_height_": {
-        "type": "string",
-        "value": "65dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -22,41 +26,53 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd6f161473e945ba95b65e25d798d9e8",
+    "_right_": {
+        "type": "number",
+        "value": "0"
+    },
+    "_skin_": "s1dd73cc5bb2466d9f68507593765e42",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "65dp"
     },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "allowhorizontalbounce": false,
+    "allowverticalbounce": true,
+    "bounces": true,
     "canUpdateUI": true,
     "children": [
-        "btnInfo",
-        "lblWeatherHeader"
+        "flexWeatherHeader",
+        "lstDates"
     ],
     "clipbounds": true,
     "containerweight": 100,
+    "decelerat": false,
+    "dragg": false,
     "enablescrolling": true,
-    "id": "flexWeatherHeader",
+    "horizontalscrollindicator": true,
+    "id": "flxWeatherContainer",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ab4a8d445b344dc98fcbf609864d049a",
+    "kuid": "he717a9768e24a0a81d4088ef040b67e",
     "layouttype": 2,
-    "masterType": 1,
-    "name": "kony.ui.FlexContainer",
-    "parent": "flxWeatherContainer",
+    "name": "kony.ui.FlexScrollContainer",
+    "pagingenabled": false,
+    "parent": "FlexContainerMain",
     "pf": "frmWeather",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
+    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "wType": "FlexContainer",
+    "track": false,
+    "verticalscrollindicator": true,
+    "wType": "FlexScrollContainer",
     "widgetalignment": 1,
     "zindex": 50
 }

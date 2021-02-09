@@ -5,6 +5,10 @@
         "type": "ref",
         "value": "preferred"
     },
+    "_left_": {
+        "type": "string",
+        "value": "15dp"
+    },
     "_margin_": [
         1,
         1,
@@ -17,11 +21,15 @@
         0,
         0
     ],
-    "_skin_": "scee047e6d914bb9a247386483707d9e",
-    "_text_": "Mars Weather",
+    "_right_": {
+        "type": "string",
+        "value": "15dp"
+    },
+    "_skin_": "s31501d74b784772901434ef6f829e87",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "10dp"
+        "value": "85dp"
     },
     "_width_": {
         "type": "ref",
@@ -35,13 +43,9 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
-    "contentalignment": 4,
-    "id": "lblWeatherHeader",
+    "contentalignment": 1,
+    "id": "lblFactText",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,10 +59,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aaccac9eda494541b8c26cea681e7d8e",
+    "kuid": "ca4a82b9bdf34d129cc642dace8198ef",
     "name": "kony.ui.Label",
-    "parent": "flexWeatherHeader",
-    "pf": "frmWeather",
+    "parent": "FlexScrollContainer",
+    "pf": "frmFact",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},

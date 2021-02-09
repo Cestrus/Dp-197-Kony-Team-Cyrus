@@ -1,13 +1,13 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_height_": {
         "type": "string",
         "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         6,
@@ -21,35 +21,29 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "0dp"
-    },
-    "_skin_": "sc5b8a36485d46c6ab8158e0bb104455",
-    "_text_": " ",
+    "_skin_": "sc8bedeb4b294ed9afa77ab39313fa97",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "70dp"
+        "value": "25%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "se777c1dcc1e41918496377af3436361",
-    "id": "btnInfo",
+    "focusskin": "s800ec761f60410fafb3c4cc180583a8",
+    "id": "tabBtnHome",
     "info": null,
-    "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d1c18a6cf61f46a28323555959a0318d",
+    "kuid": "dd38efed560340578346d6c94718200c",
+    "masterType": 1,
     "name": "kony.ui.Button",
-    "parent": "flexWeatherHeader",
-    "pf": "frmWeather",
-    "retaincontentalignment": false,
-    "retainflexpositionproperties": false,
+    "parent": "navBottomMenu",
+    "pf": "frmFact",
     "wType": "Button",
-    "zindex": 1
+    "zindex": 2
 }

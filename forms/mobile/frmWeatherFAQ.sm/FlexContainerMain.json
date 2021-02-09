@@ -37,7 +37,8 @@
     "children": [
         "flexHeader",
         "flexWeatherFAQHeader",
-        "navBottomMenu"
+        "navBottomMenu",
+        "lstFacts"
     ],
     "clipbounds": true,
     "containerweight": 100,

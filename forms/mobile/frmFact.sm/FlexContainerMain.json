@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "65dp"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd6f161473e945ba95b65e25d798d9e8",
+    "_skin_": "sf956024bcf34b17908c49ebc0f06d67",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -35,22 +35,22 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "btnInfo",
-        "lblWeatherHeader"
+        "flexHeader",
+        "FlexScrollContainer",
+        "navBottomMenu"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flexWeatherHeader",
+    "id": "FlexContainerMain",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ab4a8d445b344dc98fcbf609864d049a",
+    "kuid": "dcd6ec9d461447e6ad2ee1bf5ae22333",
     "layouttype": 2,
-    "masterType": 1,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxWeatherContainer",
-    "pf": "frmWeather",
+    "parent": "frmFact",
+    "pf": "frmFact",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
@@ -58,5 +58,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 50
+    "zindex": 1
 }

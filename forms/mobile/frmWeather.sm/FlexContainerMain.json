@@ -36,9 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "flexHeader",
-        "flexWeatherHeader",
         "navBottomMenu",
-        "lstDates"
+        "flxWeatherContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,

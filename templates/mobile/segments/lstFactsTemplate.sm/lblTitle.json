@@ -1,9 +1,17 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "26dp"
+    },
     "_height_": {
         "type": "ref",
         "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "100dp"
     },
     "_margin_": [
         1,
@@ -17,11 +25,11 @@
         0,
         0
     ],
-    "_skin_": "scee047e6d914bb9a247386483707d9e",
-    "_text_": "Mars Weather",
+    "_skin_": "sf026872d8f040829cebd14f4c5cc77d",
+    "_text_": "Label",
     "_top_": {
         "type": "string",
-        "value": "10dp"
+        "value": "30dp"
     },
     "_width_": {
         "type": "ref",
@@ -35,13 +43,10 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
+    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblWeatherHeader",
+    "id": "lblTitle",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,10 +60,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aaccac9eda494541b8c26cea681e7d8e",
+    "kuid": "f2305d91ee5646f7a900c18d4bc8a023",
     "name": "kony.ui.Label",
-    "parent": "flexWeatherHeader",
-    "pf": "frmWeather",
+    "parent": "flxFactRow",
+    "pf": "lstFactsTemplate",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "textstyle": {},
