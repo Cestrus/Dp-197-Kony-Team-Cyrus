@@ -35,10 +35,10 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lstDates",
         "flexHeader",
         "flexWeatherHeader",
-        "navBottomMenu"
+        "navBottomMenu",
+        "lstDates"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "50dp"
+        "value": "50%"
     },
     "_margin_": [
         1,
@@ -21,19 +21,15 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "37.98%"
-    },
-    "_skin_": "s49282b5b03a43e6bddf7a9aacde3ecf",
-    "_text_": "Min",
+    "_skin_": "s5abb2aa4cc0476c871ad570f33981c5",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "120dp"
     },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "20dp"
     },
     "_wrapping_": 2,
     "android": {
@@ -45,8 +41,8 @@
     "canUpdateUI": true,
     "containerId": true,
     "containerweight": 100,
-    "contentalignment": 4,
-    "id": "lblTempMin",
+    "contentalignment": 5,
+    "id": "lblIconTempHigh",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,8 +56,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "abe09dfa6b2242c79a75c0e4a22e3d06",
+    "kuid": "if721caf46734c6ca5872e12bbfa3f0a",
     "name": "kony.ui.Label",
+    "paddinginpixel": false,
     "parent": "flxDateRow",
     "pf": "lstWeatherTemplate",
     "retaincontentalignment": false,

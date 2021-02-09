@@ -3,7 +3,7 @@
     "background_color": "22204500",
     "bg_type": "one",
     "font_color": "ffffffff",
-    "font_name": "default",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true
   },
@@ -11,7 +11,7 @@
     "background_color": "22204500",
     "bg_type": "one",
     "font_color": "ffffffff",
-    "font_name": "default",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true
   },
@@ -31,7 +31,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_color": "ffffffff",
-    "font_name": "Helvetica",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true,
     "shadow": {
@@ -92,7 +92,7 @@
     "background_color": "22204500",
     "bg_type": "one",
     "font_color": "ffffffff",
-    "font_name": "None",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true
   },
@@ -107,7 +107,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_color": "ffffffff",
-    "font_name": "Helvetica",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true,
     "shadow": {
@@ -135,7 +135,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_color": "ffffffff",
-    "font_name": "Helvetica",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true,
     "shadow": {
@@ -163,7 +163,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_color": "ffffffff",
-    "font_name": "Helvetica",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true,
     "shadow": {
@@ -191,7 +191,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_color": "ffffffff",
-    "font_name": "Helvetica",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true,
     "shadow": {
@@ -219,7 +219,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_color": "ffffffff",
-    "font_name": "Helvetica",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true,
     "shadow": {
@@ -247,7 +247,7 @@
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
     "font_color": "ffffffff",
-    "font_name": "Helvetica",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true,
     "shadow": {
@@ -269,7 +269,7 @@
     "background_color": "22204500",
     "bg_type": "one",
     "font_color": "ffffffff",
-    "font_name": "default",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true
   },
@@ -284,7 +284,7 @@
     "background_color": "22204500",
     "bg_type": "one",
     "font_color": "ffffffff",
-    "font_name": "None",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true
   },
@@ -292,7 +292,7 @@
     "background_color": "22204500",
     "bg_type": "one",
     "font_color": "ffffffff",
-    "font_name": "None",
+    "font_name": "FontAwesome",
     "font_size": 160,
     "isForked": true
   }

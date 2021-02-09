@@ -5,7 +5,7 @@ define(["NewsService"], function(newsService) {
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       
-      this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
+//       this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
 
@@ -35,10 +35,10 @@ define(["NewsService"], function(newsService) {
       navigation.navigate();
     },
     
-    onButtonGoInfo : function() {
-      var navigation = new kony.mvc.Navigation("frmWeatherInfo");
-      navigation.navigate();
-    },
+//     onButtonGoInfo : function() {
+//       var navigation = new kony.mvc.Navigation("frmWeatherInfo");
+//       navigation.navigate();
+//     },
     
     onGoToProfile: function() {
       var navigation = new kony.mvc.Navigation("frmCollectionImg");

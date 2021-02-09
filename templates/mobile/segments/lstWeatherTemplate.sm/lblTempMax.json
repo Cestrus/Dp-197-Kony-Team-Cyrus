@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "50%"
+        "value": "60.06%"
     },
     "_margin_": [
         1,
@@ -23,13 +23,13 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "10%"
+        "value": "10dp"
     },
     "_skin_": "s49282b5b03a43e6bddf7a9aacde3ecf",
     "_text_": "Max",
     "_top_": {
         "type": "string",
-        "value": "125dp"
+        "value": "120dp"
     },
     "_width_": {
         "type": "ref",
