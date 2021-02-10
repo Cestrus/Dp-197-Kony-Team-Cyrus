@@ -62,7 +62,7 @@ define({
   },
 
   onDeleteImg: function() {
-    this.showMessage('deleted');
+//     this.showMessage('deleted');
     this.currStore.delete(this.currNum);
     if (!this.currStore.get().length) {
       var navigation = new kony.mvc.Navigation("frmCollectionImg");
