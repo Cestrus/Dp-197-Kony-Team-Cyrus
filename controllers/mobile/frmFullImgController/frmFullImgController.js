@@ -62,13 +62,14 @@ define({
   },
 
   onDeleteImg: function() {
-//     this.showMessage('deleted');
-    this.currStore.delete(this.currNum);
-    if (!this.currStore.get().length) {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    }
-    else this.onPrevImg();
+    this.showMessage('deleted', function(){
+      this.currStore.delete(this.currNum);
+      if (!this.currStore.get().length) {
+        var navigation = new kony.mvc.Navigation("frmCollectionImg");
+        navigation.navigate();
+      }
+      else this.onPrevImg();
+    }.bind(this));
   },
 
   onAddImg: function() {
@@ -77,11 +78,12 @@ define({
     store.push(this.currStore.get()[this.currNum]);
   },
   
-  showMessage: function(str) {
+  showMessage: function(str, clbk = null) {
     this.view.txtBoxAddImg.text = 'Image is ' + str;
     this.view.txtBoxAddImg.isVisible = true;
     kony.timer.schedule("timerMessg", function(){
       this.view.txtBoxAddImg.isVisible = false;
+      if(clbk) clbk();
       kony.timer.cancel("timerMessg");
     }.bind(this), 1, false);
   }
