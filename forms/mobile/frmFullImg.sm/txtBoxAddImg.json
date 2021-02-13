@@ -1,10 +1,6 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "100dp"
-    },
     "_height_": {
         "type": "string",
         "value": "50dp"
@@ -34,6 +30,10 @@
     "autofilter": false,
     "canUpdateUI": true,
     "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
         "type": "string",
         "value": "50%"
     },
