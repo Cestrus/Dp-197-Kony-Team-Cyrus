@@ -8,7 +8,8 @@
   "background_color": "171430ff",
   "bg_type": "one",
   "border_color": "05d0ceff",
-  "border_style": "plain",
+  "border_radius": 25,
+  "border_style": "custom",
   "border_type": 0,
   "border_width": 2,
   "desktopweb": {
