@@ -4,6 +4,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       this.resetVisiblity();
       
       this.loadImgStore = new LoadImgStore(); // array for all img on page
+      this.chosenImgArr = [];
  
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
@@ -97,10 +98,10 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
         this.renderNotInput();
       } else {
         var tempArr = arrLinks.filter(function(link) { // delete arr element ""
-          return link.imgSpace !== "";
+          return link !== "";
         });
         this.loadImgStore.set(tempArr);
-        if(!this.loadImgStore.get().length) this.renderNotFound();  
+        if(!this.loadImgStore.length()) this.renderNotFound();  
         else {
           this.createListImg(this.loadImgStore.get());
           this.renderListImg();
@@ -111,11 +112,8 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       
     createListImg: function(arrImg){
       for(var i = 0; i < arrImg.length; i++){
-        var image = this.createImg( i, arrImg[i].imgSpace );
+        var image = this.createImg( i, arrImg[i] );
         this.view.flexScrollImgContainer.add( image );
-				
-//         this.view.image0.addGestureRecognizer(1, {fingers: 1, taps: 2}, this.onShowFullImg.bind(this));
-//         this.view.image0.addGestureRecognizer(3, {pressDuration: 2}, this.onChooseImg.bind(this));
       }
     },  
       
@@ -138,7 +136,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       var choiceMark = new kony.ui.Label({
         "id": "choiceMark" + index,
         "skin": "skinldlChoosenImg",
-        "isVisible": true,
+        "isVisible": false,
         "bottom": "10dp",
         "right": "20dp",
         "width": "20dp",
@@ -156,18 +154,27 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     }, 
      
     onShowFullImg: function(widget) {
-      var index = widget.id.match(/\d\d?/)[0];
-      alert(index);
-//       var navigation = new kony.mvc.Navigation("frmFullImg");
-//       navigation.navigate(index);
+      var index = this.takeIndex(widget);
+      var navigation = new kony.mvc.Navigation("frmFullImg");
+      navigation.navigate(index);
     },
 
-    onChooseImg: function(id) {
-      alert('chosen' + id)
+    onChooseImg: function(widget) {
+      var index = this.takeIndex(widget);
+      var imgUrl =  widget.widgets()[0].src;
+      var mark = widget.widgets()[1];
+      mark.isVisible = !mark.isVisible;
+      if( mark.isVisible ) this.chosenImgArr.push(imgUrl);
+      else this.chosenImgArr = this.chosenImgArr.filter(function(el){ return el !== imgUrl;});
+      
     },
       
     onAddToCollection: function() {
 
-    }
+    },
+      
+    takeIndex: function(widget){
+      return widget.id.match(/\d\d?/)[0];
+    }  
   };
 });

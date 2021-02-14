@@ -6,17 +6,22 @@ function LoadImgStore () {
   
   var store = [];
   
+  this.length = function() {
+    return store.length;
+  };
+  
   this.set = function(arr) {
     store.length = 0;
     store = arr.slice();
   };
   
   this.get = function() {
-    return store;
+    return store.slice();
   };
   
   return { 
     set: this.set,
     get: this.get,
+    length: this.length,
   };
 }

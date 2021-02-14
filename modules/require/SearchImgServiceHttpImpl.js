@@ -30,7 +30,7 @@ define(function () {
         url, 
         function(responseData){
           var imgLinks = responseData.collection.items.map(function(item) {
-            return (item.links) ? {imgSpace: item.links[0].href} : {imgSpace: ''};
+            return (item.links) ? item.links[0].href : '';
           });                  	
           successCallback(imgLinks);
         }, 
