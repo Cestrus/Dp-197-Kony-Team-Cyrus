@@ -1,6 +1,6 @@
 var isExistInstPage = false; 
 
-function LoadImgStore () {
+function LoadedImageStore () {
   if (isExistInstPage) return isExistInstPage;
   else isExistInstPage = this;
   

@@ -43,7 +43,7 @@
         "flexHeader",
         "lbNotFound",
         "lbNotInput",
-        "flexScrollImgContainer"
+        "ImgContainerSearch"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -43,7 +43,7 @@
     "dragg": false,
     "enablescrolling": true,
     "horizontalscrollindicator": true,
-    "id": "flexScrollImgContainer",
+    "id": "ImgContainerSearch",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

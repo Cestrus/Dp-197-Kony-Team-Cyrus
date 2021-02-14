@@ -2,19 +2,17 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
   return {
     onInitialize: function() {
       this.resetVisiblity();
-      
-      this.loadImgStore = new LoadImgStore(); // array for all img on page
+            
+      this.loadedImageStore = new LoadedImageStore(); // array for all img on page
+      this.favoriteImageStore = new FavoriteImageStore();
       this.chosenImgArr = [];
  
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnSearch.onClick = this.onSendRequest.bind(this);
-      this.view.btnAddToCollection.onClick = this.onAddToCollection(this);
-      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
-      
-//       this.view.flexScrollImgContainer.addGestureRecognizer(3, {pressDuration: 2}, this.onChooseImg.bind(this));
-      
+      this.view.btnAddToCollection.onClick = this.onAddToCollection.bind(this);
+      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);      
     },
 
     onButtonGoToHome: function() {
@@ -54,7 +52,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     resetVisiblity: function() {
       this.view.imgRocket.isVisible = true;
       this.view.lbNotFound.isVisible = false;
-      this.view.flexScrollImgContainer.isVisible = false;
+      this.view.ImgContainerSearch.isVisible = false;
       this.view.btnAddToCollection.isVisible = false;
       this.view.lbNotInput.isVisible = false;
     },
@@ -62,7 +60,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     renderNotFound: function() {
       this.view.imgRocket.isVisible = true;
       this.view.lbNotFound.isVisible = true;
-      this.view.flexScrollImgContainer.isVisible = false;
+      this.view.ImgContainerSearch.isVisible = false;
       this.view.btnAddToCollection.isVisible = false;
       this.view.lbNotInput.isVisible = false;
     },
@@ -70,7 +68,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     renderListImg: function() {
       this.view.imgRocket.isVisible = false;
       this.view.lbNotFound.isVisible = false;      
-      this.view.flexScrollImgContainer.isVisible = true;
+      this.view.ImgContainerSearch.isVisible = true;
       this.view.btnAddToCollection.isVisible = false;
       this.view.lbNotInput.isVisible = false;
     },
@@ -79,11 +77,12 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       this.view.lbNotInput.isVisible = true;
       this.view.imgRocket.isVisible = true;
       this.view.lbNotFound.isVisible = false;
-      this.view.flexScrollImgContainer.isVisible = false;
+      this.view.ImgContainerSearch.isVisible = false;
       this.view.btnAddToCollection.isVisible = false;
     },
 
     onSendRequest: function() {
+      
       var requestText = this.view.inptSearchImg.text? this.view.inptSearchImg.text.trim() : this.view.inptSearchImg.text;
       kony.application.showLoadingScreen();
 
@@ -100,10 +99,10 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
         var tempArr = arrLinks.filter(function(link) { // delete arr element ""
           return link !== "";
         });
-        this.loadImgStore.set(tempArr);
-        if(!this.loadImgStore.length()) this.renderNotFound();  
+        this.loadedImageStore.set(tempArr);
+        if(!this.loadedImageStore.length()) this.renderNotFound();  
         else {
-          this.createListImg(this.loadImgStore.get());
+          this.createListImg(this.loadedImageStore.get());
           this.renderListImg();
         }        
       } 
@@ -111,9 +110,10 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     },
       
     createListImg: function(arrImg){
+      this.view.ImgContainerSearch.removeAll();
       for(var i = 0; i < arrImg.length; i++){
         var image = this.createImg( i, arrImg[i] );
-        this.view.flexScrollImgContainer.add( image );
+        this.view.ImgContainerSearch.add( image );
       }
     },  
       
@@ -154,27 +154,34 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     }, 
      
     onShowFullImg: function(widget) {
-      var index = this.takeIndex(widget);
+      var index = widget.id.match(/\d\d?/)[0];
       var navigation = new kony.mvc.Navigation("frmFullImg");
       navigation.navigate(index);
     },
 
     onChooseImg: function(widget) {
-      var index = this.takeIndex(widget);
       var imgUrl =  widget.widgets()[0].src;
       var mark = widget.widgets()[1];
       mark.isVisible = !mark.isVisible;
       if( mark.isVisible ) this.chosenImgArr.push(imgUrl);
       else this.chosenImgArr = this.chosenImgArr.filter(function(el){ return el !== imgUrl;});
-      
+      (this.chosenImgArr.length) ? this.view.btnAddToCollection.isVisible = true : this.view.btnAddToCollection.isVisible = false;
     },
       
     onAddToCollection: function() {
-
+			this.favoriteImageStore.push(this.chosenImgArr);
+      this.chosenImgArr.length = 0;
+      this.resetChoiceMark();
+      this.view.btnAddToCollection.isVisible = false;
+      alert(this.favoriteImageStore.get())
     },
       
-    takeIndex: function(widget){
-      return widget.id.match(/\d\d?/)[0];
+    resetChoiceMark: function() {
+      var containersArr = this.view.ImgContainerSearch.widgets();
+      containersArr.forEach( function(cont) {
+        if(cont) cont.widgets()[1].isVisible = false; /// if ???
+      });
     }  
+ 
   };
 });
