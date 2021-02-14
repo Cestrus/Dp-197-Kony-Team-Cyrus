@@ -125,7 +125,11 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
 
     onDeleteImg: function() {
       this.favoriteImageStore.delete(this.chosenImgArr);
-      this.view.ImgContainerCollection.isVisible = false;
+      if (this.favoriteImageStore.length()) {
+        this.view.ImgContainerCollection.removeAll();
+        this.createListImg(this.favoriteImageStore.get());
+      } 
+      else this.renderEmptyCollection();
     }
     
   };

@@ -173,7 +173,6 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       this.chosenImgArr.length = 0;
       this.resetChoiceMark();
       this.view.btnAddToCollection.isVisible = false;
-      alert(this.favoriteImageStore.get())
     },
       
     resetChoiceMark: function() {

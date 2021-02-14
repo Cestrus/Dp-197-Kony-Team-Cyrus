@@ -19,10 +19,10 @@ function FavoriteImageStore (){
     } else if (!isImgExist(images)) store.push(images); 
   };
   
-  this.delete = function (num) {
-    if (Array.isArray(num)){
-      num.forEach(function(el) { delete store[el]; });
-      store = store.filter(function(el) { return el === null; });
+  this.delete = function (indexes) {
+    if (Array.isArray(indexes)){
+      indexes.forEach(function(el) { delete store[el]; });
+      store = store.filter(function(el) { return el !== undefined; });
     } else {
       store.splice(num, 1);
     }    
