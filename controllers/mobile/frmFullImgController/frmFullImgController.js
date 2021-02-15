@@ -44,27 +44,27 @@ define({
       this.currNum = this.navigationData.num;
       this.view.imgSpaceFull.width = '100%'; // test without this
 
-      this.currStore = this.navigationData.isSearchScreen ? new LoadImgStore() : new FavorImgStore();
+      this.currStore = this.navigationData.isSearchScreen ? new LoadedImageStore() : new FavoriteImageStore();
 
-      this.view.imgSpaceFull.src = this.currStore.get()[this.currNum].imgSpace; 
+      this.view.imgSpaceFull.src = this.currStore.get()[this.currNum]; 
       this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
     }
   },
 
   onNextImg: function() {
-    this.currNum = (this.currNum + 1 >= this.currStore.get().length) ? this.currNum : ++this.currNum;
-    this.view.imgSpaceFull.src = this.currStore.get()[this.currNum].imgSpace;
+    this.currNum = (this.currNum + 1 >= this.currStore.length()) ? this.currNum : ++this.currNum;
+    this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
   },
 
   onPrevImg: function() {
     this.currNum = this.currNum - 1 < 0 ? this.currNum : --this.currNum;
-    this.view.imgSpaceFull.src = this.currStore.get()[this.currNum].imgSpace;
+    this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
   },
 
   onDeleteImg: function() {
     this.showMessage('deleted', function(){
       this.currStore.delete(this.currNum);
-      if (!this.currStore.get().length) {
+      if (!this.currStore.length()) {
         var navigation = new kony.mvc.Navigation("frmCollectionImg");
         navigation.navigate();
       }
@@ -74,7 +74,7 @@ define({
 
   onAddImg: function() {
     this.showMessage('added');
-    var store = new FavorImgStore();
+    var store = new FavoriteImageStore();
     store.push(this.currStore.get()[this.currNum]);
   },
   

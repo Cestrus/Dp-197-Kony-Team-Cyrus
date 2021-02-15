@@ -66,6 +66,7 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
     }, 
     
     createListImg: function(arrImg){
+      this.view.ImgContainerCollection.removeAll();
       for(var i = 0; i < arrImg.length; i++){
         var image = this.createImg( i, arrImg[i] );
         this.view.ImgContainerCollection.add( image );
@@ -118,9 +119,10 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
     },
 
     onShowFullImg: function(widget) {
-//       var data = {num: rowNumber, isSearchScreen: false};
-//       var navigation = new kony.mvc.Navigation("frmFullImg");
-//       navigation.navigate(data);
+      var index = widget.id.match(/\d\d?/)[0];
+      var data = {num: index, isSearchScreen: false};
+      var navigation = new kony.mvc.Navigation("frmFullImg");
+      navigation.navigate(data);
     },
 
     onDeleteImg: function() {
@@ -130,6 +132,8 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
         this.createListImg(this.favoriteImageStore.get());
       } 
       else this.renderEmptyCollection();
+      this.chosenImgArr = [];
+      this.view.btnDeleteCollection.isVisible = false;
     }
     
   };

@@ -24,7 +24,7 @@ function FavoriteImageStore (){
       indexes.forEach(function(el) { delete store[el]; });
       store = store.filter(function(el) { return el !== undefined; });
     } else {
-      store.splice(num, 1);
+      store.splice(indexes, 1);
     }    
   };
   

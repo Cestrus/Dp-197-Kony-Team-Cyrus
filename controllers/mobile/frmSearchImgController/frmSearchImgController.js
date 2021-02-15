@@ -155,8 +155,9 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
      
     onShowFullImg: function(widget) {
       var index = widget.id.match(/\d\d?/)[0];
+      var data = {num: index, isSearchScreen: true};
       var navigation = new kony.mvc.Navigation("frmFullImg");
-      navigation.navigate(index);
+      navigation.navigate(data);
     },
 
     onChooseImg: function(widget) {
