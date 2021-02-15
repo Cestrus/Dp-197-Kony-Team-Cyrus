@@ -1,12 +1,8 @@
 {
     "DNDConfig": null,
-    "_height_": {
+    "_bottom_": {
         "type": "string",
-        "value": "100%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "value": "160dp"
     },
     "_margin_": [
         0,
@@ -22,45 +18,50 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sae1da21ed4445299d1a92fa66d59328",
+    "_skin_": "s010b29f344e493bb648722fce21b37f",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "150dp"
     },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "allowhorizontalbounce": false,
+    "allowverticalbounce": true,
+    "bounces": true,
     "canUpdateUI": true,
-    "children": [
-        "flexHeader",
-        "lbCollectionTitle",
-        "btnDeleteCollection",
-        "imgRocket",
-        "lbCollectionEmptyTitle",
-        "navBottomMenu",
-        "ImgContainerCollection"
-    ],
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [],
     "clipbounds": true,
     "containerweight": 100,
+    "decelerat": false,
+    "dragg": false,
     "enablescrolling": true,
-    "id": "FlexContainerCollection",
+    "horizontalscrollindicator": true,
+    "id": "ImgContainerCollection",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "jdfb6246ec304effa1f993e9c9aee40b",
+    "kuid": "ja95d6e4a1984df8bc0ca2718611b49e",
     "layouttype": 2,
-    "name": "kony.ui.FlexContainer",
-    "parent": "frmCollectionImg",
+    "name": "kony.ui.FlexScrollContainer",
+    "pagingenabled": false,
+    "parent": "FlexContainerCollection",
     "pf": "frmCollectionImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
+    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "wType": "FlexContainer",
+    "track": false,
+    "verticalscrollindicator": true,
+    "wType": "FlexScrollContainer",
     "widgetalignment": 1,
-    "zindex": 1
+    "zindex": 50
 }
