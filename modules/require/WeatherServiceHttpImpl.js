@@ -1,23 +1,5 @@
 define(function () {
   var WEATHER_BASE_URL = "https://mars.nasa.gov/rss/api/?feed=weather&category=msl&feedtype=json";
-  
-  var makeHttpRequest = function(url, successCallback, errorCallback) {
-    var httpClient = new kony.net.HttpRequest();
-    httpClient.open(constants.HTTP_METHOD_GET, url);
-    httpClient.onReadyStateChange = function () {
-      if (httpClient.readyState !== constants.HTTP_READY_STATE_DONE) {
-        return;
-      }
-      
-      if (httpClient.status === HttpResponseCodes.OK) {
-        successCallback(httpClient.response);  
-      } else {
-        errorCallback(httpClient.response);
-      }
-    };
-    
-    httpClient.send();
-  }; 
  
   var getWeather = function (successCallback, errorCallback) {
     var weatherData = kony.store.getItem("weather");
@@ -27,14 +9,14 @@ define(function () {
 
     var weather = [];
     
-    makeHttpRequest(WEATHER_BASE_URL, function (currentData) {
+    appService.makeHttpRequest (WEATHER_BASE_URL, function (currentData) {
       if (currentData) {
         var dates = currentData.soles;
         
         for (var i = 0; i <= 6; i++){
           
           weather.push({
-              lblSol: 'Sole ' + dates[i].sol,
+              lblSol: 'Sol ' + dates[i].sol,
               lblDate: dates[i].terrestrial_date,
               lblSunrise: dates[i].sunrise,
               lblSunset: dates[i].sunset,
