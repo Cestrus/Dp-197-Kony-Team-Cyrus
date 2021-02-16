@@ -1,4 +1,5 @@
-var makeHttpRequestTry = function(url, successCallback, errorCallback) {
+var appService = {
+  makeHttpRequest: function(url, successCallback, errorCallback) {
     var httpClient = new kony.net.HttpRequest();
     httpClient.open(constants.HTTP_METHOD_GET, url);
     httpClient.onReadyStateChange = function () {
@@ -14,4 +15,9 @@ var makeHttpRequestTry = function(url, successCallback, errorCallback) {
     };
     
     httpClient.send();
-  };
+  }
+};
+
+var HttpResponseCodes = {
+  OK: 200
+};

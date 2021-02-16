@@ -9,7 +9,7 @@ define(function () {
 
     var weather = [];
     
-    makeHttpRequestTry(WEATHER_BASE_URL, function (currentData) {
+    appService.makeHttpRequest (WEATHER_BASE_URL, function (currentData) {
       if (currentData) {
         var dates = currentData.soles;
         
