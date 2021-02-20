@@ -1,8 +1,12 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
+    "_height_": {
         "type": "string",
-        "value": "160dp"
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -21,7 +25,7 @@
     "_skin_": "s010b29f344e493bb648722fce21b37f",
     "_top_": {
         "type": "string",
-        "value": "150dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
@@ -36,6 +40,10 @@
         "type": "string",
         "value": "50%"
     },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [],
     "clipbounds": true,
     "containerweight": 100,
@@ -43,16 +51,16 @@
     "dragg": false,
     "enablescrolling": true,
     "horizontalscrollindicator": true,
-    "id": "ImgContainerCollection",
+    "id": "flxScrollCntainer",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ja95d6e4a1984df8bc0ca2718611b49e",
-    "layouttype": 2,
+    "kuid": "bad10dda94094bfa9459eefcc46c8b4f",
+    "layouttype": 4,
     "name": "kony.ui.FlexScrollContainer",
     "pagingenabled": false,
-    "parent": "FlexContainerCollection",
-    "pf": "frmCollectionImg",
+    "parent": "imgFlxScrollContainer",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
@@ -63,5 +71,5 @@
     "verticalscrollindicator": true,
     "wType": "FlexScrollContainer",
     "widgetalignment": 1,
-    "zindex": 50
+    "zindex": 1
 }

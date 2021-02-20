@@ -39,7 +39,7 @@
     "id": "btnDeleteCollection",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "d4384c678ec54170b6d2680cd8d14e1e",
     "name": "kony.ui.Button",
     "parent": "FlexContainerCollection",

@@ -4,10 +4,6 @@
         "type": "string",
         "value": "100%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_margin_": [
         0,
         0,
@@ -22,11 +18,11 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sae1da21ed4445299d1a92fa66d59328",
-    "_top_": {
+    "_right_": {
         "type": "string",
-        "value": "0dp"
+        "value": ""
     },
+    "_skin_": "s377682a3b7d478281fa509bc77b7b45",
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -34,33 +30,43 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "flexHeader",
-        "lbCollectionTitle",
-        "btnDeleteCollection",
-        "imgRocket",
-        "lbCollectionEmptyTitle",
-        "imgFlxScrollContainer",
-        "navBottomMenu"
+        "flxScrollCntainer"
     ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "FlexContainerCollection",
+    "id": "imgFlxScrollContainer",
     "info": null,
+    "iphone": {
+        "right": {
+            "type": "string",
+            "value": ""
+        }
+    },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "jdfb6246ec304effa1f993e9c9aee40b",
+    "kuid": "f7f679770caa495992571ad63f63787e",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmCollectionImg",
-    "pf": "frmCollectionImg",
+    "parent": "userwidgetmodel",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
+    "vizProps": {
+        "hidewidgethierarchy": false
+    },
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "widgetalignment": 1
 }
