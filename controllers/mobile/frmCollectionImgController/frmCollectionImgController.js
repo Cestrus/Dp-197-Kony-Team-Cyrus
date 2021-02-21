@@ -9,8 +9,8 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnDeleteCollection.onClick = this.onDeleteImg.bind(this);
-//       this.view.imgFlxScrollContainer.onInit(this.chosenImgArr, this.onShowFullImg.bind(this))
-      this.view.imgFlxScrollContainer.initiolize( this.chosenImgArr, this.onShowFullImg.bind(this))
+      
+      this.view.imgFlxScrollContainer.initiolize( this.chosenImgArr, this.onShowFullImg.bind(this), this.onChooseImg.bind(this));
       this.view.preShow = this.onFormPreShow.bind(this);
     },
 
@@ -62,7 +62,7 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
       if (!this.favoriteImageStore.length()) this.renderEmptyCollection();
       else {
         this.renderCollection();
-        this.view.imgFlxScrollContainer.createListImg.bind(this, this.favoriteImageStore.get());///////////////////////////
+        this.view.imgFlxScrollContainer.createListImg(this.favoriteImageStore.get());
       }      
     }, 
 
@@ -118,6 +118,12 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
     //       else this.chosenImgArr = this.chosenImgArr.filter(function(el){ return el !== index;});
     //       (this.chosenImgArr.length) ? this.view.btnDeleteCollection.isVisible = true : this.view.btnDeleteCollection.isVisible = false;
     //     },
+    
+    onChooseImg: function() {
+           (this.chosenImgArr.length) 
+           ? this.view.btnDeleteCollection.isVisible = true 
+           : this.view.btnDeleteCollection.isVisible = false;
+    },
 
     onShowFullImg: function(widget) {
       var index = widget.id.match(/\d\d?/)[0];

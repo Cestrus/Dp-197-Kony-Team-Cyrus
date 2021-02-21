@@ -3,28 +3,29 @@ define(function() {
   var HEIGHT_IMG = "40%";
   var _chosenImgArr = [];
   var _clbkDoubleClick = null;
+  var _clbkLongpress = null;
 
   return {
-    initiolize: function(chosenImgArr, clbkDoubleClick) {
+    initiolize: function(chosenImgArr, clbkDoubleClick, clbkLongpress) {
       _chosenImgArr = chosenImgArr;
       _clbkDoubleClick = clbkDoubleClick;
-
+      _clbkLongpress = clbkLongpress;
     },
 
     createListImg: function(arrImg){
-      this.flxScrollContainer.removeAll();
+      this.view.flxScrollCntainer.removeAll();
       for(var i = 0; i < arrImg.length; i++){
         var image = this.createImg( i, arrImg[i] );
-        this.flxScrollContainer.add( image );
+        this.view.flxScrollCntainer.add( image );
       }
     },  
 
     createImg: function(index, src){
-      var container = new kony.ui.FlexContainer({
+      var wrapper = new kony.ui.FlexContainer({
         "id": "imgCont" + index,
         "height": HEIGHT_IMG,
         "width": kony.flex.USE_PREFERED_SIZE,
-        //         "top": (index * (40 + 3)) + 3 + "%", 
+        "top": "10dp", 
         "centerX": "50%"
       });
 
@@ -48,20 +49,24 @@ define(function() {
 
       }); 
 
-      container.add(image);
-      container.add(choiceMark);
-      container.addGestureRecognizer(1, {fingers: 1, taps: 2}, this.onDoubleClick.bind(this, _clbkDoubleClick.bind(this)));
-      container.addGestureRecognizer(3, {pressDuration: 2}, this.onLongpress.bind(this, this.onChooseImg.bind(this)));
-      return container;
+      wrapper.add( image );
+      wrapper.add( choiceMark );
+      wrapper.addGestureRecognizer(1, {fingers: 1, taps: 2}, _clbkDoubleClick);
+      wrapper.addGestureRecognizer(3, {pressDuration: 2}, this.onChooseImg);
+      return wrapper;
     }, 
 
-    onChooseImg: function(widget) {
+    onDoubleClick: function () {
+
+    },
+
+    onChooseImg: function ( widget ) {
       var index = widget.id.match(/\d\d?/)[0];
       var mark = widget.widgets()[1];
       mark.isVisible = !mark.isVisible;
       if( mark.isVisible ) _chosenImgArr.push(index);
       else _chosenImgArr = _chosenImgArr.filter(function(el){ return el !== index;});
-      (_chosenImgArr.length) ? this.view.btnDeleteCollection.isVisible = true : this.view.btnDeleteCollection.isVisible = false;
+      _clbkLongpress();
     },
 
   };
