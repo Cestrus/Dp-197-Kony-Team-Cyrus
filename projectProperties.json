@@ -258,7 +258,7 @@
     "category": "app",
     "chat": "false",
     "cloud_account_guid": "02929e1c-8185-4ab7-9252-ec5df2b6538c",
-    "cloud_env_GUID": null,
+    "cloud_env_GUID": "f7bfceaf-3d77-4ecb-97f4-5864697f44dc",
     "codeGeneration": "false",
     "contacts": "false",
     "cordovaModified": false,
@@ -372,6 +372,14 @@
     "keyStoreFilePath": "",
     "keyStoreFilePathandwear": "",
     "keyStorePassword": "",
+    "kfAppInfo": {
+        "02929e1c-8185-4ab7-9252-ec5df2b6538c": {
+            "appName": "Cyrus",
+            "baseId": "c925aee2-c256-4700-9e99-775659e693bd",
+            "id": "c925aee2-c256-4700-9e99-775659e693bd",
+            "version": "1.0"
+        }
+    },
     "konyVizVersion": "9.1.15",
     "lastmodifiedtime": "1611584507094",
     "location": "false",
@@ -675,7 +683,7 @@
     "spawindows480basefontsize": "12",
     "spawindowstabbasefontsize": "17",
     "splashlogokey": "",
-    "startupformkey": "ac24b67245a44aad8272bbc4f5d5efe2",
+    "startupformkey": "befd37092a0540039fb5f38818414844",
     "statusBarHidden": "false",
     "statusBarStyle": "STATUS_BAR_STYLE_DEFAULT",
     "support32bit": "false",

@@ -24,7 +24,6 @@ define(function () {
     var dummyUser = {login: "test", password: "test"};
 
     var users = getUsersStore();
-    alert(JSON.stringify(users));
     users.push(dummyUser);
     var matchedUsers = null;
     var callback = null;
