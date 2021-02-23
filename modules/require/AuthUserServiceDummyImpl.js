@@ -1,8 +1,31 @@
 define(function () {
+  var getUsersStore = function () {
+    var usersData = kony.store.getItem("users");
+    
+    var users = null;
+    if (!usersData) {
+      users = [];
+      setUsersStore(users);
+    } else {
+      users = JSON.parse(usersData);
+    }
+    
+    return users;
+  };
+  
+  var setUsersStore = function (users) {
+    if (!Array.isArray(users)) {
+      throw new Error("Users has to be of Array type");
+    }
+    kony.store.setItem("users", JSON.stringify(users));
+  };
+  
   var checkUser = function(login, password, successCB, errorCB) {
     var dummyUser = {login: "test", password: "test"};
 
-    var users = [dummyUser, kony.store.getItem("users")];
+    var users = getUsersStore();
+    alert(JSON.stringify(users));
+    users.push(dummyUser);
     var matchedUsers = null;
     var callback = null;
 
@@ -24,7 +47,7 @@ define(function () {
   };
 
   var registerUser = function(login, password, successCB, errorCB) {
-    var users = [kony.store.getItem("users")];
+    var users = getUsersStore();
     var matchedUser = null;
     var callback = null;
     for (var i = 0; i < users.length; i++) {
@@ -39,7 +62,7 @@ define(function () {
     } else {
       var user = {login: login.toLocaleLowerCase(), password: password};
       users.push(user);
-      kony.store.setItem("users", users);
+      setUsersStore(users);
 
       callback = successCB;
     }
