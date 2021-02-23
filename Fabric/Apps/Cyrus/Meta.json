@@ -1,0 +1,15 @@
+{
+  "subType" : "customapp",
+  "description" : "Cyrus",
+  "version" : "1.0",
+  "intSvcs" : [ {
+    "name" : "CyrusImageService",
+    "version" : "1.0",
+    "etag" : "df3adb68-bc19-40b3-bcd1-6a97df7d78b0"
+  }, {
+    "name" : "CyrusNewsService",
+    "version" : "1.0",
+    "etag" : "aefb5d10-ca77-47a0-b482-8d667b6964d2"
+  } ],
+  "identitySvcConf" : "{\"session_idle_timeout_mins\":20,\"session_max_duration_mins\":360,\"show_security_attributes\":false,\"is_integrity_enabled\":false,\"auto_extend\":true}"
+}

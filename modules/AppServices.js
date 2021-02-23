@@ -22,16 +22,17 @@ var HttpResponseCodes = {
   OK: 200
 };
 
-function InitSDK() {
-  var appkey = "158155ef095a83468bc04c94728d3490";
-  var appsecret = "927023e314b1768ba01ec57dbaa1314b";
-  var serviceUrl = "https://fabric.fortnet/authService/100000002/appconfig";
+//function for the manual initialization of the SDK in case kony.sdk.getCurrentInstance(); returns null
+//function InitSDK() {
+//   var appkey = "158155ef095a83468bc04c94728d3490";
+//   var appsecret = "927023e314b1768ba01ec57dbaa1314b";
+//   var serviceUrl = "https://fabric.fortnet/authService/100000002/appconfig";
 
-  var client = new kony.sdk();
-  kony.print("Init started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-  client.init(appkey, appsecret, serviceUrl, function(response) {
-    kony.print("Init success >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> " + JSON.stringify(response));
-  }, function(error) {
-    kony.print("Init failed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> " + JSON.stringify(error));
-  });
-}
+//   var client = new kony.sdk();
+//   kony.print("Init started >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+//   client.init(appkey, appsecret, serviceUrl, function(response) {
+//     kony.print("Init success >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> " + JSON.stringify(response));
+//   }, function(error) {
+//     kony.print("Init failed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> " + JSON.stringify(error));
+//   });
+//}
