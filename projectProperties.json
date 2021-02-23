@@ -59,7 +59,7 @@
     "andminsdkkey": "5.0 (21)",
     "androidInstallLocation": "Auto",
     "androidInstallLocnPref": "false",
-    "android_allowselfsignedcertificates": "None",
+    "android_allowselfsignedcertificates": "All",
     "androidloadindicatorkey": "true",
     "androidmapkey": "",
     "androidmapkey2": "",
@@ -312,6 +312,7 @@
     "exceptionalert": "true",
     "extendBottom": "false",
     "extendTop": "false",
+    "fabric_runtime_app_version": "Linked",
     "fbxfolderpathkey": "",
     "fgcolorkey": "255,255,255",
     "generateJavaCodeForForms": "false",
@@ -324,6 +325,11 @@
     "hybridaddrkey": "",
     "hybridhttpsportkey": "",
     "hybridportkey": "",
+    "ide_appEvents": {
+        "mobile": {
+            "preappinit": "AS_AppEvents_i59e1d7397e745b88ef669a8c6559b55"
+        }
+    },
     "imagewhendownloading": "",
     "initialRotationPreferenceKey": "landscape",
     "inputaccessoryviewtype": "nextprevtoolbar",
@@ -361,6 +367,7 @@
     "iphonewebshrtcutkey": "",
     "isA11yConfigEnabled": false,
     "isDpScaleFactor": true,
+    "isEASAppUpgradable": false,
     "isI18nConfigEnabled": false,
     "isI18nLayoutConfigEnabled": false,
     "isMVC": true,
@@ -372,14 +379,7 @@
     "keyStoreFilePath": "",
     "keyStoreFilePathandwear": "",
     "keyStorePassword": "",
-    "kfAppInfo": {
-        "02929e1c-8185-4ab7-9252-ec5df2b6538c": {
-            "appName": "Cyrus",
-            "baseId": "c925aee2-c256-4700-9e99-775659e693bd",
-            "id": "c925aee2-c256-4700-9e99-775659e693bd",
-            "version": "1.0"
-        }
-    },
+    "kfAppInfo": {},
     "konyVizVersion": "9.1.15",
     "lastmodifiedtime": "1611584507094",
     "location": "false",
@@ -654,6 +654,7 @@
     "protectedmodeenabled_android": "false",
     "protectedmodeenabled_androidwear": "false",
     "protectedmodeenabled_ios": "false",
+    "prototype": {},
     "proximity": "false",
     "read_device_identifying_information": "false",
     "referenceWidth": "375",
