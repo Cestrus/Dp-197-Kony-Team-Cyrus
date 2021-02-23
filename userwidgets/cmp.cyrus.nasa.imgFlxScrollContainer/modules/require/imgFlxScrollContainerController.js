@@ -87,6 +87,7 @@ define(function() {
       _clbkBtnHandler();
       this.resetChoiceMark();
       this.onShowBtnChosenAction();
+      
     }
     
   };

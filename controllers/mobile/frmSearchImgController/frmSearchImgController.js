@@ -119,7 +119,6 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
         var el = arrImg[this.chosenImgArr[i]];
         this.favoriteImageStore.push( el );
       }
-
       this.chosenImgArr.length = 0;
     },
       

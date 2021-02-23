@@ -2,16 +2,19 @@ define({
   onInitialize: function() {  
     this.currStore = null;
     this.currNum = null;
-    this.view.btnRightFullImg.onClick = this.onNextImg.bind(this);
-    this.view.btnLeftFullImg.onClick = this.onPrevImg.bind(this);
+    this.delta = 0;
+
     this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
     this.view.btnAddImg.onClick = this.onAddImg.bind(this);
     this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
-    
+
     this.view.btnGoBack.onClick = function () {
       var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
       navigation.navigate();
     }.bind(this);
+
+    this.view.FlexContainerImg.onTouchStart = this.onTouchStart.bind(this);
+    this.view.FlexContainerImg.onTouchEnd = this.onTouchEnd.bind(this);
 
     this.view.preShow = this.onFormPreShow.bind(this);
 
@@ -51,16 +54,6 @@ define({
     }
   },
 
-  onNextImg: function() {
-    this.currNum = (this.currNum + 1 >= this.currStore.length()) ? this.currNum : ++this.currNum;
-    this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
-  },
-
-  onPrevImg: function() {
-    this.currNum = this.currNum - 1 < 0 ? this.currNum : --this.currNum;
-    this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
-  },
-
   onDeleteImg: function() {
     this.showMessage('deleted', function(){
       this.currStore.delete(this.currNum);
@@ -77,7 +70,7 @@ define({
     var store = new FavoriteImageStore();
     store.push(this.currStore.get()[this.currNum]);
   },
-  
+
   showMessage: function(str, clbk = null) {
     this.view.txtBoxAddImg.text = 'Image is ' + str;
     this.view.txtBoxAddImg.isVisible = true;
@@ -86,6 +79,20 @@ define({
       if(clbk) clbk();
       kony.timer.cancel("timerMessg");
     }.bind(this), 1, false);
-  }
+  },
+
+  onTouchStart: function(widget, x){
+    this.delta = x; 
+  },
+
+  onTouchEnd: function(widget, x){
+    if (this.delta - x > 0){
+      this.currNum = (this.currNum + 1 >= this.currStore.length()) ? this.currNum : ++this.currNum;
+      this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
+    } else {
+      this.currNum = this.currNum - 1 < 0 ? this.currNum : --this.currNum;
+      this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
+    }
+  },
 
 });
