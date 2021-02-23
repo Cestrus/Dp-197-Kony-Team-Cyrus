@@ -41,7 +41,7 @@
     "isvisible": true,
     "kuid": "e1ee451e735545e9884800bb5f49e49f",
     "name": "kony.ui.Image2",
-    "parent": "FlexScrollContainer",
+    "parent": "FCArticleHeader",
     "pf": "frmSeparateNews",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
