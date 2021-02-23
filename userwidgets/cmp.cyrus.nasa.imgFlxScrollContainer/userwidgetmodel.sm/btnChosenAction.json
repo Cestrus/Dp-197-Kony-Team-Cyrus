@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
     "_bottom_": {
-        "type": "string",
-        "value": "85dp"
+        "type": "number",
+        "value": "0"
     },
     "_height_": {
         "type": "string",
@@ -21,8 +21,8 @@
         0,
         0
     ],
-    "_skin_": "saeb6f153a2448b5826fba0c894cf707",
-    "_text_": "Delete",
+    "_skin_": "s71be62718a94408bbeecde428cadc74",
+    "_text_": "Button",
     "_width_": {
         "type": "string",
         "value": "300dp"
@@ -35,17 +35,17 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sf9becd49a554e489bb3040784da79be",
-    "id": "btnDeleteCollection",
+    "focusskin": "s9482b46deea49a5ade11002516f25a6",
+    "id": "btnChosenAction",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d4384c678ec54170b6d2680cd8d14e1e",
+    "kuid": "g1aeaa33d4334b5ebc2b2b1a1abc68b5",
     "name": "kony.ui.Button",
-    "parent": "FlexContainerCollection",
-    "pf": "frmCollectionImg",
+    "parent": "imgFlxScrollContainer",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "wType": "Button",
-    "zindex": 50
+    "zindex": 1
 }

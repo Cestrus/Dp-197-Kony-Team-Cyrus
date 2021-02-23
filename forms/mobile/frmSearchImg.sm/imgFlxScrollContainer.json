@@ -27,7 +27,7 @@
     "_skin_": "s377682a3b7d478281fa509bc77b7b45",
     "_top_": {
         "type": "string",
-        "value": "140dp"
+        "value": "160dp"
     },
     "_width_": {
         "type": "string",
@@ -46,7 +46,7 @@
         "btnChosenAction": {
             "__events__": {},
             "__info__": {
-                "kuid": "j99a271e6ff6491792d7d3e83d695caf",
+                "kuid": "f12c7bdbd50e4fc9a6a96ae406373bc7",
                 "srcKUID": "g1aeaa33d4334b5ebc2b2b1a1abc68b5",
                 "wType": "Button"
             },
@@ -55,7 +55,7 @@
         "flxScrollContainer": {
             "__events__": {},
             "__info__": {
-                "kuid": "a0ee212907f34116ab4faa294ae53bfe",
+                "kuid": "c1ba4addae5f499ab10866881dce01aa",
                 "srcKUID": "bad10dda94094bfa9459eefcc46c8b4f",
                 "wType": "FlexScrollContainer"
             },
@@ -82,7 +82,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "bceca430f4a64341b7a93130384209de",
+                "kuid": "gd5b0792d96e4abeab34c0aeae9921b6",
                 "srcKUID": "f7f679770caa495992571ad63f63787e",
                 "wType": "FlexContainer"
             },
@@ -107,7 +107,7 @@
                     "value": ""
                 }
             },
-            "isVisible": true,
+            "isVisible": false,
             "left": {
                 "Default": {
                     "type": "string",
@@ -117,7 +117,7 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "140dp"
+                    "value": "160dp"
                 }
             }
         }
@@ -129,12 +129,12 @@
     "isdatareferenced": false,
     "issegmentchild": false,
     "isvisible": true,
-    "kuid": "bceca430f4a64341b7a93130384209de",
+    "kuid": "gd5b0792d96e4abeab34c0aeae9921b6",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "FlexContainerCollection",
-    "pf": "frmCollectionImg",
+    "parent": "FlexContainerSearchImg",
+    "pf": "frmSearchImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

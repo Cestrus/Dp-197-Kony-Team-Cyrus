@@ -39,7 +39,8 @@
         "value": "50%"
     },
     "children": [
-        "flxScrollCntainer"
+        "flxScrollContainer",
+        "btnChosenAction"
     ],
     "clipbounds": true,
     "containerweight": 100,

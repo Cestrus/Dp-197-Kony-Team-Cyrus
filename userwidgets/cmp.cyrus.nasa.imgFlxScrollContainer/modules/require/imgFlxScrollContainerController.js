@@ -1,22 +1,24 @@
 define(function() {
 
   var HEIGHT_IMG = "40%";
-  var _chosenImgArr = [];
+  var _chosenImgArr = null;
   var _clbkDoubleClick = null;
-  var _clbkLongpress = null;
+  var _clbkBtnHandler = null;
 
   return {
-    initiolize: function(chosenImgArr, clbkDoubleClick, clbkLongpress) {
+    initiolize: function(chosenImgArr, clbkDoubleClick, btnName, clbkBtnHandler) {
       _chosenImgArr = chosenImgArr;
       _clbkDoubleClick = clbkDoubleClick;
-      _clbkLongpress = clbkLongpress;
+      _clbkBtnHandler = clbkBtnHandler;
+      this.view.btnChosenAction.text = btnName;
+      this.view.btnChosenAction.onClick = this.onBtnHandler.bind(this);
     },
 
     createListImg: function(arrImg){
-      this.view.flxScrollCntainer.removeAll();
+      this.view.flxScrollContainer.removeAll();
       for(var i = 0; i < arrImg.length; i++){
         var image = this.createImg( i, arrImg[i] );
-        this.view.flxScrollCntainer.add( image );
+        this.view.flxScrollContainer.add( image );
       }
     },  
 
@@ -56,18 +58,36 @@ define(function() {
       return wrapper;
     }, 
 
-    onDoubleClick: function () {
-
+    onShowBtnChosenAction: function() {
+      (_chosenImgArr.length) 
+        ? this.view.btnChosenAction.isVisible = true 
+      : this.view.btnChosenAction.isVisible = false;
     },
 
     onChooseImg: function ( widget ) {
-      var index = widget.id.match(/\d\d?/)[0];
+      var numID = widget.id.match(/\d\d?/)[0];
       var mark = widget.widgets()[1];
       mark.isVisible = !mark.isVisible;
-      if( mark.isVisible ) _chosenImgArr.push(index);
-      else _chosenImgArr = _chosenImgArr.filter(function(el){ return el !== index;});
-      _clbkLongpress();
+      if( mark.isVisible ) _chosenImgArr.push(numID);
+      else {
+        var index = _chosenImgArr.findIndex(function(el){ return el === index;});
+        _chosenImgArr.splice(index, 1);
+      }
+      this.onShowBtnChosenAction();
     },
+    
+    resetChoiceMark: function() {
+      var containersArr = this.view.flxScrollContainer.widgets();
+      containersArr.forEach( function(cont) {
+        cont.widgets()[1].isVisible = false;
+      });
+    }, 
 
+    onBtnHandler: function(){
+      _clbkBtnHandler();
+      this.resetChoiceMark();
+      this.onShowBtnChosenAction();
+    }
+    
   };
 });
