@@ -2,6 +2,8 @@ define({
   onInitialize: function() {  
     this.currStore = null;
     this.currNum = null;
+    
+    this.currImage = null;
     this.delta = 0;
 
     this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
@@ -40,17 +42,23 @@ define({
   },
 
   onFormPreShow: function() {
-    if(!this.navigationData){
+    if (!this.navigationData) {
       var navigation = new kony.mvc.Navigation('frmSearchImg');
       navigation.navigate();
+      
     } else {
       this.currNum = this.navigationData.num;
-      this.view.imgSpaceFull.width = '100%'; // test without this
+      if (this.navigationData.isSearchScreen) {
+        this.currStore = new LoadedImageStore();
+        this.renderForSearch();
+        
+      } else {
+        this.currStore = new FavoriteImageStore();
+        this.renderForFavorite();
+      }
 
-      this.currStore = this.navigationData.isSearchScreen ? new LoadedImageStore() : new FavoriteImageStore();
-
-      this.view.imgSpaceFull.src = this.currStore.get()[this.currNum]; 
-      this.navigationData.isSearchScreen ? this.renderForSearch() : this.renderForFavorite();
+	var tempImage = this.createImage(this.currNum, this.currStore.get()[this.currNum]);
+    this.currImage =  this.insertImage(tempImage);
     }
   },
 
@@ -86,13 +94,103 @@ define({
   },
 
   onTouchEnd: function(widget, x){
-    if (this.delta - x > 0){
-      this.currNum = (this.currNum + 1 >= this.currStore.length()) ? this.currNum : ++this.currNum;
-      this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
+    (this.delta - x > 0) 
+      ? this.createCarousel('next')
+      : this.createCarousel('prev');    
+  },
+
+  createImage: function(index, src){
+    var image = new kony.ui.Image2({
+      "id": "image" + index,
+      "src": src,
+      "left": '0dp',
+      "right": "0dp",
+      "height": "100%",
+      "width": "100%",
+      "centerY": "50%",
+    });   
+    return image;
+  },
+  
+  insertImage: function(image, position = false){ 
+    var widget = null;
+    if(position){
+      image.zIndex = 10;
+      this.view.FlexContainerImg.add(image);
+      widget = this.view.FlexContainerImg.widgets()[1];
+      
     } else {
-      this.currNum = this.currNum - 1 < 0 ? this.currNum : --this.currNum;
-      this.view.imgSpaceFull.src = this.currStore.get()[this.currNum];
+      image.zIndex = 20;
+      this.view.FlexContainerImg.add(image);
+      widget =  this.view.FlexContainerImg.widgets()[0];
+    }
+   return widget;
+  },
+  
+  createCarousel: function(direction) {
+    var animDef = null;
+    var tempImage = null;
+    var nextImage = null;
+    var duration = 0.25;
+    
+    if (direction === 'next') {
+      if (this.currNum + 1 < this.currStore.length()) {
+        animDef =  kony.ui.createAnimation({
+          "0": {
+            "left": "0dp", 
+            "right": "0dp"
+          },
+          "100": {
+            "left": "-100%",
+            "right": "100%"
+          }
+        });
+        ++this.currNum;
+        tempImage = this.createImage(this.currNum, this.currStore.get()[this.currNum]);
+        nextImage = this.insertImage(tempImage, 'next');
+        this.animate(this.currImage, animDef, duration);
+        this.changeCurrImage(nextImage, duration);
+      }
+
+    } else if (direction === 'prev') {
+      if (this.currNum - 1 >= 0) {
+        animDef = kony.ui.createAnimation({
+          "0": {
+            "left": "0dp",
+            "right": "0dp"
+          },
+          "100": {
+            "left": "100%",
+            "right": "-100%",
+          }
+        });
+        --this.currNum;
+        tempImage = this.createImage(this.currNum, this.currStore.get()[this.currNum]);
+        nextImage = this.insertImage(tempImage, 'prev');
+        this.animate(this.currImage, animDef, duration);
+        this.changeCurrImage(nextImage, duration);
+      }      
     }
   },
+  
+  animate: function(widget, animDef, duration) {
+    widget.animate (
+      animDef, 
+      {
+        "duration": duration,
+        "iterationCount": 1,
+        "delay": 0,
+        "fillMode": kony.anim.FILL_MODE_FORWARDS
+      });
+  },
+  
+  changeCurrImage: function(nextImage, duration){
+    kony.timer.schedule("timerAnimat", function(){
+      this.currImage.removeFromParent();
+      this.currImage = nextImage;
+      this.currImage.zIndex = 20;
+      kony.timer.cancel("timerMessg");
+    }.bind(this), duration, false);
+  }
 
 });
