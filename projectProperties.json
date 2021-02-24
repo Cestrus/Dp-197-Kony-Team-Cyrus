@@ -258,8 +258,8 @@
     "camerasettings": "",
     "category": "app",
     "chat": "false",
-    "cloud_account_guid": "990b7119-9591-4481-a42a-75650efa137e",
-    "cloud_env_GUID": "13a3f619-2156-49f0-a478-14a5ac801e27",
+    "cloud_account_guid": "02929e1c-8185-4ab7-9252-ec5df2b6538c",
+    "cloud_env_GUID": "f7bfceaf-3d77-4ecb-97f4-5864697f44dc",
     "codeGeneration": "false",
     "contacts": "false",
     "cordovaModified": false,
@@ -313,6 +313,7 @@
     "exceptionalert": "true",
     "extendBottom": "false",
     "extendTop": "false",
+    "fabric_runtime_app_version": "Linked",
     "fbxfolderpathkey": "",
     "fgcolorkey": "255,255,255",
     "generateJavaCodeForForms": "false",
@@ -363,6 +364,7 @@
     "iphonewebshrtcutkey": "",
     "isA11yConfigEnabled": false,
     "isDpScaleFactor": true,
+    "isEASAppUpgradable": false,
     "isI18nConfigEnabled": false,
     "isI18nLayoutConfigEnabled": false,
     "isMVC": true,
@@ -374,6 +376,14 @@
     "keyStoreFilePath": "",
     "keyStoreFilePathandwear": "",
     "keyStorePassword": "",
+    "kfAppInfo": {
+        "02929e1c-8185-4ab7-9252-ec5df2b6538c": {
+            "appName": "Cyrus",
+            "baseId": "c925aee2-c256-4700-9e99-775659e693bd",
+            "id": "c925aee2-c256-4700-9e99-775659e693bd",
+            "version": "1.0"
+        }
+    },
     "konyVizVersion": "9.1.15",
     "lastmodifiedtime": "1611584507094",
     "location": "false",
