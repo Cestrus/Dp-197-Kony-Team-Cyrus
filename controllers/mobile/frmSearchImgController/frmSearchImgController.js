@@ -79,8 +79,11 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     },
 
     onSendRequest: function() {
-      
-      var requestText = this.view.inptSearchImg.text? this.view.inptSearchImg.text.trim() : this.view.inptSearchImg.text;
+      if(!this.view.inptSearchImg.text ||  this.view.inptSearchImg.text.trim() === ""){
+        this.renderNotInput();
+        return;
+      }
+      var requestText = this.view.inptSearchImg.text.trim();
       kony.application.showLoadingScreen();
 
       SearchImgService.getImages(

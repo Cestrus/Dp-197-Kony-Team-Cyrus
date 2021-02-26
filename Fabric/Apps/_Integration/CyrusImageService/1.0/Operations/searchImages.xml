@@ -20,7 +20,7 @@
     </service-config>
     <service-input passthrough="false">
         <header datatype="" name="" passthrough="false"/>
-        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="query" order="" paramOrder="1" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="mars" value="">
+        <param datatype="string" defaultvalue="sun" description="" encode="true" format="None" formatvalue="" name="query" order="" paramOrder="1" parentOrder="-1" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="mars" value="sun">
             <accessType></accessType>
         </param>
         <stub-param value=""/>
