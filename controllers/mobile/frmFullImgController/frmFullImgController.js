@@ -3,8 +3,8 @@ define({
     this.currStore = null;
     this.currNum = null;
     
-    this.currImage = null;
-    this.delta = 0;
+    this.currWidget = null;
+    this.startX = 0;
 
     this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
     this.view.btnAddImg.onClick = this.onAddImg.bind(this);
@@ -47,29 +47,32 @@ define({
       navigation.navigate();
       
     } else {
+      this.view.FlexContainerImg.removeAll();
       this.currNum = this.navigationData.num;
       if (this.navigationData.isSearchScreen) {
-        this.currStore = new LoadedImageStore();
+        this.currStore = new LoadedImageStore ();
         this.renderForSearch();
         
       } else {
-        this.currStore = new FavoriteImageStore();
+        this.currStore = new FavoriteImageStore ();
         this.renderForFavorite();
       }
 
 	var tempImage = this.createImage(this.currNum, this.currStore.get()[this.currNum]);
-    this.currImage =  this.insertImage(tempImage);
+    this.currWidget =  this.insertImage(tempImage);
     }
   },
 
-  onDeleteImg: function() {
+  onDeleteImg: function() { 
     this.showMessage('deleted', function(){
       this.currStore.delete(this.currNum);
       if (!this.currStore.length()) {
         var navigation = new kony.mvc.Navigation("frmCollectionImg");
         navigation.navigate();
+      } else {
+        this.currNum --;
+        this.createCarousel('next');
       }
-      else this.onPrevImg();
     }.bind(this));
   },
 
@@ -90,13 +93,12 @@ define({
   },
 
   onTouchStart: function(widget, x){
-    this.delta = x; 
+    this.startX = x; 
   },
 
   onTouchEnd: function(widget, x){
-    (this.delta - x > 0) 
-      ? this.createCarousel('next')
-      : this.createCarousel('prev');    
+    if (this.startX - x > 30) this.createCarousel('next');
+    else if (x - this.startX > 30) this.createCarousel('prev');    
   },
 
   createImage: function(index, src){
@@ -121,7 +123,7 @@ define({
     
     var tempImage = this.createImage(this.currNum, this.currStore.get()[this.currNum]);
     var nextImage = this.insertImage(tempImage, direction);
-    this.animation(this.currImage, animDef, duration);
+    this.animation(this.currWidget, animDef, duration);
     this.changeCurrImage(nextImage, duration);
   },
   
@@ -179,10 +181,10 @@ define({
 
   changeCurrImage: function(nextImage, duration){
     kony.timer.schedule("timerAnimat", function(){
-      this.currImage.removeFromParent();
-      this.currImage = nextImage;
-      this.currImage.zIndex = 20;
-      kony.timer.cancel("timerMessg");
+      this.currWidget.removeFromParent();
+      this.currWidget = nextImage;
+      this.currWidget.zIndex = 20;
+      kony.timer.cancel("timerAnimat");
     }.bind(this), duration, false);
   }
 

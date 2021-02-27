@@ -60,7 +60,7 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
       if (!this.favoriteImageStore.length()) this.renderEmptyCollection();
       else {
         this.renderCollection();
-        this.view.imgContainer.createListImages(this.favoriteImageStore.get());
+        this.view.imgContainer.createListImages(this.favoriteImageStore.get(), this.onShowFullImg);
       }      
     }, 
     

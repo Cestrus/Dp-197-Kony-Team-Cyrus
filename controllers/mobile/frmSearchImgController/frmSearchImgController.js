@@ -98,7 +98,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
         this.loadedImageStore.set(arrLinks);
         if(!this.loadedImageStore.length()) this.renderNotFound();  
         else {
-          this.view.imgContainer.createListImages(this.loadedImageStore.get()); 
+          this.view.imgContainer.createListImages(this.loadedImageStore.get(), this.onShowFullImg); 
           this.renderListImg();
         }        
       } 

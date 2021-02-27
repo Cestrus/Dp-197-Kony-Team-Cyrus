@@ -84,10 +84,10 @@ define(function() {
     
     //Custom methods
 
-    createListImages: function (arrImg) {
+    createListImages: function (arrImg, onTapImage) {
       this.view.flxScrollContainer.removeAll();
       for(var i = 0; i < arrImg.length; i++){
-        var image = _createImg( i, arrImg[i], _onChooseImage.bind(this), null );
+        var image = _createImg( i, arrImg[i], _onChooseImage.bind(this), onTapImage );
         this.view.flxScrollContainer.add( image );
       }
     },
