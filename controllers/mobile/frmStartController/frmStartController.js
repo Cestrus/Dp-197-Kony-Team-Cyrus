@@ -2,6 +2,11 @@ define(["AuthUserService"], function(authUser) {
   return { 
     onInitialize: function() {
       this.view.btnStart.onClick = this.onButtonEnterClicked.bind(this);
+      this.view.postShow = this.onPostShow.bind(this);
+    },
+    
+    onPostShow: function () {
+      animation_1(this.view.imgStart);
     },
 
     onButtonEnterClicked: function() {
