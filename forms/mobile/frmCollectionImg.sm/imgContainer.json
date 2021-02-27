@@ -1,8 +1,14 @@
 {
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "160dp"
+        "value": "85dp"
+    },
+    "_children_": [],
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -10,7 +16,7 @@
         0,
         0
     ],
-    "_orientation_": 6,
+    "_orientation_": 1,
     "_padding_": [
         0,
         0,
@@ -18,50 +24,38 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s010b29f344e493bb648722fce21b37f",
+    "_skin_": "s377682a3b7d478281fa509bc77b7b45",
     "_top_": {
         "type": "string",
-        "value": "150dp"
+        "value": "145dp"
     },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
-    "allboxes": [],
-    "allowhorizontalbounce": false,
-    "allowverticalbounce": true,
-    "bounces": true,
+    "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "children": [],
     "clipbounds": true,
-    "containerweight": 100,
-    "decelerat": false,
-    "dragg": false,
+    "containerweight": 0,
+    "data": {
+        "buttonText": "Delete"
+    },
     "enablescrolling": true,
-    "horizontalscrollindicator": true,
-    "id": "ImgContainerCollection",
+    "id": "imgContainer",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ja95d6e4a1984df8bc0ca2718611b49e",
+    "kuid": "gf6678cb8a3743329a009a66f437fc58",
     "layouttype": 2,
-    "name": "kony.ui.FlexScrollContainer",
-    "pagingenabled": false,
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
     "parent": "FlexContainerCollection",
     "pf": "frmCollectionImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "track": false,
-    "verticalscrollindicator": true,
-    "wType": "FlexScrollContainer",
-    "widgetalignment": 1,
-    "zindex": 50
+    "sourceUserWidget": "bf9838c74271421eb3a3438f5ddcdecf",
+    "wType": "UserWidgetInstance"
 }

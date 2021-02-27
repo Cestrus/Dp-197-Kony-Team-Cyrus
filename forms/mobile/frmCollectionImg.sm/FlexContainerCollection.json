@@ -37,11 +37,10 @@
     "children": [
         "flexHeader",
         "lbCollectionTitle",
-        "btnDeleteCollection",
         "imgRocket",
         "lbCollectionEmptyTitle",
         "navBottomMenu",
-        "ImgContainerCollection"
+        "imgContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,

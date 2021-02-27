@@ -39,7 +39,7 @@ function FavoriteImageStore (){
   
   this.length = function() {
     return store.length;
-  }
+  };
   
   return {
     set: this.set,
