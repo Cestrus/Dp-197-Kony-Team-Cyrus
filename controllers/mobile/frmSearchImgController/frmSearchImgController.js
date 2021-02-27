@@ -5,7 +5,6 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
             
       this.loadedImageStore = new LoadedImageStore(); // array for all img on page
       this.favoriteImageStore = new FavoriteImageStore();
-      this.chosenImgArr = [];
  
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
@@ -13,7 +12,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       this.view.btnSearch.onClick = this.onSendRequest.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);    
       
-      this.view.imgFlxScrollContainer.initiolize( this.chosenImgArr, this.onShowFullImg.bind(this), 'Add to collection', this.onAddToCollection.bind(this));
+      this.view.imgContainer.onBtnClick = this.onAddToCollection.bind(this);
     },
 
     onButtonGoToHome: function() {
@@ -53,21 +52,21 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
     resetVisiblity: function() {
       this.view.imgRocket.isVisible = true;
       this.view.lbNotFound.isVisible = false;
-      this.view.imgFlxScrollContainer.isVisible = false;
+      this.view.imgContainer.isVisible = false;
       this.view.lbNotInput.isVisible = false;
     },
 
     renderNotFound: function() {
       this.view.imgRocket.isVisible = true;
       this.view.lbNotFound.isVisible = true;
-      this.view.imgFlxScrollContainer.isVisible = false;
+      this.view.imgContainer.isVisible = false;
       this.view.lbNotInput.isVisible = false;
     },
 
     renderListImg: function() {
       this.view.imgRocket.isVisible = false;
       this.view.lbNotFound.isVisible = false;      
-      this.view.imgFlxScrollContainer.isVisible = true;
+      this.view.imgContainer.isVisible = true;
       this.view.lbNotInput.isVisible = false;
     },
 
@@ -75,7 +74,7 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       this.view.lbNotInput.isVisible = true;
       this.view.imgRocket.isVisible = true;
       this.view.lbNotFound.isVisible = false;
-      this.view.imgFlxScrollContainer.isVisible = false;
+      this.view.imgContainer.isVisible = false;
     },
 
     onSendRequest: function() {
@@ -96,13 +95,10 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       if(!arrLinks){
         this.renderNotInput();
       } else {
-        var tempArr = arrLinks.filter(function(link) { // delete arr element ""
-          return link !== "";
-        });
-        this.loadedImageStore.set(tempArr);
+        this.loadedImageStore.set(arrLinks);
         if(!this.loadedImageStore.length()) this.renderNotFound();  
         else {
-          this.view.imgFlxScrollContainer.createListImg(this.loadedImageStore.get());
+          this.view.imgContainer.createListImages(this.loadedImageStore.get()); 
           this.renderListImg();
         }        
       } 
@@ -116,13 +112,13 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       navigation.navigate(data);
     },
 
-    onAddToCollection: function() {
-      var arrImg = this.loadedImageStore.get();
-      for (var i = 0; i < this.chosenImgArr.length; i++){
-        var el = arrImg[this.chosenImgArr[i]];
+    onAddToCollection: function(arrImages) {
+      var store = this.loadedImageStore.get();
+      for (var i = 0; i < arrImages.length; i++){
+        var el = store[arrImages[i]];
         this.favoriteImageStore.push( el );
       }
-      this.chosenImgArr.length = 0;
+      this.view.imgContainer.resetChoiceMark();
     },
       
   };

@@ -691,7 +691,7 @@
     "startupformkey": "ac24b67245a44aad8272bbc4f5d5efe2",
     "statusBarHidden": "false",
     "statusBarStyle": "STATUS_BAR_STYLE_DEFAULT",
-    "support32bit": "false",
+    "support32bit": "true",
     "support64bitandwear": "false",
     "supportX86Devices": "true",
     "supportX86Devicesandwear": "false",

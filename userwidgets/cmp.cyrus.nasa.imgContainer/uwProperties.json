@@ -1,0 +1,102 @@
+{
+    "classname": "imgContainer",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "b53a245768a3422c8906c54d1cce3592",
+                    "paramList": [
+                        {
+                            "name": "arrImages"
+                        }
+                    ],
+                    "propertyKey": "createListImages",
+                    "pw": {
+                        "displayName": "createListImages",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bf9838c74271421eb3a3438f5ddcdecf",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b2e0dae27d71475ca1cb6bddfc5fa452",
+                    "paramList": [],
+                    "propertyKey": "resetChoiceMark",
+                    "pw": {
+                        "displayName": "resetChoiceMark",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bf9838c74271421eb3a3438f5ddcdecf",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f045f7eb77c14c4d8fc09cdcbf0a9221",
+                    "paramList": [
+                        {
+                            "name": "arrImages"
+                        }
+                    ],
+                    "propertyIndex": 2,
+                    "propertyKey": "onBtnClick",
+                    "pw": {
+                        "displayName": "onBtnClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "bf9838c74271421eb3a3438f5ddcdecf",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [
+                "Component Group"
+            ],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "gfb822cccd394ee5bfa0073b95ef0e39",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "buttonText",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Button text",
+                        "isHiddenInTool": false,
+                        "srcWidget": "btnImageContainer",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "f608764e1bf948a090a929c4cb5c7954"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "cmp.cyrus.nasa",
+    "version": "1.0.0"
+}

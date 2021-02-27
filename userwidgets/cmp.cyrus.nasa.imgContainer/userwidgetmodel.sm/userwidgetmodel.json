@@ -32,7 +32,7 @@
     },
     "canUpdateUI": true,
     "children": [
-        "imgFlxScrollContainer"
+        "imgContainer"
     ],
     "containerweight": 100,
     "currentLocale": "default",
@@ -48,9 +48,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u1884f1a85904b5788865836c87e8bc9",
+    "kuid": "u47265f52c6c4a82a6d199ad9b0813ab",
     "layouttype": 2,
-    "masterType": 0,
+    "masterType": 1,
     "name": "kony.ui.Form2",
     "needappmenu": true,
     "outtransitionconfig": {
