@@ -1,20 +1,19 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
-    "_base64_": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "50dp"
     },
     "_left_": {
         "type": "string",
-        "value": "15dp"
+        "value": "120dp"
     },
     "_margin_": [
-        0,
-        0,
-        0,
-        0
+        6,
+        6,
+        6,
+        6
     ],
     "_padding_": [
         0,
@@ -22,31 +21,31 @@
         0,
         0
     ],
-    "_skin_": "s75fbb28b54147d98a251601780a6bb5",
-    "_src_": "imagedrag.png",
+    "_skin_": "sf0222b937ac4139aed16041202de7eb",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "15dp"
+        "value": "10dp"
     },
     "_width_": {
         "type": "string",
-        "value": "150dp"
+        "value": "50dp"
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "id": "imgNews",
-    "imagescalemode": 1,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sb5e9fded82342c09876273ecf080353",
+    "id": "btnFavoriteArticle",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e1ee451e735545e9884800bb5f49e49f",
-    "name": "kony.ui.Image2",
+    "kuid": "b4231ef6872041a6babcbde2ef4bcf70",
+    "name": "kony.ui.Button",
     "parent": "FCArticleHeader",
     "pf": "frmSeparateNews",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "srcType": 1,
-    "wType": "Image",
-    "widgetalignment": 5,
+    "wType": "Button",
     "zindex": 1
 }
