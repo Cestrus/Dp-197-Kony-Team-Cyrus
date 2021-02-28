@@ -7,6 +7,7 @@ define(["AuthUserService"], function(authUser) {
     
     onPostShow: function () {
       animation_1(this.view.imgStart);
+      bgStars(this.view.flexWrap); ///////
     },
 
     onButtonEnterClicked: function() {
