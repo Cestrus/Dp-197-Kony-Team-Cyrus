@@ -36,5 +36,31 @@ function animation_1 (widget) {
   };  
   
   widget.animate(animDef, animConf, {});
+ 
+}
+
+function animation_2 (widget) { 
+  var transformProp1 = kony.ui.makeAffineTransform();
+  transformProp1.scale(1, 1);
   
+  var transformProp2 = kony.ui.makeAffineTransform();
+  transformProp2.scale(0.9, 0.9);
+  
+  var animDef = kony.ui.createAnimation({
+    50: {
+      "transform": transformProp2  
+    }, 
+    100: {
+      "transform": transformProp1
+    }
+  });
+  
+  var animConf = {
+    "duration": 0.5,
+    "iterationCount": 1,
+    "delay": 0,
+    "fillMode": kony.anim.FILL_MODE_FORWARDS
+  };  
+  
+  widget.animate(animDef, animConf, {});
 }
