@@ -2,6 +2,7 @@ define(function() {
   var _buttonText = 'button';
   var _chosenImagesArr = [];
   var _HEIGHT_IMG = "40%";
+  var _animation = animation_2;
   
   
   var _onButtonClick = function () {
@@ -49,7 +50,7 @@ define(function() {
       wrapper.add( image );
       wrapper.add( choiceMark );
       wrapper.addGestureRecognizer(1, {fingers: 1, taps: 1}, onTapImage);
-      wrapper.addGestureRecognizer(3, {pressDuration: 2}, onChooseImage);
+      wrapper.addGestureRecognizer(3, {pressDuration: 1}, onChooseImage);
       return wrapper;
   };
   
@@ -62,6 +63,7 @@ define(function() {
         var index = _chosenImagesArr.findIndex(function(el){ return el === index;});
         _chosenImagesArr.splice(index, 1);
       }
+      _animation ( widget );
       _showButton.bind(this)();
     };
 
