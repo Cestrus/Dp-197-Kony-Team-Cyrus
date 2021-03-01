@@ -1,5 +1,6 @@
 define(["NewsService", "FavoritesService"], function(newsService, favoritesService) {
   var articleData = {};
+  var savedArticlesArr = [];
   return { 
     onInitialize: function() { 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
@@ -32,7 +33,9 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
       var result = 0;
       favoritesService.getFavoriteArticles(articleData.userId,
        function(articleIdsArr) {
-        alert("userId" + articleData.userId + "\n resp: " + articleIdsArr);
+        //alert("userId" + articleData.userId + "\n resp: " + articleIdsArr);
+        savedArticlesArr = articleIdsArr;
+        alert(savedArticlesArr);
         articleIdsArr.forEach(function(el) {
           if (el.articleId === id) {
             result = 1;
@@ -48,6 +51,7 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
 
     updateAtricleStore: function(id, userId, action) {
 		if (action === 1) {
+          articleData.isFavorite = 1;
           favoritesService.addFavoriteArticle(id, userId,
 			function(response) {
               return response;
@@ -57,6 +61,7 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
             });
 
         } else {
+          articleData.isFavorite = 0;
           
         }
     },
