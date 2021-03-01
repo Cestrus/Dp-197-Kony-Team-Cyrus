@@ -7,7 +7,7 @@ define(["AuthUserService"], function(authUser) {
 
     onPostShow: function () {
       animation_1(this.view.imgStart);
-      bgStars(this.view.flexWrap); ///////
+      bgStars(this.view.flexWrap); 
     },
 
     onButtonEnterClicked: function() {
@@ -20,6 +20,7 @@ define(["AuthUserService"], function(authUser) {
         if (this.view.switchNewUser.selectedIndex === 1) {
           authUser.checkUser(login, password, 
 			function(userId) {
+            kony.timer.cancel("timerStars");
             kony.store.setItem("userId", userId);
             var navigation = new kony.mvc.Navigation("frmMain");
             navigation.navigate();
