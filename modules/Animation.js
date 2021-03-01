@@ -64,24 +64,3 @@ function animation_2 (widget) {
   
   widget.animate(animDef, animConf, {});
 }
-
-function animation_3 (widget, time) {
-  kony.print("star => " + JSON.stringify(widget));
-  var animDef = kony.ui.createAnimation({     
-    0: {
-      "left": "100%",
-    },
-    100: {
-      "left": "0%",
-    }
-  });
-  
-  var animConf = {
-    "duration": time,
-    "iterationCount": 1,
-    "delay": 0,
-    "fillMode": kony.anim.FILL_MODE_FORWARDS
-  };  
-  
-  widget.animate(animDef, animConf, {});
-}
