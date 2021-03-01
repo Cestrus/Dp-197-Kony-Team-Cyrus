@@ -11,7 +11,6 @@ define(function () {
     newsService.invokeOperation("loginUser", headers, params, function(response) {
       kony.print("Integration userLogin Service Response is: " + JSON.stringify(response));
       
-      //kony.store.setItem("userId", JSON.stringify(response.userLoginId));
       if (successCallback && response.userLoginError !== "login_failed") {
         successCallback(response.userLoginId);
       } else {
@@ -34,7 +33,6 @@ define(function () {
     newsService.invokeOperation("registerUser", headers, params, function(response) {
       kony.print("Integration registerUser Service Response is: " + JSON.stringify(response));
       
-      //kony.store.setItem("userId", JSON.stringify(response.userLoginId));
       if (successCallback && response.userNewId) {
         successCallback(response.userNewId);
       }
