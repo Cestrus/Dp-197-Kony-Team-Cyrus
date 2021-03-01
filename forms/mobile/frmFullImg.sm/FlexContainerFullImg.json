@@ -36,8 +36,6 @@
     "canUpdateUI": true,
     "children": [
         "FlexContainerImg",
-        "btnLeftFullImg",
-        "btnRightFullImg",
         "btnDeleteImg",
         "btnAddImg"
     ],

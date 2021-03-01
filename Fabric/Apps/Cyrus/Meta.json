@@ -3,13 +3,21 @@
   "description" : "Cyrus",
   "version" : "1.0",
   "intSvcs" : [ {
+    "name" : "CyrusDB",
+    "version" : "1.0",
+    "etag" : "68622015-eb4c-4651-b5f6-8cbbf39b579c"
+  }, {
     "name" : "CyrusImageService",
     "version" : "1.0",
-    "etag" : "df3adb68-bc19-40b3-bcd1-6a97df7d78b0"
+    "etag" : "29153014-9dd9-459e-ac8d-1a6b6f6fcbbe"
   }, {
     "name" : "CyrusNewsService",
     "version" : "1.0",
-    "etag" : "aefb5d10-ca77-47a0-b482-8d667b6964d2"
+    "etag" : "6c3851f8-46f9-41d3-9ce0-de0ecd7b3183"
+  }, {
+    "name" : "CyrusWeatherService",
+    "version" : "1.0",
+    "etag" : "8ce3fe3f-a246-4b9d-9904-cb178adc6b3b"
   } ],
   "identitySvcConf" : "{\"session_idle_timeout_mins\":20,\"session_max_duration_mins\":360,\"show_security_attributes\":false,\"is_integrity_enabled\":false,\"auto_extend\":true}"
 }

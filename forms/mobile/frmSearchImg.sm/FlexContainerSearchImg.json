@@ -38,12 +38,11 @@
         "inptSearchImg",
         "imgRocket",
         "btnSearch",
-        "btnAddToCollection",
         "navBottomMenu",
         "flexHeader",
         "lbNotFound",
         "lbNotInput",
-        "ImgContainerSearch"
+        "imgContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,

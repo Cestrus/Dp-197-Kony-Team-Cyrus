@@ -1,4 +1,5 @@
-define(["NewsService"], function(newsService) {
+define(["NewsService", "FavoritesService"], function(newsService, favoritesService) {
+  var articleData = {};
   return { 
     onInitialize: function() { 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
@@ -6,70 +7,69 @@ define(["NewsService"], function(newsService) {
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.btnGoBack.onClick = this.onButtonGoToNews.bind(this);
+      
       this.view.btnFavoriteArticle.onClick = this.onButtonFavoriteArticle.bind(this);
 
     },
 
     onNavigate: function(data) {
-      this.view.imgNews.src = data.imgNews;
-      this.view.lblNewsTitle.text = data.lblNewsTitle;
-      this.view.lblNewsText.text = data.bodyText;
-      alert("On navigate check of the store " + this.checkSavedArticles(data.lblNewsTitle));
-      if (this.checkSavedArticles(data.lblNewsTitle)[0]) {
+      articleData = data;
+      articleData.userId = kony.store.getItem("userId");
+      this.view.imgNews.src = articleData.imgNews;
+      this.view.lblNewsTitle.text = articleData.lblNewsTitle;
+      this.view.lblNewsText.text = articleData.bodyText;
+      //alert("On navigate check:" + this.checkSavedArticles(articleData.id));
+      if (this.checkSavedArticles(articleData.id)) {
+        articleData.isFavorite = 1;
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticleFocus';
       } else {
+        articleData.isFavorite = 0;
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticle';
       }
     },
-    
-    checkSavedArticles: function(title) {
-      var articleStore = JSON.parse(kony.store.getItem("savedArticles"));
-      var index;
-      if (articleStore !== null) { 
-        for (index = 0; index < articleStore.length; index++) {
-          if (articleStore[index].lblNewsTitle === title ) {
-            return [1, index];
+
+    checkSavedArticles: function(id) {
+      var result = 0;
+      favoritesService.getFavoriteArticles(articleData.userId,
+       function(articleIdsArr) {
+        alert("userId" + articleData.userId + "\n resp: " + articleIdsArr);
+        articleIdsArr.forEach(function(el) {
+          if (el.articleId === id) {
+            result = 1;
+            return;
           }
-        }
-      }
-      return [0];
+        });
+      }, function(error) {
+        kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
+      });
+      return result;
 
     },
-    
-    updateAtricleStore: function(article, action, index) {
-      var articleStore = JSON.parse(kony.store.getItem("savedArticles"));
-      alert("article" + article.lblNewsTitle + "action" + action + "index" + index);
-      if (articleStore === null && action === 1) {
-        articleStore = []; 
-        articleStore.push(article);
-        kony.store.setItem("savedArticles", JSON.stringify(articleStore));
-      } else {
-        if (action === 1) {
-          articleStore.push(article);
-          kony.store.setItem("savedArticles", JSON.stringify(articleStore));
+
+    updateAtricleStore: function(id, userId, action) {
+		if (action === 1) {
+          favoritesService.addFavoriteArticle(id, userId,
+			function(response) {
+              return response;
+            },
+              function(error) {
+                kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
+            });
+
         } else {
-          kony.store.setItem("savedArticles", JSON.stringify(articleStore.splice(index, 1)));
+          
         }
-      }
-      alert(articleStore);
     },
 
     onButtonFavoriteArticle: function() {
-      var article = {
-        //imgNews: this.view.imgNews.src,
-        lblNewsTitle: this.view.lblNewsTitle.text,
-        //lblNewsText: this.view.lblNewsText.text
-      };
-      var articleFinder = this.checkSavedArticles(article.lblNewsTitle);
-      alert("onButtonFavoriteArticle: " + articleFinder[0]);
-      if (articleFinder[0]) {
+      if (articleData.isFavorite) {
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticle';
-        this.updateAtricleStore(article, 0, articleFinder[1]);
+        this.updateAtricleStore(articleData.id, articleData.userId, 0);
       } else {
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticleFocus';
-        this.updateAtricleStore(article, 1);
+        this.updateAtricleStore(articleData.id, articleData.userId, 1);
       }
-     
+
     },
 
     onButtonGoToHome: function() {

@@ -1,8 +1,8 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
+    "_height_": {
         "type": "string",
-        "value": "160dp"
+        "value": "100%"
     },
     "_margin_": [
         0,
@@ -18,50 +18,41 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s010b29f344e493bb648722fce21b37f",
-    "_top_": {
-        "type": "string",
-        "value": "150dp"
-    },
+    "_skin_": "s377682a3b7d478281fa509bc77b7b45",
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "allboxes": [],
-    "allowhorizontalbounce": false,
-    "allowverticalbounce": true,
-    "bounces": true,
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
         "type": "string",
         "value": "50%"
     },
     "children": [],
     "clipbounds": true,
     "containerweight": 100,
-    "decelerat": false,
-    "dragg": false,
     "enablescrolling": true,
-    "horizontalscrollindicator": true,
-    "id": "ImgContainerCollection",
+    "id": "flexWrap",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ja95d6e4a1984df8bc0ca2718611b49e",
+    "kuid": "i3a1bd5522ef43ec8805fb7ddd985f6a",
     "layouttype": 2,
-    "name": "kony.ui.FlexScrollContainer",
-    "pagingenabled": false,
-    "parent": "FlexContainerCollection",
-    "pf": "frmCollectionImg",
+    "name": "kony.ui.FlexContainer",
+    "parent": "FlexContainerStart",
+    "pf": "frmStart",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "track": false,
-    "verticalscrollindicator": true,
-    "wType": "FlexScrollContainer",
+    "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 50
+    "zindex": 1
 }

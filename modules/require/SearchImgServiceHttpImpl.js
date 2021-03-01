@@ -7,21 +7,17 @@ define(function () {
 
 
   var getImages = function(str, successCallback, errorCallback) {	
-    if(!str){
-      successCallback(false);
-    } else {
-      var url = makeURL(str);
-      appService.makeHttpRequest(
-        url, 
-        function(responseData){
-          var imgLinks = responseData.collection.items.map(function(item) {
-            return (item.links) ? item.links[0].href : '';
-          });                  	
-          successCallback(imgLinks);
-        }, 
-        errorCallback
-      );
-    }       
+    var url = makeURL(str);
+    appService.makeHttpRequest(
+      url, 
+      function(responseData){
+        var imgLinks = responseData.collection.items.map(function(item) {
+          return (item.links) ? item.links[0].href : '';
+        });                  	
+        successCallback(imgLinks);
+      }, 
+      errorCallback
+    );
   };
 
   return {

@@ -31,10 +31,6 @@
     },
     "_skin_": "s3755659597c4e528e1a43e4c3d9e256",
     "_text_": "🗑",
-    "_top_": {
-        "type": "string",
-        "value": ""
-    },
     "_width_": {
         "type": "string",
         "value": "65dp"
@@ -79,8 +75,8 @@
             "value": "0"
         },
         "top": {
-            "type": "number",
-            "value": "65"
+            "type": "string",
+            "value": ""
         }
     },
     "name": "kony.ui.Button",
