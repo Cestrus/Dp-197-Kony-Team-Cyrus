@@ -33,7 +33,6 @@ function bgStars (wrap) {
   
   kony.timer.schedule("timerStars", function(){
      renderStar();      
-      kony.timer.cancel("timerStar");
     }.bind(this), 0.1, true);
 }
     
