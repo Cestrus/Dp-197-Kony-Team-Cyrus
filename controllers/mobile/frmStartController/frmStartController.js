@@ -10,34 +10,35 @@ define(["AuthUserService"], function(authUser) {
     },
 
     onButtonEnterClicked: function() {
-      var validationResult = this.validateInput();
+      var login = this.view.inptStartLogin.text;
+      var password = this.view.inptStartPsswd.text;
+      var validationResult = this.validateInput(login, password);
+      //alert (validationResult.validation);
       if (!validationResult.validation) {
         alert (validationResult.validationMessage);
       } else {
         if (this.view.switchNewUser.selectedIndex === 1) {
-          authUser.checkUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
+          authUser.checkUser(login, password, 
             function() {
               var navigation = new kony.mvc.Navigation("frmMain");
               navigation.navigate();
-            },function() {
-              alert("User is not registrated. Please registrate first");
+            },function(error) {
+              alert(error ? JSON.stringify(error) : "User is not registrated. Please registrate first");
             });
         } else {
-          authUser.registerUser(this.view.inptStartLogin.text, this.view.inptStartPsswd.text, 
+          authUser.registerUser(login, password, 
             function() {
               var navigation = new kony.mvc.Navigation("frmMain");
               navigation.navigate();
-            },function() {
-              alert("User already exists. Please try another login");
+            },function(error) {
+              alert(error ? JSON.stringify(error) : "User already exists. Please try another login");
             });
         }
       }
       
     },
     
-    validateInput: function() {
-      var login = this.view.inptStartLogin.text;
-      var password = this.view.inptStartPsswd.text;
+    validateInput: function(login, password) {
       //regexps for the validation
       var pattern  = /^(?!\s)[A-Za-z0-9]+$/;
       
@@ -48,29 +49,17 @@ define(["AuthUserService"], function(authUser) {
         };
       }
       
-      if (login.length < 4 || login.length > 10) {
+      if ((login.length < 4 || login.length > 10) || (password.length < 4 || password.length > 10)) {
         return  {
           validation: false, 
-          validationMessage: "Login's length should be from 4 to 10 characters"
-        };
-      }
-      if (password.length < 4 || password.length > 10) {
-        return  {
-          validation: false, 
-          validationMessage: "Password's length should be from 4 to 10 characters"
+          validationMessage: "Password's and Login's length should be from 4 to 10 characters"
         };
       }
       
-      if(!pattern.test(password)){
+      if(!pattern.test(password) || !pattern.test(login)){
         return  {
           validation: false, 
-          validationMessage: "Password shouldn't contain any spaces or special characters"
-        };
-      }
-      if(!pattern.test(login)){
-        return {
-          validation: false, 
-          validationMessage: "Login shouldn't contain any spaces or special characters"
+          validationMessage: "Login and Password shouldn't contain any spaces or special characters"
         };
       }
       
