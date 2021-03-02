@@ -17,7 +17,8 @@ define(function () {
           lblNewsDate: m.webPublicationDate.slice(0,10),
           lblNewsShortDesc: m.fields.trailText,
           imgNews: m.fields.thumbnail,
-          bodyText: m.fields.bodyText
+          bodyText: m.fields.bodyText,
+          id: m.id
         });
       });
       if (successCallback) {
@@ -42,11 +43,12 @@ define(function () {
 
       if (successCallback) {
         successCallback({
-          lblNewsTitle: response.results.webTitle,
-          lblNewsDate: response.results.webPublicationDate.slice(0,10),
-          lblNewsShortDesc: response.results.fields.trailText,
-          imgNews: response.results.fields.thumbnail,
-          bodyText: response.results.fields.bodyText
+          lblNewsTitle: response.content.webTitle,
+          lblNewsDate: response.content.webPublicationDate.slice(0,10),
+          lblNewsShortDesc: response.content.fields.trailText,
+          imgNews: response.content.fields.thumbnail,
+          bodyText: response.content.fields.bodyText,
+          id: response.content.id
         });
       }
 

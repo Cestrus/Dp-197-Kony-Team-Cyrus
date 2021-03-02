@@ -1,6 +1,7 @@
 define(["NewsService", "FavoritesService"], function(newsService, favoritesService) {
   var articleData = {};
-  var savedArticlesArr = [];
+  var currentUserId;
+  var savedArticlesArr;
   return { 
     onInitialize: function() { 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
@@ -8,18 +9,18 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.btnGoBack.onClick = this.onButtonGoToNews.bind(this);
-      
+
       this.view.btnFavoriteArticle.onClick = this.onButtonFavoriteArticle.bind(this);
 
     },
 
     onNavigate: function(data) {
       articleData = data;
-      articleData.userId = kony.store.getItem("userId");
       this.view.imgNews.src = articleData.imgNews;
       this.view.lblNewsTitle.text = articleData.lblNewsTitle;
       this.view.lblNewsText.text = articleData.bodyText;
-      //alert("On navigate check:" + this.checkSavedArticles(articleData.id));
+      currentUserId = kony.store.getItem("userId");
+      savedArticlesArr = JSON.parse(kony.store.getItem("savedArticles"));
       if (this.checkSavedArticles(articleData.id)) {
         articleData.isFavorite = 1;
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticleFocus';
@@ -31,48 +32,59 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
 
     checkSavedArticles: function(id) {
       var result = 0;
-      favoritesService.getFavoriteArticles(articleData.userId,
-       function(articleIdsArr) {
-        //alert("userId" + articleData.userId + "\n resp: " + articleIdsArr);
-        savedArticlesArr = articleIdsArr;
-        alert(savedArticlesArr);
-        articleIdsArr.forEach(function(el) {
-          if (el.articleId === id) {
-            result = 1;
-            return;
-          }
-        });
-      }, function(error) {
-        kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
+      savedArticlesArr.forEach(function(el) {
+        if (el.articleId === id) {
+          result = 1;
+        }
       });
       return result;
 
     },
 
-    updateAtricleStore: function(id, userId, action) {
-		if (action === 1) {
-          articleData.isFavorite = 1;
-          favoritesService.addFavoriteArticle(id, userId,
-			function(response) {
-              return response;
-            },
-              function(error) {
-                kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
-            });
+    updateAtricleStore: function(articleId, userId, action) {
+      if (action === 1) {
+        articleData.isFavorite = 1;
+        favoritesService.addFavoriteArticle(articleId, userId, function(response) {
+          //kony.print("Integration Add Article Service Success:" + JSON.stringify(response));
 
-        } else {
-          articleData.isFavorite = 0;
-          
-        }
+          favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
+            kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
+            savedArticlesArr = articleIdsArr;
+          }, function(error) {
+            //kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
+          });
+        }, function(error) {
+          //kony.print("Integration Add Article Service Failure:" + JSON.stringify(error));
+        });
+
+      } else {
+        articleData.isFavorite = 0;
+        var idToRemove;
+        savedArticlesArr.forEach(function (el) {
+          if (el.articleId === articleId) idToRemove = el.id;
+        });
+        favoritesService.removeFavoriteArticle(idToRemove, function(response) {
+          //kony.print("Integration Remove Article Service Success:" + JSON.stringify(response));
+
+          favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
+            kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
+            savedArticlesArr = articleIdsArr;
+          }, function(error) {
+            //kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
+          });
+        }, function(error) {
+          //kony.print("Integration Remove Article Service Failure:" + JSON.stringify(error));
+        });
+      }
     },
 
     onButtonFavoriteArticle: function() {
       if (articleData.isFavorite) {
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticle';
-        this.updateAtricleStore(articleData.id, articleData.userId, 0);
+        this.updateAtricleStore(articleData.id, currentUserId, 0);
       } else {
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticleFocus';
-        this.updateAtricleStore(articleData.id, articleData.userId, 1);
+        this.updateAtricleStore(articleData.id, currentUserId, 1);
       }
 
     },
