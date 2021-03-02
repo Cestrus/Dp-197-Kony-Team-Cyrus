@@ -18,7 +18,8 @@ define(function () {
               lblNewsDate: m.webPublicationDate.slice(0,10),
               lblNewsShortDesc: m.fields.trailText,
               imgNews: m.fields.thumbnail,
-              bodyText: m.fields.bodyText
+              bodyText: m.fields.bodyText,
+              id: m.fields.id
             });
 		});
       }

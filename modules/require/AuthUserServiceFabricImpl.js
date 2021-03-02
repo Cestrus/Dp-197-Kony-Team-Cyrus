@@ -1,14 +1,14 @@
 define(function () {
 
   var sdk = kony.sdk.getCurrentInstance();
-  var newsService = sdk.getIntegrationService("CyrusDB");
+  var authService = sdk.getIntegrationService("CyrusDB");
   var params;
   var headers = null; 
 
   var checkUser = function(login, password, successCallback, errorCallback) {
     params = {"userLogin": login, "userPassword": password};
     
-    newsService.invokeOperation("loginUser", headers, params, function(response) {
+    authService.invokeOperation("loginUser", headers, params, function(response) {
       kony.print("Integration userLogin Service Response is: " + JSON.stringify(response));
       
       if (successCallback && response.userLoginError !== "login_failed") {
@@ -30,7 +30,7 @@ define(function () {
   var registerUser = function(login, password, successCallback, errorCallback) {
     params = {"userLogin": login, "userPassword": password};
     
-    newsService.invokeOperation("registerUser", headers, params, function(response) {
+    authService.invokeOperation("registerUser", headers, params, function(response) {
       kony.print("Integration registerUser Service Response is: " + JSON.stringify(response));
       
       if (successCallback && response.userNewId) {
