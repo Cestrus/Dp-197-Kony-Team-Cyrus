@@ -66,7 +66,6 @@ function animation_2 (widget) {
 }
 
 function animation_3 (widget, time) {
-  kony.print("star => " + JSON.stringify(widget));
   var animDef = kony.ui.createAnimation({     
     0: {
       "left": "100%",
