@@ -7,7 +7,7 @@ define(["AuthUserService", "FavoritesService"], function(authUser, favoritesServ
 
     onPostShow: function () {
       animation_1(this.view.imgStart);
-      bgStars(this.view.flexWrap); ///////
+      bgStars(this.view.flexWrap); 
     },
 
     onButtonEnterClicked: function() {
@@ -20,6 +20,7 @@ define(["AuthUserService", "FavoritesService"], function(authUser, favoritesServ
         if (this.view.switchNewUser.selectedIndex === 1) {
           authUser.checkUser(login, password, 
 			function(userId) {
+            kony.timer.cancel("timerStars");
             kony.store.setItem("userId", userId);
             favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
               kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
