@@ -1,7 +1,6 @@
 define(function () {
    
   var getFacts = function (successCallback, errorCallback) {
-
     var facts = [];
     var sdk = kony.sdk.getCurrentInstance();
     var factService = sdk.getIntegrationService("CyrusDB");
