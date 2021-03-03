@@ -1,4 +1,4 @@
-define(["NewsService", "WeatherService"], function(newsService, weatherService) {
+define(["NewsService", "WeatherService", "DatabaseService"], function(newsService, weatherService, databaseService) {
   return { 
     onInitialize: function() {
       this.favoriteImageStore = new FavoriteImageStore();
@@ -57,28 +57,45 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
     },
 
     onFormPreShow: function() {
-      if (!this.favoriteImageStore.length()) this.renderEmptyCollection();
-      else {
-        this.renderCollection();
-        this.view.imgContainer.createListImages(this.favoriteImageStore.get(), this.onShowFullImg);
-      }      
+      this.loadImages();   
     }, 
     
-    onShowFullImg: function(widget) {
+    onShowFullImg: function( widget ) {
       var index = widget.id.match(/\d\d?/)[0];
       var data = {num: index, isSearchScreen: false};
       var navigation = new kony.mvc.Navigation("frmFullImg");
       navigation.navigate(data);
     },
 
-    onDeleteImg: function(arrImages) {
+    onDeleteImg: function( arrImages ) { // array indexes
+      var userId = kony.store.getItem("userId");
+      for(var i = 0; i < arrImages.length; i++) {
+        var link = this.favoriteImageStore.get()[arrImages[i]];
+        databaseService.deleteImages ( userId, link );
+      }
+      
       this.favoriteImageStore.delete(arrImages);
       if (this.favoriteImageStore.length()) {
         this.view.imgContainer.createListImages(this.favoriteImageStore.get());
       } else {
         this.renderEmptyCollection();
       }
-    }
+    },
+    
+    loadImages: function() {
+      var userId = kony.store.getItem("userId");
+      databaseService.getImages(
+        userId,
+        function(data){
+          data.records.forEach (function(obj){ this.favoriteImageStore.push(obj.link);}.bind(this));
+          if (!this.favoriteImageStore.length()) this.renderEmptyCollection();
+          else {
+            this.renderCollection();
+            this.view.imgContainer.createListImages(this.favoriteImageStore.get(), this.onShowFullImg).bind(this);
+          }      
+        }.bind(this)
+      );
+    }, 
 
   };
 });
