@@ -1,4 +1,4 @@
-define(["NewsService", "MarsFactService"], function(newsService, marsFactService) { 
+define(["NewsService", "MarsFactsService"], function(newsService, marsFactsService) { 
   return {
     onInitialize: function() {  
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
@@ -35,7 +35,7 @@ define(["NewsService", "MarsFactService"], function(newsService, marsFactService
     },
     
     onButtonGoInfo: function() {
-      marsFactService.getFacts(function(facts) {
+      marsFactsService.getFacts(function(facts) {
         var navigation = new kony.mvc.Navigation("frmWeatherFAQ");
         navigation.navigate(facts);
         
