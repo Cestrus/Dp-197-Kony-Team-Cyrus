@@ -5,7 +5,6 @@ define(function () {
   var requestFunc = function(request, params, header, successCallback, errorCallback){
     cyrusDB.invokeOperation (request, header, params, 
       function(response) {
-      //kony.print("Database response: \n" + JSON.stringify(response)); ///////
         if (successCallback) {
           successCallback (response);
         }

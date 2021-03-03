@@ -20,7 +20,7 @@ define(["DatabaseService"], function (databaseService) {
       this.view.FlexContainerImg.onTouchEnd = this.onTouchEnd.bind(this);
 
       this.view.preShow = this.onFormPreShow.bind(this);
-
+		
     },
 
     renderForSearch: function() {
@@ -126,10 +126,13 @@ define(["DatabaseService"], function (databaseService) {
     createCarousel: function(direction) {
       var animDef = this.createAnimDef(direction);
       var duration = 0.25;
-
-      if (direction === 'next' && this.currNum + 1 < this.currStore.length()) ++this.currNum;
-      else if (direction === 'prev' && this.currNum - 1 >= 0)  --this.currNum;
-
+      if (direction === 'next' && Number(this.currNum) + 1 < this.currStore.length()){
+        ++this.currNum;
+      } 
+      else if (direction === 'prev' && this.currNum - 1 >= 0){
+        --this.currNum;
+      }  
+		
       var tempImage = this.createImage(this.currNum, this.currStore.get()[this.currNum]);
       var nextImage = this.insertImage(tempImage, direction);
       this.animation(this.currWidget, animDef, duration);
