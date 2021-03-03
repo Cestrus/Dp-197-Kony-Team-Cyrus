@@ -82,6 +82,10 @@ define(["DatabaseService"], function (databaseService) {
     },
 
     onAddImg: function() {
+      var userId = kony.store.getItem("userId");
+      var link = this.currStore.get()[this.currNum];
+      databaseService.addImages ( userId, link );
+      
       this.showMessage('added');
       var store = new FavoriteImageStore();
       store.push(this.currStore.get()[this.currNum]);
