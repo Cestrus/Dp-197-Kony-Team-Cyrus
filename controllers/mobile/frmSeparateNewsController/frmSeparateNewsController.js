@@ -1,4 +1,4 @@
-define(["NewsService", "FavoritesService"], function(newsService, favoritesService) {
+define(["NewsService", "FavoritesService", "WeatherService" ], function(newsService, favoritesService, weatherService) {
   var articleData = {};
   var currentUserId;
   var savedArticlesArr;
@@ -8,10 +8,19 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.btnGoBack.onClick = this.onButtonGoToNews.bind(this);
+      this.view.btnGoBack.onClick = function () {
+        var previousFormId = kony.application.getPreviousForm().id;
+        if (previousFormId === "frmFavoriteNews") {
+          this.onButtonGoToFavoriteNews();
+        } else {
+          this.onButtonGoToNews();
+        }
+      }.bind(this);
 
       this.view.btnFavoriteArticle.onClick = this.onButtonFavoriteArticle.bind(this);
-
+		
+      //temp function for saved articles form
+      this.view.btnProfile.onClick = this.onButtonGoToFavoriteNews.bind(this);
     },
 
     onNavigate: function(data) {
@@ -28,6 +37,7 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
         articleData.isFavorite = 0;
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticle';
       }
+      //alert(kony.store.getItem("savedFullArticles"));
     },
 
     checkSavedArticles: function(id) {
@@ -102,6 +112,15 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
         alert("Error while retrieving news list.");
       });
     },
+    
+    onButtonGoToFavoriteNews: function() {
+      newsService.getSavedNews(JSON.parse(kony.store.getItem("savedArticles")), function(arr) {
+        var navigation = new kony.mvc.Navigation("frmFavoriteNews");
+        navigation.navigate(arr);
+      },function() {
+        alert("Error while retrieving news list.");
+      });
+    },
 
     onButtonGoToSearchImg: function() {
       var navigation = new kony.mvc.Navigation("frmSearchImg");
@@ -109,8 +128,13 @@ define(["NewsService", "FavoritesService"], function(newsService, favoritesServi
     },
 
     onButtonGoToWeather: function() {
-      var navigation = new kony.mvc.Navigation("frmWeather");
-      navigation.navigate();
+      weatherService.getWeather(function(arr) {
+        var navigation = new kony.mvc.Navigation("frmWeather");
+        navigation.navigate(arr);
+
+      },function() {
+        alert("Error while retrieving Mars weather.");
+      });
     }
   };
 

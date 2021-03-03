@@ -1,4 +1,4 @@
-define(["AuthUserService", "FavoritesService"], function(authUser, favoritesService) {
+define(["AuthUserService", "FavoritesService", "NewsService"], function(authUser, favoritesService, newsService) {
   return { 
     onInitialize: function() {
       this.view.btnStart.onClick = this.onButtonEnterClicked.bind(this);
@@ -7,7 +7,7 @@ define(["AuthUserService", "FavoritesService"], function(authUser, favoritesServ
 
     onPostShow: function () {
       animation_1(this.view.imgStart);
-      bgStars(this.view.flexWrap); ///////
+      bgStars(this.view.flexWrap); 
     },
 
     onButtonEnterClicked: function() {
@@ -20,9 +20,25 @@ define(["AuthUserService", "FavoritesService"], function(authUser, favoritesServ
         if (this.view.switchNewUser.selectedIndex === 1) {
           authUser.checkUser(login, password, 
 			function(userId) {
+            kony.timer.cancel("timerStars");
             kony.store.setItem("userId", userId);
             favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
               kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
+//               var savedFullArticlesArr = [];
+//               var savedFullArticle;
+//               articleIdsArr.forEach(function(el) {
+//                 try {
+//                   newsService.getSavedNews(el.articleId, function(articleObj) {
+//                     savedFullArticle = articleObj;
+//                   },function() {
+//                     alert("Error while retrieving saved news.");
+//                     //errorCallback();
+//                   });
+//                 } catch {} finally {
+//                   savedFullArticlesArr.push(savedFullArticle);
+//                   kony.store.setItem("savedFullArticles", JSON.stringify(savedFullArticlesArr));
+//                 }
+//               });
             }, function(error) {
               //kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
             });

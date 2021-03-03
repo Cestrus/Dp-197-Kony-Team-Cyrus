@@ -72,7 +72,7 @@ function animation_3 (widget, time) {
       "left": "100%",
     },
     100: {
-      "left": "0%",
+      "left": "-2%",
     }
   });
   
