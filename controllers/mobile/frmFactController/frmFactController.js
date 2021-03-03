@@ -1,10 +1,11 @@
-define(["NewsService"], function(newsService) {
+define(["NewsService", "MarsFactsService", "WeatherService"], function(newsService, marsFactsService, weatherService) {
   return { 
 	onInitialize: function() { 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+      
       this.view.btnGoBack.onClick = this.onButtonGoInfo.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
@@ -34,13 +35,23 @@ define(["NewsService"], function(newsService) {
     },
 
     onButtonGoToWeather: function() {
+      weatherService.getWeather(function(arr) {
         var navigation = new kony.mvc.Navigation("frmWeather");
-        navigation.navigate();
+        navigation.navigate(arr);
+        
+      },function() {
+        alert("Error while retrieving Mars weather.");
+      });
     },
     
-    onButtonGoInfo : function() {
-      var navigation = new kony.mvc.Navigation("frmWeatherFAQ");
-      navigation.navigate();
+    onButtonGoInfo: function() {
+      marsFactsService.getFacts(function(facts) {
+        var navigation = new kony.mvc.Navigation("frmWeatherFAQ");
+        navigation.navigate(facts);
+        
+      },function() {
+        alert("Error while retrieving Mars weather facts.");
+      });
     },
     
     onGoToProfile: function() {
