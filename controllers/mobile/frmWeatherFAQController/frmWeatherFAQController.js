@@ -8,6 +8,11 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
       this.view.btnGoBack.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
+    
+    onNavigate: function(data) {
+      this.view.lstFacts.setData(data);
+    },
+
 
     onFactClicked: function (segmentWidgetRef, sectionNumber, rowIndex) {
       var navigation = new kony.mvc.Navigation("frmFact");
