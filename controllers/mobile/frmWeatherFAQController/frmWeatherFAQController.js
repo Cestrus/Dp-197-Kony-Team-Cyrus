@@ -4,10 +4,18 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.lstFacts.onRowClick = this.onFactClicked.bind(this);
+      this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+      
       this.view.btnGoBack.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+      
+      this.view.lstFacts.onRowClick = this.onFactClicked.bind(this);
     },
+    
+    onNavigate: function(data) {
+      this.view.lstFacts.setData(data);
+    },
+
 
     onFactClicked: function (segmentWidgetRef, sectionNumber, rowIndex) {
       var navigation = new kony.mvc.Navigation("frmFact");
