@@ -36,7 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "imgNews",
-        "lblNewsTitle"
+        "lblNewsTitle",
+        "btnFavoriteArticle"
     ],
     "clipbounds": true,
     "containerweight": 100,

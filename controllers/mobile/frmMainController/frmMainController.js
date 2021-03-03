@@ -4,10 +4,11 @@ define(["NewsService","WeatherService"], function(newsService, weatherService) {
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-
+      //alert(kony.store.getItem("userId"));
       this.view.btnGoToNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.btnGoToWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnGoToSearchPhotos.onClick = this.onButtonGoToSearchImg.bind(this);
+      
       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
 

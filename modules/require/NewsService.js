@@ -1,6 +1,7 @@
 define(["NewsServiceHttpImpl", "NewsServiceFabricImpl"], function (httpImpl, fabricImpl) {
-  var concreteImpl = fabricImpl;
+  
   return {
-    getNews: concreteImpl.getNews
+    getNews: fabricImpl.getNews,
+    getArticle: fabricImpl.getArticle
   };
 });

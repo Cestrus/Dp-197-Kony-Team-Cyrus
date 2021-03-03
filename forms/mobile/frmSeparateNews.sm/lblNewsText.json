@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "15dp"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -16,15 +16,11 @@
         1
     ],
     "_padding_": [
+        3,
         0,
-        0,
-        0,
+        3,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "15dp"
-    },
     "_skin_": "s3a55622c8344c1b968d13e7d37383c7",
     "_text_": "",
     "_top_": {
@@ -61,6 +57,7 @@
     "isvisible": true,
     "kuid": "d3c7300b4c8d4bb995ef75bf380fdb4b",
     "name": "kony.ui.Label",
+    "paddinginpixel": false,
     "parent": "FlexScrollContainer",
     "pf": "frmSeparateNews",
     "retaincontentalignment": false,
