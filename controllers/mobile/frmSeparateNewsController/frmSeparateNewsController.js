@@ -1,4 +1,4 @@
-define(["NewsService", "FavoritesService", "WeatherService" ], function(newsService, favoritesService, weatherService) {
+define(["NewsService", "FavoritesService", "WeatherService"], function(newsService, favoritesService, weatherService) {
   var articleData = {};
   var currentUserId;
   var savedArticlesArr;
@@ -131,7 +131,6 @@ define(["NewsService", "FavoritesService", "WeatherService" ], function(newsServ
       weatherService.getWeather(function(arr) {
         var navigation = new kony.mvc.Navigation("frmWeather");
         navigation.navigate(arr);
-
       },function() {
         alert("Error while retrieving Mars weather.");
       });

@@ -1,4 +1,4 @@
-define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImgService, newsService, weatherService){
+define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"], function(SearchImgService, newsService, weatherService, databaseService){
   return {
     onInitialize: function() {
       this.resetVisiblity();
@@ -112,15 +112,17 @@ define(["SearchImgService", "NewsService", "WeatherService"], function(SearchImg
       navigation.navigate(data);
     },
 
-    onAddToCollection: function(arrImages) {
-      var store = this.loadedImageStore.get();
-      for (var i = 0; i < arrImages.length; i++){
-        var el = store[arrImages[i]];
-        this.favoriteImageStore.push( el );
-      }
-      this.view.imgContainer.resetChoiceMark();
-    },
-      
+      onAddToCollection: function(arrImages) {
+        var userId = kony.store.getItem("userId");
+        var store = this.loadedImageStore.get();
+        for (var i = 0; i < arrImages.length; i++){
+          var link = store[arrImages[i]];
+          databaseService.addImages ( userId, link );
+          this.favoriteImageStore.push( link );
+        }
+        this.view.imgContainer.resetChoiceMark();
+      },
+
   };
       
 });
