@@ -5,7 +5,7 @@ define(["NewsService", "MarsFactsService"], function(newsService, marsFactsServi
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
-      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+//       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
 
     onNavigate: function(data) {
@@ -44,10 +44,10 @@ define(["NewsService", "MarsFactsService"], function(newsService, marsFactsServi
       });
     },
     
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    }
+//     onGoToProfile: function() {
+//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
+//       navigation.navigate();
+//     }
 
   };
 

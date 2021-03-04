@@ -9,12 +9,12 @@ define(["DatabaseService"], function (databaseService) {
 
       this.view.btnDeleteImg.onClick = this.onDeleteImg.bind(this);
       this.view.btnAddImg.onClick = this.onAddImg.bind(this);
-      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+//       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
 
-      this.view.btnGoBack.onClick = function () {
-        var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
-        navigation.navigate();
-      }.bind(this);
+//       this.view.btnGoBack.onClick = function () {
+//         var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
+//         navigation.navigate();
+//       }.bind(this);
 
       this.view.FlexContainerImg.onTouchStart = this.onTouchStart.bind(this);
       this.view.FlexContainerImg.onTouchEnd = this.onTouchEnd.bind(this);
@@ -37,10 +37,10 @@ define(["DatabaseService"], function (databaseService) {
       this.navigationData = data;
     },
 
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    },
+//     onGoToProfile: function() {
+//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
+//       navigation.navigate();
+//     },
 
     onFormPreShow: function() {
       if (!this.navigationData) {

@@ -9,7 +9,7 @@ define(["WeatherService", "NewsService"], function(weatherService, newsService){
 
       this.view.lstSavedNews.onRowClick = this.onSeparateNewsClicked.bind(this);
       //this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
-
+		alert(this.view.id)
     },
 
     onNavigate: function(data) {
@@ -51,10 +51,10 @@ define(["WeatherService", "NewsService"], function(weatherService, newsService){
       });
     },
 
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    },
+//     onGoToProfile: function() {
+//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
+//       navigation.navigate();
+//     },
   };
 
 

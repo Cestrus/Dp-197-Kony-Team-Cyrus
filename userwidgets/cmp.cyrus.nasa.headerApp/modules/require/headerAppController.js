@@ -1,18 +1,18 @@
-define(function() {
+ define(function() {
   var ANIM_TIME = 0.25;
   var _animBtnBack = animation_4;
   var _animBtnMenu = animation_5;
   var _animMenu = animation_6;
   var _flexBackdrop = null;
   var _btnMenu = null;
-  var _dropDownList = [{"text": "Favorite images", "formName": "frmCollectionImg"}, {"text":"Interesting news", "formName": "frm"}];
+  var _dropDownList = [{"text":"Favorite news", "formName": "frmFavoriteNews"}, {"text": "Favorite images", "formName": "frmCollectionImg"}];
   
   var initBtnMenu = function(refBtn) {
     _btnMenu = refBtn;
   };
   var goBack = function() {
     var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
-     navigation.navigate();
+    navigation.navigate();
   };
   
   var onBtnBackClick = function() {
@@ -22,6 +22,28 @@ define(function() {
       kony.timer.cancel('timerBack');
     }, ANIM_TIME, false);
   };
+  
+//   var showPreviousForm = function() {
+//     if (this.onBackClicked) {
+//       if (!this.onBackClicked()) {
+//         return;
+//       }
+//     }
+    
+//     var currentForm = kony.application.getCurrentForm();
+//     var previousForm = kony.application.getPreviousForm();
+
+//     if (currentForm && previousForm) {
+//       (new kony.mvc.Navigation(previousForm.id)).navigate();
+
+//       if (_destroyPreviousFormOnBack) {
+//         kony.application.destroyForm(currentForm.id);
+//       }
+//     }
+//   };
+  
+  
+  
   
   var hideDropDown = function () {
     var form = kony.application.getCurrentForm();
@@ -56,7 +78,7 @@ define(function() {
     var flexScroll = new kony.ui.FlexScrollContainer({
       id: "flxHeaderControlScrollList",
       top: "-85dp",
-      width: "150dp",
+      width: "140dp",
       right: "0dp",
       bottom: "0dp",
       isVisible: true,
@@ -83,14 +105,17 @@ define(function() {
         focusSkin: "sknBtnDropDownFocus",
         onClick: function(data){	
           hideDropDown();
-          var navigation = new kony.mvc.Navigation(data);
-          navigation.navigate();
+          kony.timer.schedule('timerNav', function(){
+            var navigation = new kony.mvc.Navigation(data);
+            navigation.navigate();
+             kony.timer.cancel('timerNav');
+          }, ANIM_TIME, false);
         }.bind(this, _dropDownList[i].formName)
       }, {
         padding: [5, 5, 5, 5],
         margin: [0, 0, 0, 0]
       });
-      button.contentAlignment = constants.CONTENT_ALIGN_MIDDLE_RIGHT;
+      button.contentAlignment = constants.CONTENT_ALIGN_CENTER;
       flexScroll.add(button);
     }
 

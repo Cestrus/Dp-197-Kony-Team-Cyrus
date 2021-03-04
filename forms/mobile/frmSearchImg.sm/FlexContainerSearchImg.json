@@ -39,10 +39,10 @@
         "imgRocket",
         "btnSearch",
         "navBottomMenu",
-        "flexHeader",
         "lbNotFound",
         "lbNotInput",
-        "imgContainer"
+        "imgContainer",
+        "headerApp"
     ],
     "clipbounds": true,
     "containerweight": 100,

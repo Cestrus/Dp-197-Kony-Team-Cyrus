@@ -36,7 +36,6 @@
     "canUpdateUI": true,
     "children": [
         "headerApp",
-        "flexHeader",
         "lbCollectionTitle",
         "imgRocket",
         "lbCollectionEmptyTitle",

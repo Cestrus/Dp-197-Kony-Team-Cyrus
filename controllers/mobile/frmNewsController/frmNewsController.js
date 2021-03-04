@@ -7,7 +7,7 @@ define(["WeatherService"], function(weatherService){
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
 
       this.view.lstNews.onRowClick = this.onSeparateNewsClicked.bind(this);
-      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+//       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
 
     },
 
@@ -40,10 +40,10 @@ define(["WeatherService"], function(weatherService){
       });
     },
 
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    },
+//     onGoToProfile: function() {
+//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
+//       navigation.navigate();
+//     },
   };
 
 
