@@ -1,4 +1,4 @@
-define(["WeatherService"], function(weatherService){
+define(["WeatherService", "FavoritesService"], function(weatherService, favoritesService){
   return {
     onInitialize: function() {
       //this.view.postShow = this.onFormShowed.bind(this);  
@@ -13,6 +13,11 @@ define(["WeatherService"], function(weatherService){
 
     onNavigate: function(data) {
       if(data) this.view.lstNews.setData(data);
+      favoritesService.getFavoriteArticles(kony.store.getItem("userId"), function(articleIdsArr) {
+        kony.print("Integration Get Favorite Articles List Service Success:" + JSON.stringify(articleIdsArr));
+      }, function(error) {
+        kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
+      });
     },
 
     onSeparateNewsClicked: function (segmentWidgetRef, sectionNumber, rowIndex) {
