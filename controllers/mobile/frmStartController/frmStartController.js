@@ -23,22 +23,7 @@ define(["AuthUserService", "FavoritesService", "NewsService"], function(authUser
             kony.timer.cancel("timerStars");
             kony.store.setItem("userId", userId);
             favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
-              kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
-//               var savedFullArticlesArr = [];
-//               var savedFullArticle;
-//               articleIdsArr.forEach(function(el) {
-//                 try {
-//                   newsService.getSavedNews(el.articleId, function(articleObj) {
-//                     savedFullArticle = articleObj;
-//                   },function() {
-//                     alert("Error while retrieving saved news.");
-//                     //errorCallback();
-//                   });
-//                 } catch {} finally {
-//                   savedFullArticlesArr.push(savedFullArticle);
-//                   kony.store.setItem("savedFullArticles", JSON.stringify(savedFullArticlesArr));
-//                 }
-//               });
+              //kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
             }, function(error) {
               //kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
             });

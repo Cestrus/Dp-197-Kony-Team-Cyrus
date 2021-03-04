@@ -18,7 +18,7 @@ define(function () {
           lblNewsShortDesc: m.fields.trailText,
           imgNews: m.fields.thumbnail,
           bodyText: m.fields.bodyText,
-          id: m.id
+          articleId: m.id
         });
       });
       if (successCallback) {
@@ -48,7 +48,7 @@ define(function () {
           lblNewsShortDesc: response.content.fields.trailText,
           imgNews: response.content.fields.thumbnail,
           bodyText: response.content.fields.bodyText,
-          id: response.content.id
+          articleId: response.content.id
         });
       }
 
