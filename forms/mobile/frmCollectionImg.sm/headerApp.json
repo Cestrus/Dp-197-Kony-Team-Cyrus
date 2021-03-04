@@ -1,8 +1,10 @@
 {
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
+    "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "65dp"
     },
     "_left_": {
         "type": "string",
@@ -14,7 +16,7 @@
         0,
         0
     ],
-    "_orientation_": 6,
+    "_orientation_": 1,
     "_padding_": [
         0,
         0,
@@ -22,7 +24,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sae1da21ed4445299d1a92fa66d59328",
+    "_skin_": "se43e4eac4384c788e51ab0dc7a263d9",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -31,36 +33,27 @@
         "type": "string",
         "value": "100%"
     },
-    "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [
-        "headerApp",
-        "flexHeader",
-        "lbCollectionTitle",
-        "imgRocket",
-        "lbCollectionEmptyTitle",
-        "navBottomMenu",
-        "imgContainer"
-    ],
     "clipbounds": true,
-    "containerweight": 100,
+    "containerweight": 0,
+    "data": {},
     "enablescrolling": true,
-    "id": "FlexContainerCollection",
+    "id": "headerApp",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "jdfb6246ec304effa1f993e9c9aee40b",
+    "kuid": "c87201b4f6c84a8dbb632b11fb839e0b",
     "layouttype": 2,
-    "name": "kony.ui.FlexContainer",
-    "parent": "frmCollectionImg",
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "FlexContainerCollection",
     "pf": "frmCollectionImg",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "sourceUserWidget": "e9c90f9b70284d8c99a3d54e9a3b4580",
+    "wType": "UserWidgetInstance"
 }

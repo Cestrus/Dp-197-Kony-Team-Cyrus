@@ -45,7 +45,7 @@
     "id": "flexHeader",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "h013c567b4a14c1f9067035405952e72",
     "layouttype": 2,
     "masterType": 1,
