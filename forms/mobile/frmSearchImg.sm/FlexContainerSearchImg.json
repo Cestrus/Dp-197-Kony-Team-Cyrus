@@ -35,14 +35,14 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
+        "headerApp",
         "inptSearchImg",
         "imgRocket",
         "btnSearch",
         "navBottomMenu",
         "lbNotFound",
         "lbNotInput",
-        "imgContainer",
-        "headerApp"
+        "imgContainer"
     ],
     "clipbounds": true,
     "containerweight": 100,

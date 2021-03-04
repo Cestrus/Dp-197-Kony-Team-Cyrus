@@ -21,29 +21,7 @@
       goBack();
       kony.timer.cancel('timerBack');
     }, ANIM_TIME, false);
-  };
-  
-//   var showPreviousForm = function() {
-//     if (this.onBackClicked) {
-//       if (!this.onBackClicked()) {
-//         return;
-//       }
-//     }
-    
-//     var currentForm = kony.application.getCurrentForm();
-//     var previousForm = kony.application.getPreviousForm();
-
-//     if (currentForm && previousForm) {
-//       (new kony.mvc.Navigation(previousForm.id)).navigate();
-
-//       if (_destroyPreviousFormOnBack) {
-//         kony.application.destroyForm(currentForm.id);
-//       }
-//     }
-//   };
-  
-  
-  
+  };  
   
   var hideDropDown = function () {
     var form = kony.application.getCurrentForm();
@@ -61,7 +39,7 @@
   
   var showDropDown = function () {
     var form = kony.application.getCurrentForm();
-
+    
     hideDropDown();
     _flexBackdrop = new kony.ui.FlexContainer({
       id: "flxHeaderControlBackdrop",
@@ -109,7 +87,7 @@
             var navigation = new kony.mvc.Navigation(data);
             navigation.navigate();
              kony.timer.cancel('timerNav');
-          }, ANIM_TIME, false);
+          }, ANIM_TIME + 0.25, false);
         }.bind(this, _dropDownList[i].formName)
       }, {
         padding: [5, 5, 5, 5],

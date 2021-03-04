@@ -9,11 +9,11 @@ define(["WeatherService", "NewsService"], function(weatherService, newsService){
 
       this.view.lstSavedNews.onRowClick = this.onSeparateNewsClicked.bind(this);
       //this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
-		alert(this.view.id)
+		kony.print("FAV NEWS \n\n" + JSON.stringify(this.view.id));
     },
 
     onNavigate: function(data) {
-      this.view.lstSavedNews.setData(data);
+      if(data) this.view.lstSavedNews.setData(data);
       //alert(data);
     },
 

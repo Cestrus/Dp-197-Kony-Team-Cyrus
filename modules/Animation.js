@@ -113,10 +113,9 @@ function animation_4 (widget, time) {
 
 function animation_5 (widget, time, isOpen) {
   var rotate = (isOpen)? -90 : 0;
-   
   var transformProp1 = kony.ui.makeAffineTransform();
   transformProp1.rotate(rotate);
-  
+  kony.print( "ANIMATION ++++++++++++++++++++\n\n " + JSON.stringify());
   var animDef = kony.ui.createAnimation({
     100: {
       "transform": transformProp1

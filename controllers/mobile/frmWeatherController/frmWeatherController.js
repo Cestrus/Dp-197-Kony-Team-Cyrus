@@ -9,7 +9,7 @@ define(["NewsService", "MarsFactsService"], function(newsService, marsFactsServi
     },
 
     onNavigate: function(data) {
-      this.view.lstDates.setData(data);
+      if(data) this.view.lstDates.setData(data);
     },
 
     onButtonGoToHome: function() {

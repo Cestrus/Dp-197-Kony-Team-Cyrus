@@ -12,7 +12,7 @@ define(["WeatherService"], function(weatherService){
     },
 
     onNavigate: function(data) {
-      this.view.lstNews.setData(data);
+      if(data) this.view.lstNews.setData(data);
     },
 
     onSeparateNewsClicked: function (segmentWidgetRef, sectionNumber, rowIndex) {
