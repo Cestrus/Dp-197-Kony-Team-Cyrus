@@ -35,11 +35,11 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
+        "headerApp",
         "inptSearchImg",
         "imgRocket",
         "btnSearch",
         "navBottomMenu",
-        "flexHeader",
         "lbNotFound",
         "lbNotInput",
         "imgContainer"

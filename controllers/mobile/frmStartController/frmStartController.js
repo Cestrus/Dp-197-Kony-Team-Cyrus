@@ -35,6 +35,7 @@ define(["AuthUserService", "FavoritesService", "NewsService"], function(authUser
         } else {
           authUser.registerUser(login, password, 
             function(userId) {
+            kony.timer.cancel("timerStars");
             kony.store.setItem("userId", userId);
             var navigation = new kony.mvc.Navigation("frmMain");
             navigation.navigate();

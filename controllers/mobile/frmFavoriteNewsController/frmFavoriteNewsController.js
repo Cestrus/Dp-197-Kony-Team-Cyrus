@@ -9,10 +9,14 @@ define(["WeatherService", "NewsService", "FavoritesService"], function(weatherSe
 
       this.view.lstSavedNews.onRowClick = this.onSeparateNewsClicked.bind(this);
       //this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+	
+      this.view.headerApp.onBackClicked = function () {
+		// ========= your logic  =============
+      }.bind(this);
     },
 
     onNavigate: function(data) {
-      this.view.lstSavedNews.setData(data);
+      if(data) this.view.lstSavedNews.setData(data);
       favoritesService.getFavoriteArticles(kony.store.getItem("userId"), function(articleIdsArr) {
         kony.print("Integration Get Favorite Articles List Service Success:" + JSON.stringify(articleIdsArr));
       }, function(error) {
@@ -55,10 +59,10 @@ define(["WeatherService", "NewsService", "FavoritesService"], function(weatherSe
       });
     },
 
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    },
+//     onGoToProfile: function() {
+//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
+//       navigation.navigate();
+//     },
   };
 
 

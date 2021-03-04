@@ -35,9 +35,9 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
+        "headerApp",
         "FlexScrollContainerMain",
-        "navBottomMenu",
-        "flexHeader"
+        "navBottomMenu"
     ],
     "clipbounds": true,
     "containerweight": 100,

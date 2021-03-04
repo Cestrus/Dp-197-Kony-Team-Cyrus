@@ -6,8 +6,10 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       
-      this.view.btnGoBack.onClick = this.onButtonGoInfo.bind(this);
-      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+//       this.view.btnGoBack.onClick = this.onButtonGoInfo.bind(this);
+//       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+      
+      this.view.headerApp.onBackClicked = this.onButtonGoInfo.bind(this);
     },
 
     onNavigate: function(data) {
@@ -54,10 +56,10 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
       });
     },
     
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    },
+//     onGoToProfile: function() {
+//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
+//       navigation.navigate();
+//     },
   };
 
  });

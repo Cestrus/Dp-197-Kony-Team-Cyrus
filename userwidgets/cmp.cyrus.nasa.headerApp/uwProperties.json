@@ -1,0 +1,101 @@
+{
+    "classname": "headerApp",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f845830e276b4ac1b5485dd02733ea33",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onBackClicked",
+                    "pw": {
+                        "displayName": "onBackClicked",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e9c90f9b70284d8c99a3d54e9a3b4580",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "hce2f53c6fab4211906301aae788ef7e",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onListItemClicked",
+                    "pw": {
+                        "displayName": "onListItemClicked",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e9c90f9b70284d8c99a3d54e9a3b4580",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "eb5b76ac558342fdbdb2076bac3c198d",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 1,
+                    "propertyKey": "isVisibleBtnBack",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Button Back Visible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "btnBack",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "j1875a78366f43b9aa5ab9e00f28b9ed"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "iddc496145ab4cceb5d1e27867d6423a",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 2,
+                    "propertyKey": "isVisibleBtnMenu",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Button Menu Visible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "btnMenu",
+                        "toolTip": "Hides/shows the widget in the screen",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "c3b5d0fde723432ab956458c95103091"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "cmp.cyrus.nasa",
+    "version": "1.0.0"
+}

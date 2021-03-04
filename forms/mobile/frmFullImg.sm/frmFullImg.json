@@ -31,7 +31,7 @@
     "canUpdateUI": true,
     "children": [
         "FlexContainerFullImg",
-        "flexHeader",
+        "headerApp",
         "txtBoxAddImg"
     ],
     "containerweight": 100,

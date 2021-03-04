@@ -10,7 +10,7 @@ define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"],
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnSearch.onClick = this.onSendRequest.bind(this);
-      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);    
+//       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);    
       
       this.view.imgContainer.onBtnClick = this.onAddToCollection.bind(this);
     },
@@ -42,10 +42,10 @@ define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"],
       });
     },
 
-    onGoToProfile: function() {
-      var navigation = new kony.mvc.Navigation("frmCollectionImg");
-      navigation.navigate();
-    },
+//     onGoToProfile: function() {
+//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
+//       navigation.navigate();
+//     },
     
     // visibility methods
 
@@ -78,6 +78,7 @@ define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"],
     },
 
     onSendRequest: function() {
+      animation_4(this.view.btnSearch, 0.25);
       if(!this.view.inptSearchImg.text ||  this.view.inptSearchImg.text.trim() === ""){
         this.renderNotInput();
         return;

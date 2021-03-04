@@ -9,7 +9,7 @@ define(["NewsService", "WeatherService", "DatabaseService"], function(newsServic
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       
       this.view.imgContainer.onBtnClick = this.onDeleteImg.bind(this);
-      this.view.preShow = this.onFormPreShow.bind(this);
+      this.view.preShow = this.onFormPreShow.bind(this);    
     },
 
     onButtonGoToHome: function() {
@@ -99,3 +99,7 @@ define(["NewsService", "WeatherService", "DatabaseService"], function(newsServic
 
   };
 });
+
+
+
+

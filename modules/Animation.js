@@ -84,3 +84,69 @@ function animation_3 (widget, time) {
   
   widget.animate(animDef, animConf, {});
 }
+
+function animation_4 (widget, time) {
+  var transformProp1 = kony.ui.makeAffineTransform();
+  transformProp1.scale(1.5, 1.5);
+  
+  var transformProp2 = kony.ui.makeAffineTransform();
+  transformProp2.scale(1, 1);
+  
+  var animDef = kony.ui.createAnimation({
+    50: {
+      "transform": transformProp1
+    },    
+    100: {
+      "transform": transformProp2
+    }
+  });
+  
+  var animConf = {
+    "duration": time,
+    "iterationCount": 1,
+    "delay": 0,
+    "fillMode": kony.anim.FILL_MODE_FORWARDS
+  };  
+  
+  widget.animate(animDef, animConf, {});
+}
+
+function animation_5 (widget, time, isOpen) {
+  var rotate = (isOpen)? -90 : 0;
+  var transformProp1 = kony.ui.makeAffineTransform();
+  transformProp1.rotate(rotate);
+  kony.print( "ANIMATION ++++++++++++++++++++\n\n " + JSON.stringify());
+  var animDef = kony.ui.createAnimation({
+    100: {
+      "transform": transformProp1
+    }
+  });
+  
+  var animConf = {
+    "duration": time,
+    "iterationCount": 1,
+    "delay": 0,
+    "fillMode": kony.anim.FILL_MODE_FORWARDS
+  };  
+  
+  widget.animate(animDef, animConf, {});
+}
+
+function animation_6 (widget, time, isOpen) {
+  var top = (isOpen)? "-85dp" : 0;
+   
+  var animDef = kony.ui.createAnimation({
+    100: {
+      "top": top
+    }
+  });
+  
+  var animConf = {
+    "duration": time,
+    "iterationCount": 1,
+    "delay": 0,
+    "fillMode": kony.anim.FILL_MODE_FORWARDS
+  };  
+  
+  widget.animate(animDef, animConf, {});
+}
