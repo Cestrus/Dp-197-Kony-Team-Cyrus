@@ -1,4 +1,4 @@
-define(["WeatherService", "NewsService"], function(weatherService, newsService){
+define(["WeatherService", "NewsService", "FavoritesService"], function(weatherService, newsService, favoritesService){
   return {
     onInitialize: function() {
       //this.view.postShow = this.onFormShowed.bind(this);  
@@ -9,11 +9,15 @@ define(["WeatherService", "NewsService"], function(weatherService, newsService){
 
       this.view.lstSavedNews.onRowClick = this.onSeparateNewsClicked.bind(this);
       //this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
-
     },
 
     onNavigate: function(data) {
       this.view.lstSavedNews.setData(data);
+      favoritesService.getFavoriteArticles(kony.store.getItem("userId"), function(articleIdsArr) {
+        kony.print("Integration Get Favorite Articles List Service Success:" + JSON.stringify(articleIdsArr));
+      }, function(error) {
+        kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
+      });
       //alert(data);
     },
 
