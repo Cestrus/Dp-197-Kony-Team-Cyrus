@@ -78,6 +78,7 @@ define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"],
     },
 
     onSendRequest: function() {
+      animation_4(this.view.btnSearch, 0.25);
       if(!this.view.inptSearchImg.text ||  this.view.inptSearchImg.text.trim() === ""){
         this.renderNotInput();
         return;
