@@ -4,22 +4,26 @@ define(function () {
   var params = null;
   var headers = null; 
 
-  var addArticle = function (articleId, userId, successCallback, errorCallback) {
+  // in obj articleId, userId, title, href, date, trailText
+  var addArticle = function(recordData, userId, successCallback, errorCallback) {
     params = {
-      "newArticleId": articleId,
-      "userIdentificator": userId.toString()
+      "newArticleId": recordData.articleId,
+      "userIdentificator": userId.toString(),
+      "title": recordData.lblNewsTitle,
+      "articleDescr": recordData.lblNewsShortDesc,
+      "pubDate": recordData.lblNewsDate,
+      "href": recordData.imgNews,
+      "bodyText": recordData.bodyText
     };
 
 
     favoritesService.invokeOperation("addArticle", headers, params, function(response) {
-      kony.print("Integration Service Response is: " + JSON.stringify(response));
-// 		alert(JSON.stringify(headers));
-//       alert(JSON.stringify(response));
+      kony.print("Integration Add Article Service Response is: " + JSON.stringify(response));
       if (successCallback && response.articleMappingId) {
         successCallback(response);
       } 
     }, function(error) {
-      kony.print("Integration Service Failure:" + JSON.stringify(error));
+      kony.print("Integration Add Article Service Failure:" + JSON.stringify(error));
       if (errorCallback) {
         errorCallback(error);
       }
@@ -31,14 +35,14 @@ define(function () {
       "userIdentificator": userId.toString()
     };
 
-
     favoritesService.invokeOperation("getArticles", headers, params, function(response) {
-      //kony.print("Integration GetArticles Service Response is: " + JSON.stringify(response));
+      kony.print("Integration Get Articles Service Response is: " + JSON.stringify(response));
+      kony.store.setItem("savedArticles", JSON.stringify(response.records));
       if (successCallback) {
         successCallback(response.records);
       }
     }, function(error) {
-      //kony.print("Integration Service Failure:" + JSON.stringify(error));
+      kony.print("Integration Get Articles Service Failure:" + JSON.stringify(error));
       if (errorCallback) {
         errorCallback(error);
       }
@@ -52,12 +56,12 @@ define(function () {
     };
     
     favoritesService.invokeOperation("deleteArticle", headers, params, function(response) {
-      //kony.print("Integration GetArticles Service Response is: " + JSON.stringify(response));
+      kony.print("Integration Delete Articles Service Response is: " + JSON.stringify(response));
       if (successCallback) {
-        successCallback(response.deletedRecords);
+        successCallback(response);
       }
     }, function(error) {
-      //kony.print("Integration Service Failure:" + JSON.stringify(error));
+      kony.print("Integration Delete Articles Service Failure:" + JSON.stringify(error));
       if (errorCallback) {
         errorCallback(error);
       }

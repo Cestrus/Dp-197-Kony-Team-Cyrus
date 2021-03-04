@@ -1,4 +1,4 @@
-define(["AuthUserService", "FavoritesService"], function(authUser, favoritesService) {
+define(["AuthUserService", "FavoritesService", "NewsService"], function(authUser, favoritesService, newsService) {
   return { 
     onInitialize: function() {
       this.view.btnStart.onClick = this.onButtonEnterClicked.bind(this);
@@ -23,7 +23,7 @@ define(["AuthUserService", "FavoritesService"], function(authUser, favoritesServ
             kony.timer.cancel("timerStars");
             kony.store.setItem("userId", userId);
             favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
-              kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
+              //kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
             }, function(error) {
               //kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
             });
