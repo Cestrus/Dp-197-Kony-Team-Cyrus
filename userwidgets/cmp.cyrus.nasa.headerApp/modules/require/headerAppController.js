@@ -5,24 +5,32 @@
   var _animMenu = animation_6;
   var _flexBackdrop = null;
   var _btnMenu = null;
-  var _dropDownList = [{"text":"Favorite news", "formName": "frmFavoriteNews"}, {"text": "Favorite images", "formName": "frmCollectionImg"}];
-  
+  var _dropDownList = [{"name":"Favorite news", "idForm": "frmFavoriteNews"}, 
+                       {"name": "Favorite images", "idForm": "frmCollectionImg"}];
   var initBtnMenu = function(refBtn) {
     _btnMenu = refBtn;
   };
-  var goBack = function() {
-    var navigation = new kony.mvc.Navigation(kony.application.getPreviousForm().id);
-    navigation.navigate();
-  };
   
-  var onBtnBackClick = function() {
-    _animBtnBack(this.view.btnBack, ANIM_TIME);
-    kony.timer.schedule('timerBack', function(){
-      goBack();
-      kony.timer.cancel('timerBack');
-    }, ANIM_TIME, false);
-  };  
   
+   var onBtnBackClick = function() {
+     _animBtnBack(this.view.btnBack, ANIM_TIME);
+     kony.timer.schedule('timerBack', function(){
+       if (this.onBackClicked) {
+         if (!this.onBackClicked()) {
+           return;
+         }
+       }
+
+       var currentForm = kony.application.getCurrentForm();
+       var previousForm = kony.application.getPreviousForm();
+
+       if (currentForm && previousForm) {
+         (new kony.mvc.Navigation(previousForm.id)).navigate();
+       }
+       kony.timer.cancel('timerBack');
+     }, ANIM_TIME, false);
+   };  
+    
   var hideDropDown = function () {
     var form = kony.application.getCurrentForm();
 
@@ -78,17 +86,17 @@
         width: "100%",
         height: "40dp",
         isVisible: true,
-        text: _dropDownList[i].text,
+        text: _dropDownList[i].name,
         skin: "sknBtnDropDown",
         focusSkin: "sknBtnDropDownFocus",
         onClick: function(data){	
-          hideDropDown();
-          kony.timer.schedule('timerNav', function(){
-            var navigation = new kony.mvc.Navigation(data);
+          hideDropDown();          
+          kony.timer.schedule('timerNav', function(){                       
+            var navigation = new kony.mvc.Navigation(data.idForm);
             navigation.navigate();
-             kony.timer.cancel('timerNav');
+            kony.timer.cancel('timerNav'); 
           }, ANIM_TIME + 0.25, false);
-        }.bind(this, _dropDownList[i].formName)
+        }.bind(this, _dropDownList[i])
       }, {
         padding: [5, 5, 5, 5],
         margin: [0, 0, 0, 0]
@@ -100,9 +108,7 @@
     _flexBackdrop.add(flexScroll);
     form.add(_flexBackdrop);
   };
-  
 
-  
   var toggleDropMenu = function() {
     if (_flexBackdrop) {
       hideDropDown();
@@ -121,7 +127,7 @@
     },
     
     initGettersSetters: function() {
-		
+
     }
   };
 });

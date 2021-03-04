@@ -6,7 +6,34 @@
             "passthrough": []
         },
         "events": {
-            "custom": [],
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f845830e276b4ac1b5485dd02733ea33",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onBackClicked",
+                    "pw": {
+                        "displayName": "onBackClicked",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e9c90f9b70284d8c99a3d54e9a3b4580",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "hce2f53c6fab4211906301aae788ef7e",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onListItemClicked",
+                    "pw": {
+                        "displayName": "onListItemClicked",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e9c90f9b70284d8c99a3d54e9a3b4580",
+                    "type": "event"
+                }
+            ],
             "passthrough": []
         },
         "groups": {

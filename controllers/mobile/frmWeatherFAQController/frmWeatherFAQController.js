@@ -9,6 +9,10 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
 //       this.view.btnGoBack.onClick = this.onButtonGoToWeather.bind(this);
 //       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
       
+      this.view.headerApp.onBackClicked = function () {
+        this.onButtonGoToWeather.bind(this);
+      }.bind(this);
+      
       this.view.lstFacts.onRowClick = this.onFactClicked.bind(this);
     },
     

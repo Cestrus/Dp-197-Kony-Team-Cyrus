@@ -9,7 +9,10 @@ define(["WeatherService", "NewsService"], function(weatherService, newsService){
 
       this.view.lstSavedNews.onRowClick = this.onSeparateNewsClicked.bind(this);
       //this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
-		kony.print("FAV NEWS \n\n" + JSON.stringify(this.view.id));
+	
+      this.view.headerApp.onBackClicked = function () {
+		// ========= your logic  =============
+      }.bind(this);
     },
 
     onNavigate: function(data) {

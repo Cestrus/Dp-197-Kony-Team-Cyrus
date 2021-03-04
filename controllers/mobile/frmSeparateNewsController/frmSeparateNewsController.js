@@ -9,15 +9,16 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-//       this.view.btnGoBack.onClick = function () {
-//         previousFormId = kony.application.getPreviousForm().id;
-//         if (previousFormId === "frmFavoriteNews") {
-//           this.onButtonGoToFavoriteNews();
-//         } else {
-//           this.onButtonGoToNews();
-//         }
-//       }.bind(this);
-
+      
+      this.view.headerApp.onBackClicked = function () {
+        previousFormId = kony.application.getPreviousForm().id;
+        if (previousFormId === "frmFavoriteNews") {
+          this.onButtonGoToFavoriteNews();
+        } else {
+          this.onButtonGoToNews();
+        }
+      }.bind(this);
+      
       this.view.btnFavoriteArticle.onClick = this.onButtonFavoriteArticle.bind(this);
 		
       //temp function for saved articles form
