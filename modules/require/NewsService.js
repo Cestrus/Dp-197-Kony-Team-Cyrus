@@ -2,6 +2,7 @@ define(["NewsServiceHttpImpl", "NewsServiceFabricImpl"], function (httpImpl, fab
   
   return {
     getNews: fabricImpl.getNews,
-    getArticle: fabricImpl.getArticle
+    getArticle: fabricImpl.getArticle,
+    getSavedNews: fabricImpl.getSavedNews
   };
 });

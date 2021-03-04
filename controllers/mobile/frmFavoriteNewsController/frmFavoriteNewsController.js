@@ -1,18 +1,20 @@
-define(["WeatherService"], function(weatherService){
+define(["WeatherService", "NewsService"], function(weatherService, newsService){
   return {
     onInitialize: function() {
       //this.view.postShow = this.onFormShowed.bind(this);  
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
 
-      this.view.lstNews.onRowClick = this.onSeparateNewsClicked.bind(this);
-      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+      this.view.lstSavedNews.onRowClick = this.onSeparateNewsClicked.bind(this);
+      //this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
 
     },
 
     onNavigate: function(data) {
-      this.view.lstNews.setData(data);
+      this.view.lstSavedNews.setData(data);
+      //alert(data);
     },
 
     onSeparateNewsClicked: function (segmentWidgetRef, sectionNumber, rowIndex) {
@@ -37,6 +39,15 @@ define(["WeatherService"], function(weatherService){
 
       },function() {
         alert("Error while retrieving Mars weather.");
+      });
+    }, 
+
+    onButtonGoToNews: function() {
+      newsService.getNews(function(arr) {
+        var navigation = new kony.mvc.Navigation("frmNews");
+        navigation.navigate(arr);
+      },function() {
+        alert("Error while retrieving news list.");
       });
     },
 

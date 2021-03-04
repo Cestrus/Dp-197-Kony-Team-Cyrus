@@ -1,17 +1,27 @@
 define(["NewsService", "FavoritesService", "WeatherService"], function(newsService, favoritesService, weatherService) {
-  var articleData = {};
+  var articleData;
   var currentUserId;
   var savedArticlesArr;
+  var previousFormId;
   return { 
     onInitialize: function() { 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.btnGoBack.onClick = this.onButtonGoToNews.bind(this);
+      this.view.btnGoBack.onClick = function () {
+        previousFormId = kony.application.getPreviousForm().id;
+        if (previousFormId === "frmFavoriteNews") {
+          this.onButtonGoToFavoriteNews();
+        } else {
+          this.onButtonGoToNews();
+        }
+      }.bind(this);
 
       this.view.btnFavoriteArticle.onClick = this.onButtonFavoriteArticle.bind(this);
-
+		
+      //temp function for saved articles form
+      this.view.btnProfile.onClick = this.onButtonGoToFavoriteNews.bind(this);
     },
 
     onNavigate: function(data) {
@@ -21,7 +31,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       this.view.lblNewsText.text = articleData.bodyText;
       currentUserId = kony.store.getItem("userId");
       savedArticlesArr = JSON.parse(kony.store.getItem("savedArticles"));
-      if (this.checkSavedArticles(articleData.id)) {
+      if (this.checkSavedArticles(articleData.articleId)) {
         articleData.isFavorite = 1;
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticleFocus';
       } else {
@@ -41,50 +51,51 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
 
     },
 
-    updateAtricleStore: function(articleId, userId, action) {
+    updateAtricleStore: function(articleRecordData, userId ,action) {
       if (action === 1) {
         articleData.isFavorite = 1;
-        favoritesService.addFavoriteArticle(articleId, userId, function(response) {
-          //kony.print("Integration Add Article Service Success:" + JSON.stringify(response));
+        favoritesService.addFavoriteArticle(articleRecordData, userId, function(response) {
+          kony.print("Integration updateAtricleStore Service Success:" + JSON.stringify(response));
 
           favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
-            kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
             savedArticlesArr = articleIdsArr;
           }, function(error) {
-            //kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
+            kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
           });
         }, function(error) {
-          //kony.print("Integration Add Article Service Failure:" + JSON.stringify(error));
+          kony.print("Integration Add Article Service Failure:" + JSON.stringify(error));
         });
 
       } else {
         articleData.isFavorite = 0;
         var idToRemove;
         savedArticlesArr.forEach(function (el) {
-          if (el.articleId === articleId) idToRemove = el.id;
+          if (el.articleId === articleRecordData.articleId) {
+            idToRemove = el.id;
+            //alert("id found " + idToRemove);
+            favoritesService.removeFavoriteArticle(idToRemove, function(response) {
+              kony.print("Integration Remove Article Service Success:" + JSON.stringify(response));
+              favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
+                savedArticlesArr = articleIdsArr;
+              }, function(error) {
+                kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
+              });
+            }, function(error) {
+              kony.print("Integration Remove Article Service Failure:" + JSON.stringify(error));
+            });
+          } 
         });
-        favoritesService.removeFavoriteArticle(idToRemove, function(response) {
-          //kony.print("Integration Remove Article Service Success:" + JSON.stringify(response));
 
-          favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
-            kony.store.setItem("savedArticles", JSON.stringify(articleIdsArr));
-            savedArticlesArr = articleIdsArr;
-          }, function(error) {
-            //kony.print("Integration Get Article IDs List Service Failure:" + JSON.stringify(error));
-          });
-        }, function(error) {
-          //kony.print("Integration Remove Article Service Failure:" + JSON.stringify(error));
-        });
       }
     },
 
     onButtonFavoriteArticle: function() {
       if (articleData.isFavorite) {
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticle';
-        this.updateAtricleStore(articleData.id, currentUserId, 0);
+        this.updateAtricleStore(articleData, currentUserId, 0);
       } else {
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticleFocus';
-        this.updateAtricleStore(articleData.id, currentUserId, 1);
+        this.updateAtricleStore(articleData, currentUserId, 1);
       }
 
     },
@@ -103,6 +114,24 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       });
     },
 
+    onButtonGoToFavoriteNews: function() {
+      //alert (JSON.stringify(savedArticlesArr)); 
+      var newArr = [];
+      JSON.parse(kony.store.getItem("savedArticles")).forEach(function(m) {
+        newArr.push({
+          lblNewsTitle: m.articleTitle,
+          lblNewsDate: m.articlePubDate,
+          lblNewsShortDesc:  m.articleDesc,
+          imgNews: m.articleHref,
+          articleId: m.articleId,
+          recordId: m.id,
+          bodyText: m.articleText
+        });
+      });
+      var navigation = new kony.mvc.Navigation("frmFavoriteNews");
+      navigation.navigate(newArr);
+    },
+
     onButtonGoToSearchImg: function() {
       var navigation = new kony.mvc.Navigation("frmSearchImg");
       navigation.navigate();
@@ -112,7 +141,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       weatherService.getWeather(function(arr) {
         var navigation = new kony.mvc.Navigation("frmWeather");
         navigation.navigate(arr);
-        
       },function() {
         alert("Error while retrieving Mars weather.");
       });
