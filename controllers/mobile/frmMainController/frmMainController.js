@@ -1,9 +1,8 @@
-  
 define(["NewsService","WeatherService"], function(newsService, weatherService) {
   return { 
     onInitialize: function() {
-      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       //alert(kony.store.getItem("userId"));
       this.view.btnGoToNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.btnGoToWeather.onClick = this.onButtonGoToWeather.bind(this);
