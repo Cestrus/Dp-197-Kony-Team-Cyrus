@@ -1,10 +1,10 @@
 define(["NewsService", "MarsFactsService", "WeatherService"], function(newsService, marsFactsService, weatherService) {
   return { 
 	onInitialize: function() { 
-      this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-      this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
-      this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+//       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
+//       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
+      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
           
       this.view.headerApp.onBackClicked = function () {
         this.onButtonGoInfo();
@@ -16,10 +16,10 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
         this.view.lblFactText.text = data.factContent;
     },
 
-    onButtonGoToHome: function() {
-        var navigation = new kony.mvc.Navigation("frmMain");
-        navigation.navigate();
-    },  
+//     onButtonGoToHome: function() {
+//         var navigation = new kony.mvc.Navigation("frmMain");
+//         navigation.navigate();
+//     },  
 
     onButtonGoToNews: function() {
       newsService.getNews(function(arr) {
@@ -30,10 +30,10 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
       });
     },
 
-    onButtonGoToSearchImg: function() {
-        var navigation = new kony.mvc.Navigation("frmSearchImg");
-        navigation.navigate();
-    },
+//     onButtonGoToSearchImg: function() {
+//         var navigation = new kony.mvc.Navigation("frmSearchImg");
+//         navigation.navigate();
+//     },
 
     onButtonGoToWeather: function() {
       weatherService.getWeather(function(arr) {

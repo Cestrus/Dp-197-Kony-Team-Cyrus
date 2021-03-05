@@ -41,14 +41,14 @@
         "activeTabUnderline": {
             "__events__": {},
             "__info__": {
-                "kuid": "a0dd67446dab4667b40a3bc38ac57420",
+                "kuid": "c336f881c1ab41f585a162ede7bbe667",
                 "srcKUID": "g256f6b62fe94166ba8581d73ce24de7",
                 "wType": "FlexContainer"
             },
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "75%"
+                    "value": "25%"
                 }
             }
         },
@@ -56,24 +56,15 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "f0e47fcfe82a4cc88f28026a423e2db2",
+                "kuid": "a8b479adf6f64756b8a62859bc295243",
                 "srcKUID": "gce2c186e7764165a3ee6b702400efe9",
                 "wType": "FlexContainer"
-            },
-            "autogrowMode": {
-                "Default": 0
-            },
-            "height": {
-                "Default": {
-                    "type": "string",
-                    "value": "65dp"
-                }
             }
         },
         "tabBtnHome": {
             "__events__": {},
             "__info__": {
-                "kuid": "bd671c850184485284b321cbdd13d8e1",
+                "kuid": "j8690c0a106949f49740ce89b43c4f86",
                 "srcKUID": "be4b323649fe4df69d5eaeeb8b76f6ad",
                 "wType": "Button"
             }
@@ -81,7 +72,7 @@
         "tabBtnNews": {
             "__events__": {},
             "__info__": {
-                "kuid": "b397c2b2f22648c696c71b621f7601c5",
+                "kuid": "ddffe88a55914c638c1a90173dfe8ba1",
                 "srcKUID": "gb5ba2c5d4f34e7aa66dfd26d5bb73ce",
                 "wType": "Button"
             }
@@ -89,7 +80,7 @@
         "tabBtnSearchImg": {
             "__events__": {},
             "__info__": {
-                "kuid": "af4b424ca86b469098f2ef42873bfd6c",
+                "kuid": "feb16cf0397a4677b77fc0340fe72604",
                 "srcKUID": "d51021b2d02843babdd442126bf7bc7b",
                 "wType": "Button"
             }
@@ -97,7 +88,7 @@
         "tabBtnWeather": {
             "__events__": {},
             "__info__": {
-                "kuid": "cc94c42f4dbb4cb3aaf1e621620c6faf",
+                "kuid": "b7c948ab2361485aa3fd411efa553fd0",
                 "srcKUID": "f98cb34970984755aabde8d2efaab759",
                 "wType": "Button"
             }
@@ -107,14 +98,13 @@
     "id": "nav",
     "info": null,
     "isdatareferenced": false,
-    "issegmentchild": false,
     "isvisible": true,
-    "kuid": "f0e47fcfe82a4cc88f28026a423e2db2",
+    "kuid": "a8b479adf6f64756b8a62859bc295243",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "FlexContainerMain",
-    "pf": "frmWeather",
+    "parent": "FlexContainerCollection",
+    "pf": "frmCollectionImg",
     "snapgridsize": 10,
     "snaptogrid": true,
     "sourceUserWidget": "gce2c186e7764165a3ee6b702400efe9",
