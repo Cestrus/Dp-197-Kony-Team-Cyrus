@@ -113,7 +113,7 @@ function animation_4 (widget, time) {
 
 var widget_5 = null;
 function animation_5 (time, widget) {
-  widget_5 = (widget_5)? widget_5 : widget;
+//   widget_5 = (widget_5)? widget_5 : widget;
   var animDef = kony.ui.createAnimation({
     50: {
       right: "-20dp"
@@ -130,7 +130,7 @@ function animation_5 (time, widget) {
     "fillMode": kony.anim.FILL_MODE_FORWARDS
   };  
   
-  widget_5.animate(animDef, animConf, {});
+  widget.animate(animDef, animConf, {});
 }
 
 function animation_6 (widget, time, isOpen) {
