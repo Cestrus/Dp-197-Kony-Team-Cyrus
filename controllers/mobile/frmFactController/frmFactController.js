@@ -1,5 +1,5 @@
 define(["NewsService", "MarsFactsService", "WeatherService"], function(newsService, marsFactsService, weatherService) {
-  var _facts;
+
   return { 
 	onInitialize: function() { 
       this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
@@ -11,7 +11,7 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
     },
 
     onNavigate: function(data) {
-		    this.view.lblFactTitle.text = data.lblTitle;
+		this.view.lblFactTitle.text = data.lblTitle;
         this.view.lblFactText.text = data.factContent;
     },  
 
