@@ -1,4 +1,4 @@
- define(function() {
+ define(["FavoritesService"], function(favoritesService) {
   var ANIM_TIME = 0.25;
   var _animBtnBack = animation_4;
   var _animBtnMenu = animation_5;
@@ -27,6 +27,7 @@
        if (currentForm && previousForm) {
          (new kony.mvc.Navigation(previousForm.id)).navigate();
        }
+       favoritesService.getFavoriteArticles(kony.store.getItem("userId"));
        kony.timer.cancel('timerBack');
      }, ANIM_TIME, false);
    };  
@@ -89,11 +90,29 @@
         text: _dropDownList[i].name,
         skin: "sknBtnDropDown",
         focusSkin: "sknBtnDropDownFocus",
-        onClick: function(data){	
+        onClick: function(data){
+          favoritesService.getFavoriteArticles(kony.store.getItem("userId"));
           hideDropDown();          
           kony.timer.schedule('timerNav', function(){                       
             var navigation = new kony.mvc.Navigation(data.idForm);
-            navigation.navigate();
+
+            if (data.idForm === "frmFavoriteNews") {
+              var newArr = [];
+              JSON.parse(kony.store.getItem("savedArticles")).forEach(function(m) {
+                newArr.push({
+                  lblNewsTitle: m.articleTitle,
+                  lblNewsDate: m.articlePubDate,
+                  lblNewsShortDesc:  m.articleDesc,
+                  imgNews: m.articleHref,
+                  articleId: m.articleId,
+                  recordId: m.id,
+                  bodyText: m.articleText
+                });
+              });
+              navigation.navigate(newArr);
+            } else {
+              navigation.navigate();
+            }
             kony.timer.cancel('timerNav'); 
           }, ANIM_TIME + 0.25, false);
         }.bind(this, _dropDownList[i])
