@@ -35,55 +35,7 @@ define(function () {
 
   };
 
-  var getArticle = function (articleId, successCallback, errorCallback) {
-    params = {"articleId" : articleId};
-
-    newsService.invokeOperation("getArticle", headers, params, function(response) {
-      kony.print("Integration Service Response is: " + JSON.stringify(response));
-      //alert("savedArticlesArr from the fav page: \n" + params.articleId);
-      if (successCallback) {
-        successCallback({
-          lblNewsTitle: response.content.webTitle,
-          lblNewsDate: response.content.webPublicationDate.slice(0,10),
-          lblNewsShortDesc: response.content.fields.trailText,
-          imgNews: response.content.fields.thumbnail,
-          bodyText: response.content.fields.bodyText,
-          articleId: response.content.id
-        });
-      }
-
-    }, function(error) {
-      kony.print("Integration Service Failure:" + JSON.stringify(error));
-      if (errorCallback) {
-        errorCallback(error);
-      }
-    });
-
-  };
-  
-  var getSavedNews = function(savedArticlesArr, successCallback, errorCallback) {
-    //alert("savedArticlesArr from the fav page: \n" + JSON.stringify(savedArticlesArr));
-    var arr = [];
-    
-    savedArticlesArr.forEach(function(el) {
-      getArticle(el.articleId, function(articleObj) {
-        arr.push(articleObj);
-      },function() {
-        alert("Error while retrieving saved news.");
-        //errorCallback();
-      });
-    });
-	
-    alert("saved news to show" + JSON.stringify(arr));
-    if (successCallback) {
-      successCallback(arr);
-    }
-    
-  };
-
   return {
-    getNews: getNews,
-    getArticle: getArticle,
-    getSavedNews: getSavedNews
+    getNews: getNews
   };
 });
