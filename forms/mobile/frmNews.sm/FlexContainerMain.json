@@ -37,7 +37,7 @@
     "children": [
         "headerApp",
         "FlexScrollContainer",
-        "navBottomMenu"
+        "nav"
     ],
     "clipbounds": true,
     "containerweight": 100,

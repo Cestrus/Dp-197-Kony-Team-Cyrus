@@ -2,9 +2,9 @@ define(["WeatherService", "FavoritesService"], function(weatherService, favorite
   return {
     onInitialize: function() {
       //this.view.postShow = this.onFormShowed.bind(this);  
-      this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-      this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
-      this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+//       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
+//       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
+      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
 
       this.view.lstNews.onRowClick = this.onSeparateNewsClicked.bind(this);
 //       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
@@ -25,15 +25,15 @@ define(["WeatherService", "FavoritesService"], function(weatherService, favorite
       navigation.navigate(segmentWidgetRef.data[rowIndex]);
     },
 
-    onButtonGoToHome: function() {
-      var navigation = new kony.mvc.Navigation("frmMain");
-      navigation.navigate();
-    },
+//     onButtonGoToHome: function() {
+//       var navigation = new kony.mvc.Navigation("frmMain");
+//       navigation.navigate();
+//     },
 
-    onButtonGoToSearchImg: function() {
-      var navigation = new kony.mvc.Navigation("frmSearchImg");
-      navigation.navigate();
-    },
+//     onButtonGoToSearchImg: function() {
+//       var navigation = new kony.mvc.Navigation("frmSearchImg");
+//       navigation.navigate();
+//     },
 
     onButtonGoToWeather: function() {
       weatherService.getWeather(function(arr) {

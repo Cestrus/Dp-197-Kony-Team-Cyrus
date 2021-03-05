@@ -6,19 +6,19 @@ define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"],
       this.loadedImageStore = new LoadedImageStore(); // array for all img on page
       this.favoriteImageStore = new FavoriteImageStore();
  
-      this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+//       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
+      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.btnSearch.onClick = this.onSendRequest.bind(this);
 //       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);    
       
       this.view.imgContainer.onBtnClick = this.onAddToCollection.bind(this);
     },
 
-    onButtonGoToHome: function() {
-      var navigation = new kony.mvc.Navigation("frmMain");
-      navigation.navigate();
-    },
+//     onButtonGoToHome: function() {
+//       var navigation = new kony.mvc.Navigation("frmMain");
+//       navigation.navigate();
+//     },
 
     onButtonGoToNews: function() {
       newsService.getNews( 
