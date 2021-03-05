@@ -23,8 +23,9 @@ define(["NewsService", "MarsFactsService"], function(newsService, marsFactsServi
 
     onButtonGoInfo: function() {
       marsFactsService.getFacts(function(facts) {
+        weatherStore = facts;
         var navigation = new kony.mvc.Navigation("frmWeatherFAQ");
-        navigation.navigate(facts);
+        navigation.navigate(weatherStore);
         
       },function() {
         alert("Error while retrieving Mars weather facts.");

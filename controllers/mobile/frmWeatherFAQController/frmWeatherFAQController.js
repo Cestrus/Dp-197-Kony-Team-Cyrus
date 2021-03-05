@@ -12,7 +12,8 @@ define(["NewsService", "WeatherService"], function(newsService, weatherService) 
     },
     
     onNavigate: function(data) {
-      this.view.lstFacts.setData(data);
+      var facts = (data)? data : weatherStore;
+      this.view.lstFacts.setData(facts);
     },
 
 
