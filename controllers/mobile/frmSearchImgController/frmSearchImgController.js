@@ -1,38 +1,13 @@
-define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"], function(SearchImgService, newsService, weatherService, databaseService){
+define(["SearchImgService", "DatabaseService"], function(SearchImgService, databaseService) {
   return {
     onInitialize: function() {
       this.resetVisiblity();
             
       this.loadedImageStore = new LoadedImageStore(); // array for all img on page
       this.favoriteImageStore = new FavoriteImageStore();
-
-      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       
       this.view.btnSearch.onClick = this.onSendRequest.bind(this);      
       this.view.imgContainer.onBtnClick = this.onAddToCollection.bind(this);
-    },
-
-    onButtonGoToNews: function() {
-      newsService.getNews( 
-        function(arr) {
-          var navigation = new kony.mvc.Navigation("frmNews");
-          navigation.navigate(arr);
-        },
-        function() {
-          alert("Error while retrieving news list.");
-        }
-      );
-    },
-
-    onButtonGoToWeather: function() {
-      weatherService.getWeather(function(arr) {
-        var navigation = new kony.mvc.Navigation("frmWeather");
-        navigation.navigate(arr);
-
-      },function() {
-        alert("Error while retrieving Mars weather.");
-      });
     },
 
     // visibility methods

@@ -1,15 +1,11 @@
-define(["NewsService", "FavoritesService", "WeatherService"], function(newsService, favoritesService, weatherService) {
+define(["NewsService", "FavoritesService"], function(newsService, favoritesService) {
   var articleData;
   var currentUserId;
   var savedArticlesArr;
   var previousFormId;
   return { 
-    onInitialize: function() { 
-      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      
+    onInitialize: function() {
       this.view.headerApp.onBackClicked = function () {
-        
         previousFormId = kony.application.getPreviousForm().id;
         if (previousFormId === "frmFavoriteNews") {
           this.onButtonGoToFavoriteNews();
@@ -19,9 +15,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       }.bind(this);
       
       this.view.btnFavoriteArticle.onClick = this.onButtonFavoriteArticle.bind(this);
-		
-      //temp function for saved articles form
-//       this.view.btnProfile.onClick = this.onButtonGoToFavoriteNews.bind(this);
     },
 
     onNavigate: function(data) {
@@ -48,7 +41,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
         }
       });
       return result;
-
     },
 
     updateAtricleStore: function(articleRecordData, userId ,action) {
@@ -65,7 +57,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
         }, function(error) {
           kony.print("Integration Add Article Service Failure:" + JSON.stringify(error));
         });
-
       } else {
         articleData.isFavorite = 0;
         var idToRemove;
@@ -75,6 +66,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
             el = {};
             favoritesService.removeFavoriteArticle(idToRemove, function(response) {
               kony.print("Integration Remove Article Service Success:" + JSON.stringify(response));
+              // works from time to time(as we have too slow responce on the article removal), but let it be here
               favoritesService.getFavoriteArticles(function(articleIdsArr) {
                 savedArticlesArr = articleIdsArr;
               }, function(error) {
@@ -85,8 +77,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
             });
           } 
         });
-        kony.store.setItem("savedArticles", JSON.stringify(savedArticlesArr));
-
       }
     },
 
@@ -98,7 +88,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
         this.view.btnFavoriteArticle.skin = 'sknFavotiteArticleFocus';
         this.updateAtricleStore(articleData, currentUserId, 1);
       }
-
     },  
 
     onButtonGoToNews: function() {
@@ -113,7 +102,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
     onButtonGoToFavoriteNews: function() {
       var newArr = [];
       favoritesService.getFavoriteArticles(function(articleIdsArr) {
-
         articleIdsArr.forEach(function(m) {
           newArr.push({
             lblNewsTitle: m.articleTitle,
@@ -131,15 +119,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
         kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
       });
     },
-
-    onButtonGoToWeather: function() {
-      weatherService.getWeather(function(arr) {
-        var navigation = new kony.mvc.Navigation("frmWeather");
-        navigation.navigate(arr);
-      },function() {
-        alert("Error while retrieving Mars weather.");
-      });
-    }
   };
 
 });

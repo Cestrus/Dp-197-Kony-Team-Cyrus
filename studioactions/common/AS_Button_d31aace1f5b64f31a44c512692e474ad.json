@@ -1,0 +1,27 @@
+{
+    "AS_Button_d31aace1f5b64f31a44c512692e474ad": {
+        "id": "AS_Button_d31aace1f5b64f31a44c512692e474ad",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "uwu8930a0ec0c84ec2ba1fa63deebda2b7",
+            "type": "userwidgets",
+            "KUID": "u8930a0ec0c84ec2ba1fa63deebda2b7"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ca3d24ae38824ef7ba55e86c89d784dd",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToNews",
+            "display": "onButtonGoToNews",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}
