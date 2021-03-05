@@ -1,0 +1,27 @@
+{
+    "AS_Button_dc3291e9b3754876b449036166a2373f": {
+        "id": "AS_Button_dc3291e9b3754876b449036166a2373f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "uwu8930a0ec0c84ec2ba1fa63deebda2b7",
+            "type": "userwidgets",
+            "KUID": "u8930a0ec0c84ec2ba1fa63deebda2b7"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__e2e7d77585b9413baaa6a4af85879089",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToWeather",
+            "display": "onButtonGoToWeather",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}
