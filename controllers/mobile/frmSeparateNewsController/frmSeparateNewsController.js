@@ -9,6 +9,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       
       this.view.headerApp.onBackClicked = function () {
+        
         previousFormId = kony.application.getPreviousForm().id;
         if (previousFormId === "frmFavoriteNews") {
           this.onButtonGoToFavoriteNews();
@@ -54,7 +55,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       if (action === 1) {
         articleData.isFavorite = 1;
         favoritesService.addFavoriteArticle(articleRecordData, userId, function(response) {
-          kony.print("Integration updateAtricleStore Service Success:" + JSON.stringify(response));
+          kony.print("Integration addFavoriteArticle Service Success:" + JSON.stringify(response));
 
           favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
             savedArticlesArr = articleIdsArr;
@@ -109,7 +110,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
     },
 
     onButtonGoToFavoriteNews: function() {
-      //alert (JSON.stringify(savedArticlesArr)); 
       var newArr = [];
       JSON.parse(kony.store.getItem("savedArticles")).forEach(function(m) {
         newArr.push({
