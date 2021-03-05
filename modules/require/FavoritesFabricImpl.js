@@ -30,9 +30,9 @@ define(function () {
     });
   };
   
-  var getArticles = function (userId, successCallback, errorCallback) {
+  var getArticles = function (successCallback, errorCallback) {
     params = {
-      "userIdentificator": userId.toString()
+      "userIdentificator": kony.store.getItem("userId").toString()
     };
 
     favoritesService.invokeOperation("getArticles", headers, params, function(response) {

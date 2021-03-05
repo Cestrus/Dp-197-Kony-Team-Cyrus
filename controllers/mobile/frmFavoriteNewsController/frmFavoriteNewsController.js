@@ -12,7 +12,7 @@ define(["WeatherService", "NewsService", "FavoritesService"], function(weatherSe
     },
 
     onNavigate: function(data) {
-      favoritesService.getFavoriteArticles(kony.store.getItem("userId"));
+      favoritesService.getFavoriteArticles();
       if(data) this.view.lstSavedNews.setData(data);
     },
 

@@ -22,7 +22,7 @@ define(["AuthUserService", "FavoritesService"], function(authUser, favoritesServ
 			function(userId) {
             kony.timer.cancel("timerStars");
             kony.store.setItem("userId", userId);
-            favoritesService.getFavoriteArticles(userId);
+            favoritesService.getFavoriteArticles();
             var navigation = new kony.mvc.Navigation("frmMain");
             navigation.navigate();
           },function(error) {

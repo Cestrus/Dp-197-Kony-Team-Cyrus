@@ -57,7 +57,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
         favoritesService.addFavoriteArticle(articleRecordData, userId, function(response) {
           kony.print("Integration addFavoriteArticle Service Success:" + JSON.stringify(response));
 
-          favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
+          favoritesService.getFavoriteArticles(function(articleIdsArr) {
             savedArticlesArr = articleIdsArr;
           }, function(error) {
             kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
@@ -72,10 +72,10 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
         savedArticlesArr.forEach(function (el) {
           if (el.articleId === articleRecordData.articleId) {
             idToRemove = el.id;
-            //alert("id found " + idToRemove);
+            el = {};
             favoritesService.removeFavoriteArticle(idToRemove, function(response) {
               kony.print("Integration Remove Article Service Success:" + JSON.stringify(response));
-              favoritesService.getFavoriteArticles(userId, function(articleIdsArr) {
+              favoritesService.getFavoriteArticles(function(articleIdsArr) {
                 savedArticlesArr = articleIdsArr;
               }, function(error) {
                 kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
@@ -85,6 +85,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
             });
           } 
         });
+        kony.store.setItem("savedArticles", JSON.stringify(savedArticlesArr));
 
       }
     },
@@ -111,19 +112,24 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
 
     onButtonGoToFavoriteNews: function() {
       var newArr = [];
-      JSON.parse(kony.store.getItem("savedArticles")).forEach(function(m) {
-        newArr.push({
-          lblNewsTitle: m.articleTitle,
-          lblNewsDate: m.articlePubDate,
-          lblNewsShortDesc:  m.articleDesc,
-          imgNews: m.articleHref,
-          articleId: m.articleId,
-          recordId: m.id,
-          bodyText: m.articleText
+      favoritesService.getFavoriteArticles(function(articleIdsArr) {
+
+        articleIdsArr.forEach(function(m) {
+          newArr.push({
+            lblNewsTitle: m.articleTitle,
+            lblNewsDate: m.articlePubDate,
+            lblNewsShortDesc:  m.articleDesc,
+            imgNews: m.articleHref,
+            articleId: m.articleId,
+            recordId: m.id,
+            bodyText: m.articleText
+          });
         });
+        var navigation = new kony.mvc.Navigation("frmFavoriteNews");
+        navigation.navigate(newArr);
+      }, function(error) {
+        kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
       });
-      var navigation = new kony.mvc.Navigation("frmFavoriteNews");
-      navigation.navigate(newArr);
     },
 
     onButtonGoToWeather: function() {

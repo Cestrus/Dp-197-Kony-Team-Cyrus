@@ -9,11 +9,7 @@ define(["WeatherService", "FavoritesService"], function(weatherService, favorite
 
     onNavigate: function(data) {
       if(data) this.view.lstNews.setData(data);
-      favoritesService.getFavoriteArticles(kony.store.getItem("userId"), function(articleIdsArr) {
-        kony.print("Integration Get Favorite Articles List Service Success:" + JSON.stringify(articleIdsArr));
-      }, function(error) {
-        kony.print("Integration Get Favorite Articles List Service Failure:" + JSON.stringify(error));
-      });
+      favoritesService.getFavoriteArticles();
     },
 
     onSeparateNewsClicked: function (segmentWidgetRef, sectionNumber, rowIndex) {
