@@ -10,6 +10,7 @@
   var initBtnMenu = function(refBtn) {
     _btnMenu = refBtn;
   };
+   _isOpen = false;
   
   
    var onBtnBackClick = function() {
@@ -34,67 +35,71 @@
      }, ANIM_TIME, false);
    };  
     
-  var hideDropDown = function () {
-    var form = kony.application.getCurrentForm();
+//   var hideDropDown = function () {
+//     var form = kony.application.getCurrentForm();
 
-    if (_flexBackdrop) {
-      _animBtnMenu(_btnMenu, ANIM_TIME, false);
-      _animMenu(_flexBackdrop.widgets()[0], ANIM_TIME, true);
-      kony.timer.schedule('timerMenu', function(){
-        form.remove(_flexBackdrop);
-        _flexBackdrop = null;
-        kony.timer.cancel('timerMenu');
-      }, ANIM_TIME, false);
-    }
-  };
+//     if (_flexBackdrop) {
+//       _animBtnMenu(_btnMenu, ANIM_TIME, false);
+//       _animMenu(_flexBackdrop.widgets()[0], ANIM_TIME, true);
+//       kony.timer.schedule('timerMenu', function(){
+//         form.remove(_flexBackdrop);
+//         _flexBackdrop = null;
+//         kony.timer.cancel('timerMenu');
+//       }, ANIM_TIME, false);
+//     }
+//   };
   
   var showDropDown = function () {
     var form = kony.application.getCurrentForm();
     
-    hideDropDown();
+//     hideDropDown();
+    _flexBackdrop = null;
     _flexBackdrop = new kony.ui.FlexContainer({
       id: "flxHeaderControlBackdrop",
-      top: "65dp",
+      top: "0dp", 
       left: "0dp",
       right: "0dp",
       bottom: "0dp",
       zIndex: '1000',
       isVisible: true,
-      onClick: hideDropDown,
+//       onClick: hideDropDown,
+      onClick: closeDropMenu,
       layoutType: kony.flex.FREE_FORM
     });
 
     var flexScroll = new kony.ui.FlexScrollContainer({
       id: "flxHeaderControlScrollList",
-      top: "-85dp",
-      width: "140dp",
-      right: "0dp",
+      top: "65dp",
+      width: "165dp",
+//       right: "0dp",
+      right: "-165dp",
       bottom: "0dp",
       isVisible: true,
       enableScrolling: true,
       scrollDirection: kony.flex.SCROLL_VERTICAL,
       bounces: false,
-      onClick: hideDropDown,
+//       onClick: hideDropDown,
+      onClick: closeDropMenu,
       layoutType: kony.flex.FLOW_VERTICAL, 
     }, {
-      padding: [10, 10, 10, 10],
       margin: [0, 0, 0, 0]
     });
 
     for (var i = 0; i < _dropDownList.length; i++) {
       var button = new kony.ui.Button({
         id: "flxHeaderControlListItem" + i,
-        top: "1dp",
+        top: "5dp",
         left: "0dp",
         width: "100%",
-        height: "40dp",
+        height: "45dp",
         isVisible: true,
         text: _dropDownList[i].name,
         skin: "sknBtnDropDown",
         focusSkin: "sknBtnDropDownFocus",
         onClick: function(data){
           favoritesService.getFavoriteArticles(kony.store.getItem("userId"));
-          hideDropDown();          
+//           hideDropDown();   
+          closeDropMenu();
           kony.timer.schedule('timerNav', function(){                       
             var navigation = new kony.mvc.Navigation(data.idForm);
 
@@ -130,21 +135,45 @@
     form.add(_flexBackdrop);
   };
 
-  var toggleDropMenu = function() {
-    if (_flexBackdrop) {
-      hideDropDown();
-    } else {
-      showDropDown();
-      _animBtnMenu(this.view.btnMenu, ANIM_TIME, true);
-      _animMenu(_flexBackdrop.widgets()[0], ANIM_TIME, false);
-    }
-  };
+//   var toggleDropMenu = function() {
+//     if (_flexBackdrop) {
+//       hideDropDown();
+//     } else {
+//       showDropDown();
+//       _animBtnMenu(this.view.btnMenu, ANIM_TIME, true);
+//       _animMenu(_flexBackdrop.widgets()[0], ANIM_TIME, false);
+//     }
+//   };
    
+   var closeDropMenu = function() {
+     var form = kony.application.getCurrentForm();
+
+//      if (_flexBackdrop) {
+       _animBtnMenu(ANIM_TIME);
+       _animMenu(_flexBackdrop.widgets()[0], ANIM_TIME, _isOpen);
+       kony.timer.schedule('timerMenu', function(){
+         form.remove(_flexBackdrop);
+         _flexBackdrop = null;
+         kony.timer.cancel('timerMenu');
+       }, ANIM_TIME, false);
+//      }
+     _isOpen = !_isOpen;
+   };
+   
+   var openDropMenu = function() {
+     showDropDown();
+     _animBtnMenu(ANIM_TIME, this.view.btnMenu);
+     _animMenu(_flexBackdrop.widgets()[0], ANIM_TIME, _isOpen);
+     _isOpen = !_isOpen;
+   };
+   
+  
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       initBtnMenu(this.view.btnMenu);
       this.view.btnBack.onClick = onBtnBackClick.bind(this);
-      this.view.btnMenu.onClick = toggleDropMenu.bind(this);
+//       this.view.btnMenu.onClick = toggleDropMenu.bind(this);
+      this.view.btnMenu.onClick = openDropMenu.bind(this);
     },
     
     initGettersSetters: function() {
