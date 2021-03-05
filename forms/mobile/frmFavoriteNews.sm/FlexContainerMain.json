@@ -38,7 +38,7 @@
         "headerApp",
         "flexSavedArticlesHeader",
         "FlexScrollContainer",
-        "navBottomMenu"
+        "nav"
     ],
     "clipbounds": true,
     "containerweight": 100,
