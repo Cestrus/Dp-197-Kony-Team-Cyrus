@@ -5,8 +5,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
 //   var previousFormId;
   return { 
     onInitialize: function() { 
-//       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-//       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
       this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       
@@ -99,12 +97,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
         this.updateAtricleStore(articleData, currentUserId, 1);
       }
 
-    },
-
-//     onButtonGoToHome: function() {
-//       var navigation = new kony.mvc.Navigation("frmMain");
-//       navigation.navigate();
-//     },  
+    },  
 
     onButtonGoToNews: function() {
       newsService.getNews(function(arr) {
@@ -132,11 +125,6 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
       var navigation = new kony.mvc.Navigation("frmFavoriteNews");
       navigation.navigate(newArr);
     },
-
-//     onButtonGoToSearchImg: function() {
-//       var navigation = new kony.mvc.Navigation("frmSearchImg");
-//       navigation.navigate();
-//     },
 
     onButtonGoToWeather: function() {
       weatherService.getWeather(function(arr) {
