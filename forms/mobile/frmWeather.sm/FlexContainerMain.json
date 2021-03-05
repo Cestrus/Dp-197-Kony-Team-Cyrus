@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "children": [
         "headerApp",
-        "navBottomMenu",
+        "nav",
         "flxWeatherContainer"
     ],
     "clipbounds": true,

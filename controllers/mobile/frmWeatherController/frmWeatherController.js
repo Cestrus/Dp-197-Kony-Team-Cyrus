@@ -1,21 +1,21 @@
 define(["NewsService", "MarsFactsService"], function(newsService, marsFactsService) { 
   return {
     onInitialize: function() {  
-      this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-      this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
-      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+//       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
+//       this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
+      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
       this.view.btnInfo.onClick = this.onButtonGoInfo.bind(this);
-//       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
+      this.view.btnProfile.onClick = this.onGoToProfile.bind(this);
     },
 
     onNavigate: function(data) {
       if(data) this.view.lstDates.setData(data);
     },
 
-    onButtonGoToHome: function() {
-      var navigation = new kony.mvc.Navigation("frmMain");
-      navigation.navigate();
-    },
+//     onButtonGoToHome: function() {
+//       var navigation = new kony.mvc.Navigation("frmMain");
+//       navigation.navigate();
+//     },
 
     onButtonGoToNews: function() {
       newsService.getNews( 
@@ -29,10 +29,10 @@ define(["NewsService", "MarsFactsService"], function(newsService, marsFactsServi
       );
     },
 
-    onButtonGoToSearchImg: function() {
-      var navigation = new kony.mvc.Navigation("frmSearchImg");
-      navigation.navigate();
-    },
+//     onButtonGoToSearchImg: function() {
+//       var navigation = new kony.mvc.Navigation("frmSearchImg");
+//       navigation.navigate();
+//     },
     
     onButtonGoInfo: function() {
       marsFactsService.getFacts(function(facts) {
@@ -44,10 +44,10 @@ define(["NewsService", "MarsFactsService"], function(newsService, marsFactsServi
       });
     },
     
-//     onGoToProfile: function() {
-//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
-//       navigation.navigate();
-//     }
+    onGoToProfile: function() {
+      var navigation = new kony.mvc.Navigation("frmCollectionImg");
+      navigation.navigate();
+    }
 
   };
 

@@ -1,6 +1,12 @@
 define(function () {
    
   var getFacts = function (successCallback, errorCallback) {
+    
+//     var storedFact = kony.store.getItem("facts");
+//     if (storedFact) {
+//       return successCallback(storedFact);
+//     }
+    
     var facts = [];
     var sdk = kony.sdk.getCurrentInstance();
     var factService = sdk.getIntegrationService("CyrusDB");
@@ -19,6 +25,7 @@ define(function () {
         });
       
       if (successCallback) {
+//         kony.store.setItem("facts", facts);
         successCallback(facts);
       }
       
