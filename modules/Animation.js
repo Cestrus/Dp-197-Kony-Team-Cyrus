@@ -111,14 +111,15 @@ function animation_4 (widget, time) {
   widget.animate(animDef, animConf, {});
 }
 
-function animation_5 (widget, time, isOpen) {
-  var rotate = (isOpen)? -90 : 0;
-  var transformProp1 = kony.ui.makeAffineTransform();
-  transformProp1.rotate(rotate);
-  kony.print( "ANIMATION ++++++++++++++++++++\n\n " + JSON.stringify());
+var widget_5 = null;
+function animation_5 (time, widget) {
+  widget_5 = (widget_5)? widget_5 : widget;
   var animDef = kony.ui.createAnimation({
+    50: {
+      right: "-20dp"
+    },
     100: {
-      "transform": transformProp1
+      right: "0dp"
     }
   });
   
@@ -129,15 +130,15 @@ function animation_5 (widget, time, isOpen) {
     "fillMode": kony.anim.FILL_MODE_FORWARDS
   };  
   
-  widget.animate(animDef, animConf, {});
+  widget_5.animate(animDef, animConf, {});
 }
 
 function animation_6 (widget, time, isOpen) {
-  var top = (isOpen)? "-85dp" : 0;
+  var top = (isOpen)? "-165dp" : 0 ;
    
   var animDef = kony.ui.createAnimation({
     100: {
-      "top": top
+      "right": top
     }
   });
   
