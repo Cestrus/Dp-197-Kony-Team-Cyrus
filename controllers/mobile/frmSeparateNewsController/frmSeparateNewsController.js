@@ -2,7 +2,7 @@ define(["NewsService", "FavoritesService", "WeatherService"], function(newsServi
   var articleData;
   var currentUserId;
   var savedArticlesArr;
-//   var previousFormId;
+  var previousFormId;
   return { 
     onInitialize: function() { 
       this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
