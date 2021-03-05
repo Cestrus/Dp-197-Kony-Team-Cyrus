@@ -5,19 +5,12 @@ define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"],
             
       this.loadedImageStore = new LoadedImageStore(); // array for all img on page
       this.favoriteImageStore = new FavoriteImageStore();
- 
-      this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-      this.view.btnSearch.onClick = this.onSendRequest.bind(this);
-//       this.view.btnProfile.onClick = this.onGoToProfile.bind(this);    
-      
-      this.view.imgContainer.onBtnClick = this.onAddToCollection.bind(this);
-    },
 
-    onButtonGoToHome: function() {
-      var navigation = new kony.mvc.Navigation("frmMain");
-      navigation.navigate();
+      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+      
+      this.view.btnSearch.onClick = this.onSendRequest.bind(this);      
+      this.view.imgContainer.onBtnClick = this.onAddToCollection.bind(this);
     },
 
     onButtonGoToNews: function() {
@@ -42,13 +35,7 @@ define(["SearchImgService", "NewsService", "WeatherService", "DatabaseService"],
       });
     },
 
-//     onGoToProfile: function() {
-//       var navigation = new kony.mvc.Navigation("frmCollectionImg");
-//       navigation.navigate();
-//     },
-    
     // visibility methods
-
     resetVisiblity: function() {
       this.view.imgRocket.isVisible = true;
       this.view.lbNotFound.isVisible = false;

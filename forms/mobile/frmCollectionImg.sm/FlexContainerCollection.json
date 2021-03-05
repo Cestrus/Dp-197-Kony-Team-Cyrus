@@ -39,8 +39,8 @@
         "lbCollectionTitle",
         "imgRocket",
         "lbCollectionEmptyTitle",
-        "navBottomMenu",
-        "imgContainer"
+        "imgContainer",
+        "nav"
     ],
     "clipbounds": true,
     "containerweight": 100,

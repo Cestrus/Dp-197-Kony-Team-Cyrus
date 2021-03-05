@@ -2,29 +2,17 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
   var _facts;
   return { 
 	onInitialize: function() { 
-      this.view.tabBtnHome.onClick = this.onButtonGoToHome.bind(this);
-      this.view.tabBtnSearchImg.onClick = this.onButtonGoToSearchImg.bind(this);
-      this.view.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
-      this.view.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
-      
-      this.view.headerApp.onBackClicked = this.onButtonGoInfo.bind(this);
+      this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
+      this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
+          
+      this.view.headerApp.onBackClicked = function () {
+        this.onButtonGoInfo();
+      }.bind(this);
     },
 
     onNavigate: function(data) {
-      this.view.lblFactTitle.text = data.lblTitle;
-      this.view.lblFactText.text = data.factContent;
-
-      marsFactsService.getFacts(function(facts) {
-        _facts = facts;
-
-      },function() {
-        alert("Error while retrieving Mars weather facts.");
-      });
-    },
-
-    onButtonGoToHome: function() {
-      var navigation = new kony.mvc.Navigation("frmMain");
-      navigation.navigate();
+		    this.view.lblFactTitle.text = data.lblTitle;
+        this.view.lblFactText.text = data.factContent;
     },  
 
     onButtonGoToNews: function() {
@@ -34,11 +22,6 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
       },function() {
         alert("Error while retrieving news list.");
       });
-    },
-
-    onButtonGoToSearchImg: function() {
-      var navigation = new kony.mvc.Navigation("frmSearchImg");
-      navigation.navigate();
     },
 
     onButtonGoToWeather: function() {
@@ -59,7 +42,6 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
       },function() {
         alert("Error while retrieving Mars weather facts.");
       });
-    },
+    }
   };
-
  });
