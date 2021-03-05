@@ -5,14 +5,12 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
       this.view.nav.tabBtnWeather.onClick = this.onButtonGoToWeather.bind(this);
       this.view.nav.tabBtnNews.onClick = this.onButtonGoToNews.bind(this);
           
-      this.view.headerApp.onBackClicked = function () {
-        this.onButtonGoInfo();
-      }.bind(this);
+      this.view.headerApp.onBackClicked = this.onButtonGoInfo.bind(this);
     },
 
     onNavigate: function(data) {
-		this.view.lblFactTitle.text = data.lblTitle;
-        this.view.lblFactText.text = data.factContent;
+      this.view.lblFactTitle.text = data.lblTitle;
+      this.view.lblFactText.text = data.factContent;
     },  
 
     onButtonGoToNews: function() {
@@ -35,6 +33,7 @@ define(["NewsService", "MarsFactsService", "WeatherService"], function(newsServi
     },
 
     onButtonGoInfo: function() {
+      
       marsFactsService.getFacts(function(facts) {
         var navigation = new kony.mvc.Navigation("frmWeatherFAQ");
         navigation.navigate(facts);

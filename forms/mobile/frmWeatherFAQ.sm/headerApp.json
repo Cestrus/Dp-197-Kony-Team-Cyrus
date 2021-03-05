@@ -38,6 +38,7 @@
     "clipbounds": true,
     "containerweight": 0,
     "data": {
+        "ide_onBackClicked": "AS_UWI_c3c31f89f050483ab4a3400459b1f35f",
         "isVisibleBtnBack": true
     },
     "enablescrolling": true,

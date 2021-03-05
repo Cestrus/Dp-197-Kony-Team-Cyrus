@@ -1,0 +1,25 @@
+{
+    "AS_UWI_j08c04647e554eb28e247d5eeb9b3b15": {
+        "id": "AS_UWI_j08c04647e554eb28e247d5eeb9b3b15",
+        "type": "ACTION_SEQUENCE",
+        "params": [],
+        "contextObj": {
+            "name": "frmWeatherFAQ",
+            "type": "forms",
+            "platform": "",
+            "KUID": "g5366a951d3c4950962e7339fb962a26"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__g9d7f25da85949bcae74cf679a433bf6",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onButtonGoToWeather",
+            "display": "onButtonGoToWeather",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

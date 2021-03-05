@@ -13,22 +13,24 @@
   
   
    var onBtnBackClick = function() {
+     _this = this;
      _animBtnBack(this.view.btnBack, ANIM_TIME);
      kony.timer.schedule('timerBack', function(){
-       if (this.onBackClicked) {
-         if (!this.onBackClicked()) {
+       if (_this.onBackClicked) {
+         if (!_this.onBackClicked()) {
            return;
          }
        }
+         var currentForm = kony.application.getCurrentForm();
+         var previousForm = kony.application.getPreviousForm();
 
-       var currentForm = kony.application.getCurrentForm();
-       var previousForm = kony.application.getPreviousForm();
-
-       if (currentForm && previousForm) {
-         (new kony.mvc.Navigation(previousForm.id)).navigate();
-       }
-       favoritesService.getFavoriteArticles(kony.store.getItem("userId"));
-       kony.timer.cancel('timerBack');
+         if (currentForm && previousForm) {
+           (new kony.mvc.Navigation(previousForm.id)).navigate();
+         }
+         favoritesService.getFavoriteArticles(kony.store.getItem("userId"));
+       
+         kony.timer.cancel('timerBack');
+      
      }, ANIM_TIME, false);
    };  
     
