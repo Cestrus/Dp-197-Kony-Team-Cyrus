@@ -1,4 +1,4 @@
-define(["DatabaseService"], function (databaseService) { 
+define(["FavoritesService"], function (favoritesService) { 
   return {
     onInitialize: function() {  
       this.currStore = null;
@@ -56,7 +56,7 @@ define(["DatabaseService"], function (databaseService) {
     onDeleteImg: function() { 
       var userId = kony.store.getItem("userId");
       var link = this.currStore.get()[this.currNum];
-      databaseService.deleteImages ( userId, link );
+      favoritesService.deleteFavoriteImages ( userId, link );
 
       this.showMessage('deleted', function(){
         this.currStore.delete(this.currNum);
@@ -73,7 +73,7 @@ define(["DatabaseService"], function (databaseService) {
     onAddImg: function() {
       var userId = kony.store.getItem("userId");
       var link = this.currStore.get()[this.currNum];
-      databaseService.addImages ( userId, link );
+      favoritesService.addFavoriteImages ( userId, link );
       
       this.showMessage('added');
       var store = new FavoriteImageStore();

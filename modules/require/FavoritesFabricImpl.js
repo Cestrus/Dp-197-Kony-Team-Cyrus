@@ -1,11 +1,9 @@
 define(function () {
   var sdk = kony.sdk.getCurrentInstance();
   var favoritesService = sdk.getIntegrationService("CyrusDB");
-  var params = null;
-  var headers = null; 
-
+  
   var addArticle = function(recordData, userId, successCallback, errorCallback) {
-    params = {
+    var params = {
       "newArticleId": recordData.articleId,
       "userIdentificator": userId.toString(),
       "title": recordData.lblNewsTitle,
@@ -14,8 +12,9 @@ define(function () {
       "href": recordData.imgNews,
       "bodyText": recordData.bodyText
     };
-
-    favoritesService.invokeOperation("addArticle", headers, params, function(response) {
+    var header = null; 
+    
+    favoritesService.invokeOperation("addArticle", header, params, function(response) {
       kony.print("Integration Add Article Service Response is: " + JSON.stringify(response));
       if (successCallback && response.articleMappingId) {
         successCallback(response);
@@ -29,11 +28,12 @@ define(function () {
   };
   
   var getArticles = function (successCallback, errorCallback) {
-    params = {
+    var params = {
       "userIdentificator": kony.store.getItem("userId")//.toString()
     };
-
-    favoritesService.invokeOperation("getArticles", headers, params, function(response) {
+		var header = null;
+    
+    favoritesService.invokeOperation("getArticles", header, params, function(response) {
       kony.print("Integration Get Articles Service Response is: " + JSON.stringify(response));
       kony.store.setItem("savedArticles", JSON.stringify(response.records));
       if (successCallback) {
@@ -49,11 +49,12 @@ define(function () {
   };
   
   var removeArticle = function(recordId) {
-    params = {
+    var params = {
       "id": recordId.toString()
     };
+    var header = null;
     
-    favoritesService.invokeOperation("deleteArticle", headers, params, function(response) {
+    favoritesService.invokeOperation("deleteArticle", header, params, function(response) {
       kony.print("Integration Delete Articles Service Response is: " + JSON.stringify(response));
       if (successCallback) {
         successCallback(response);
@@ -65,9 +66,55 @@ define(function () {
       }
     });
   };
+ 
+  
+  var requestFunc = function(request, params, header, successCallback, errorCallback){
+    favoritesService.invokeOperation (request, header, params, 
+      function(response) {
+        if (successCallback) {
+          successCallback (response);
+        }
+      },
+      function(error){
+      kony.print("Database Service Failure: \n\n" + JSON.stringify(error));
+        if (errorCallback) {
+          errorCallback(error);
+        }
+      });
+  }; 
+  
+  var getImages = function(userId, successCallback, errorCallback){
+    var header = null;
+    var params = {
+      "userIdentificator": userId.toString(),
+    };
+    requestFunc ("getFavoriteImages", params, header, successCallback, errorCallback);
+  };
+
+  var deleteImages = function(userId, link, successCallback, errorCallback){
+    var header = null;
+    var params = {
+      "userIdentificator": userId.toString(),
+      "userlink": link,
+    };
+    requestFunc ("deleteFavoriteImages", params, header, successCallback, errorCallback);
+  };
+
+  var addImages = function(userId, link, successCallback, errorCallback){
+    var header = null;
+    var params = {
+      "userIdentificator": userId.toString(),
+      "userlink": link,
+    };
+    requestFunc ("addFavoriteImages", params, header, successCallback, errorCallback);
+  };
+  
   return {
     addArticle: addArticle,
     getArticles: getArticles,
-    removeArticle: removeArticle
+    removeArticle: removeArticle,
+    getImages: getImages,
+    deleteImages: deleteImages, 
+    addImages: addImages,  
   };
 });

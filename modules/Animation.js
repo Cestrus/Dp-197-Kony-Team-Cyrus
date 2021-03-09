@@ -111,9 +111,8 @@ function animation_4 (widget, time) {
   widget.animate(animDef, animConf, {});
 }
 
-var widget_5 = null;
+
 function animation_5 (time, widget) {
-//   widget_5 = (widget_5)? widget_5 : widget;
   var animDef = kony.ui.createAnimation({
     50: {
       right: "-20dp"
