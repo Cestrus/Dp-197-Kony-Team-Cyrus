@@ -1,4 +1,4 @@
-define(["DatabaseService"], function(databaseService) {
+define(["FavoritesService"], function(favoritesService) {
   return { 
     onInitialize: function() {
       this.favoriteImageStore = new FavoriteImageStore();
@@ -34,12 +34,12 @@ define(["DatabaseService"], function(databaseService) {
       var userId = kony.store.getItem("userId");
       for(var i = 0; i < arrImages.length; i++) {
         var link = this.favoriteImageStore.get()[arrImages[i]];
-        databaseService.deleteImages ( userId, link );
+        favoritesService.deleteFavoriteImages ( userId, link );
       }
       
       this.favoriteImageStore.delete(arrImages);
       if (this.favoriteImageStore.length()) {
-        this.view.imgContainer.createListImages(this.favoriteImageStore.get());
+        this.view.imgContainer.createListImages(this.favoriteImageStore.get(), this.onShowFullImg);
       } else {
         this.renderEmptyCollection();
       }
@@ -47,7 +47,7 @@ define(["DatabaseService"], function(databaseService) {
     
     loadImages: function() {
       var userId = kony.store.getItem("userId");
-      databaseService.getImages(
+      favoritesService.getFavoriteImages(
         userId,
         function(data){
           data.records.forEach (function(obj){ this.favoriteImageStore.push(obj.link);}.bind(this));

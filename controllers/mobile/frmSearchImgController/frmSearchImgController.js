@@ -1,4 +1,4 @@
-define(["SearchImgService", "DatabaseService"], function(SearchImgService, databaseService) {
+define(["SearchImgService", "FavoritesService"], function(SearchImgService, favoritesService) {
   return {
     onInitialize: function() {
       this.resetVisiblity();
@@ -80,7 +80,7 @@ define(["SearchImgService", "DatabaseService"], function(SearchImgService, datab
         var store = this.loadedImageStore.get();
         for (var i = 0; i < arrImages.length; i++){
           var link = store[arrImages[i]];
-          databaseService.addImages ( userId, link );
+          favoritesService.addFavoriteImages ( userId, link );
           this.favoriteImageStore.push( link );
         }
         this.view.imgContainer.resetChoiceMark();

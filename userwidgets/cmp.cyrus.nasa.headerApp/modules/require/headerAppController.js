@@ -112,16 +112,7 @@
     form.add(_flexBackdrop);
   };
 
-//   var toggleDropMenu = function() {
-//     if (_flexBackdrop) {
-//       hideDropDown();
-//     } else {
-//       showDropDown();
-//       _animBtnMenu(this.view.btnMenu, ANIM_TIME, true);
-//       _animMenu(_flexBackdrop.widgets()[0], ANIM_TIME, false);
-//     }
-//   };
-   
+  
    var closeDropMenu = function() {
      var form = kony.application.getCurrentForm();
 
